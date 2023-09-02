@@ -1,0 +1,132 @@
+----------VERSION_1.1.2----------
+
+CREATE TABLE `archivo` (
+  `id_producto` int(11) NOT NULL,
+  `archivo_producto` longblob NOT NULL
+);
+CREATE TABLE `creador` (
+  `id_creador` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `codigo` int(11) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `foro` (
+  `id_usuario` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `mensaje` varchar(500) NOT NULL,
+  `nombre` varchar (50) NOT NULL
+);
+CREATE TABLE `producto` (
+  `id_producto` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `categoria` enum('videojuego','web') NOT NULL,
+  `plataforma` varchar(100) NOT NULL,
+  `id_creador` int(11) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `shair` (
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL
+);
+CREATE TABLE `top` (
+    `posicion` int(2) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id_producto` int(11) NOT NULL
+);
+
+ALTER TABLE `archivo`
+  ADD FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+ALTER TABLE `producto`
+  ADD FOREIGN KEY (`id_creador`) REFERENCES `creador` (`id_creador`);
+ALTER TABLE `top` ADD FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+
+----------DISPARADORES----------
+
+DELIMITER $$
+CREATE TRIGGER ausencia_pro
+AFTER DELETE ON archivo
+FOR EACH ROW
+BEGIN
+  DELETE FROM producto WHERE id_producto = OLD.id_producto;
+END;
+$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER ausencia_cre
+AFTER DELETE ON creador
+FOR EACH ROW
+BEGIN
+  DECLARE producto_id INT;
+  
+  DECLARE productos_cursor CURSOR FOR
+    SELECT id_producto FROM producto WHERE id_creador = OLD.id_creador;
+    
+  FOR producto_id IN productos_cursor DO
+    DELETE FROM archivo WHERE id_producto = producto_id;
+  END FOR;
+  
+  DELETE FROM producto WHERE id_creador = OLD.id_creador;
+  
+  CLOSE productos_cursor;
+END;
+$$
+DELIMITER ;
+
+----------PROCEDIMIENTO----------
+
+DELIMITER $$
+
+CREATE PROCEDURE ProNoOk (
+  IN p_categoria ENUM('videojuego', 'web'),
+  IN p_fecha_modificacion TIMESTAMP,
+  IN p_id_creador VARCHAR(100),
+  IN p_id_producto INT,
+  IN p_nombre VARCHAR(100),
+  IN p_plataforma VARCHAR(100),
+  IN p_archivo LONGTEXT, -- Cambiar el tipo de datos según el tipo de archivo que estás manejando
+  OUT p_resultado VARCHAR(100) -- Mensaje de resultado
+)
+BEGIN
+  IF LENGTH(p_archivo) = 0 THEN
+    SET p_resultado = 'No se puede subir el producto sin archivo';
+  ELSE
+    INSERT INTO producto (id_producto, nombre, categoria, plataforma, id_creador, fecha_modificacion)
+    VALUES (p_id_producto, p_nombre, p_categoria, p_plataforma, p_id_creador, p_fecha_modificacion);
+
+    INSERT INTO archivo (id_producto, archivo_producto)
+    VALUES (p_id_producto, p_archivo);
+    
+    SET p_resultado = 'Producto subido exitosamente';
+  END IF;
+END;
+$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE NombreOK (
+  IN p_id_usuario INT,
+  IN p_mensaje VARCHAR(500),
+  IN p_nombre VARCHAR(50),
+  OUT p_resultado VARCHAR(50) -- Mensaje de resultado
+)
+BEGIN
+  DECLARE nombre_existente INT;
+  
+  SELECT COUNT(*) INTO nombre_existente FROM foro WHERE nombre = p_nombre;
+  
+  IF nombre_existente > 0 THEN
+    SET p_resultado = 'Este nombre está en uso';
+  ELSE
+    INSERT INTO foro (id_usuario, mensaje, nombre)
+    VALUES (p_id_usuario, p_mensaje, p_nombre);
+    
+    SET p_resultado = CONCAT('¡Hola, ', p_nombre, '!');
+  END IF;
+END;
+$$
+
+DELIMITER ;
