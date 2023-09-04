@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Test REACT</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!--Estos tres script son para usar REACT en un HTML-->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div id="anchorage"></div> <!--Este div es donde incrustaremos un componente-->
+    <div id="anchorage2"></div>
+    <div id="anchorage3"></div>
+
+</body>
+
+<script type="text/babel"> //Debe ser text/babel para la transformación
+    var content = <h1>Esto es increible</h1>; //Creamos una variable que contiene información
+    var anchorage = document.getElementById('anchorage'); //Creamos una variable que contiene a una etiqueta seleccionada del HTML
+    ReactDOM.render(content, anchorage); //Con ReactDom.render Tenemos el contenido y el destino, que son variables
+</script>
+<!--Esto son más que componentes, variables, ya que se activan de inmediato-->
+<script type="text/babel"> //Podemos hacer directamente esto sin variables
+    ReactDOM.render( //Siempre es contenido y destino
+    <h1>Metodo alternativo</h1>, //Luego del contenido en HTML se va coloca , y se selecciona la etiqueta mediante JS
+    document.getElementById('anchorage2')
+    )
+</script>
+
+<script type="text/babel">
+    var MyComponentTest = React.createClass({ //Una variable tiene el valor de ser un componente
+        render: function() { //Debido a esto debemos renderizar (Que hace el componente) una función, aunque como es función dentro de componente y no función sola en el componente, si debemos llamarla
+            return (
+                <div>
+                    <h1>Forma clásica de crear componentes</h1>
+                    <p>Es el famoso ES5</p>
+                </div>
+            )
+        }
+    })
+
+    ReactDOM.render(<MyComponentTest/>, anchorage3); //Como ya sabemos, ReactDOM.render llama contenido a destino
+</script> <!--Esto ya no se usa, y no me funcionó-->
+
+
+
+</html>
