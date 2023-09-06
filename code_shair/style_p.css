@@ -16,22 +16,28 @@ header { /*Estilo al contenedor raiz del header*/
     font-weight: 300; /*Grosor letra*/
     height: 75px;
     justify-content: flex-start; /*Alineamos los items al inicio*/
+    width: auto; /*Anchura automática*/
 }
 
-header #logo {
+header #logo #show_list { /*Estilo para el espacio del logo*/
     align-items: center; /*Alineamos verticalmente*/
     background-color: rgb(255, 255, 255); /*Color de fondo*/
     border: solid 1px rgba(40, 65, 224); /*Borde del logo(estilo, grosor y color)*/
     border-radius: 100%; /*Redondeamos el ícono*/
+    cursor: pointer; /*Cursor cambia al estar sobre*/
     display: flex; /*Damos flexibilidad a este espacio*/
     flex-grow: 0; /*Importancia para aumentar su tamaño*/
     flex-shrink: 0; /*Importancia para disminuir su tamaño*/
     justify-content: center; /*Alineamos horizontalmente*/
-    margin: 5px; /*Damos un poco de margen*/
+    margin: 5px 0px 5px 70px; /*Damos un poco de margen*/
     padding: 2px; /*Damos un poco de margen interna*/
 }
 
-header #header1 {
+header #logo #show_list:hover { /*Al posar cursor*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
+}
+
+header #header1 { /*Estilo para el texto del header*/
     color: rgb(228, 224, 20); /*Color de texto*/
     flex-grow: 1; /*Importancia para aumentar su tamaño*/
     flex-shrink: 1; /*Importancia para disminuir su tamaño*/
@@ -39,4 +45,71 @@ header #header1 {
     text-align: center;/*Alineamos el texto*/
     text-shadow: 1px 1px 2px rgb(0, 0, 0); /*Sombra de texto*/
     text-transform: uppercase; /*Convertimos en mayuscula*/
-}   
+}
+
+#lateral_menu { /*Estilo para el menú izquierdo*/
+    align-items: center; /*Alineamos horizontalmente en el centro*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*dirección vertical para acomodar los items*/
+    flex-wrap: nowrap; /*No permitimos multiples columnas*/
+    justify-content: space-between; /*Ordenamos verticalmente con espacio entre los objetos*/
+    height: 100%; /*Altura al 100%*/
+    overflow: hidden; /*Ocultamos contenido que se salga*/
+    padding: 0px; /*Borde interno*/
+    position: fixed; /*Posición fija en la página*/
+    transition: max-width 0.2s ease-in-out; /*Transición para ocultar*/
+    max-width: 10%; /*Anchura al 10%*/
+}
+
+#menu_list { /*Estilo para los botones del menu lateral*/
+    align-items: center; /*Alineamos horizontalmente en el centro*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Ordenar verticalmente*/
+    flex-wrap: nowrap; /*No permite más columnas*/
+    height: 20%; /*Altura*/
+    justify-content: center; /*Alineados verticalmente en el centro*/
+    margin-bottom: -50%;
+    width: 70%; /*Anchura*/
+}
+
+#menu_list a { /*Estilo de los botones*/
+    background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+    border: solid 2px rgb(45, 75, 224); /*Borde*/
+    border-radius: 25px; /*Radio de las esquinas*/
+    margin: 5px; /*Margen*/
+    padding: 5px; /*Margen interno*/
+    text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
+    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    width: 90%; /*Tamaño de los botones en el div*/
+}
+
+#forum { /*Estilo para los botones del menu lateral*/
+    align-items: center; /*Alineamos horizontalmente en el centro*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Ordenar verticalmente*/
+    flex-wrap: nowrap; /*No permite más columnas*/
+    height: 100%; /*Altura*/
+    justify-content: center; /*Alineados verticalmente en el centro*/
+    width: 90%; /*Anchura*/
+}
+
+#forum .forum_access { /*Estilo para la vista previa del foro*/
+    border: solid 1px rgb(45, 75, 224); /*Borde*/
+    height: 70%; /*Altura*/
+    margin: 5px; /*Margen*/
+    width: 100%; /*Anchura*/
+}
+
+#forum a { /*Estilo de los botones*/
+    background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+    border: solid 2px rgb(45, 75, 224); /*Borde*/
+    border-radius: 25px; /*Radio de las esquinas*/
+    margin: 5px; /*Margen*/
+    padding: 5px; /*Margen interno*/
+    text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
+    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    width: 90%; /*Tamaño de los botones en el div*/
+}
