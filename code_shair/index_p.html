@@ -7,12 +7,14 @@
     <meta charset="UTF-8"> <!--Codificación de caracteres-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Zoom de la página en diferentes pantallas-->
 
-    <link rel="stylesheet" href="style.css"> <!--Vinculación con archivo CSS-->
-    <link rel="shortcut icon" href="/elements/logo_v1.0.0.png" type="image/x-icon"> <!--Icono de shair-->
+    <link rel="stylesheet" href="style_p.css"> <!--Vinculación con archivo CSS-->
+    <link rel="shortcut icon" href="" type="image/x-icon"> <!--Icono de shair-->
+    
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!--Libreria react-->
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> <!--Libreria ReactDOM-->
     <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script> <!--Libreria de babel-->
+    <script src="action_menu.js" defer></script> <!--Vinculación con el JS-->
 
     <title>SHAIR</title> <!--Título de la página-->
 
@@ -23,7 +25,7 @@
     <header> <!--Cabecera-->
 
         <div id="logo"> <!--Espacio para el logo-->
-            <img src="/elements/storefront.svg" alt="Logo de SHAIR" height="50px" width="50px"> <!--Logo-->
+            <button id="show_list"><img src="/elements/storefront.svg" alt="Logo de SHAIR" height="50px" width="50px"></button> <!--Logo-->
         </div> <!--Fin de espacio para el logo-->
 
         <div id="header1"> <!--Espacio para el título-->
@@ -31,6 +33,28 @@
         </div> <!--Fin de espacio para el título-->
 
     </header> <!--Fin de la cabecera-->
+
+    <section id="lateral_menu"> <!--Menú lateral-->
+
+        <div id="menu_list"> <!--Lista de menus-->
+
+            <a href="">aplicaciones</a>
+            <a href="">juegos</a>
+            <a href="">creadores</a>
+
+        </div> <!--Fin lista de menus-->
+
+        <div id="forum"> <!--Foro-->
+
+            <iframe src="chrome://dino" class="forum_access" height=""></iframe> <!--Vista previa del foro-->
+
+            <a href="">Unirte al foro</a> <!--Botón para unirse al foro-->
+
+        </div> <!--Fin foro-->
+
+    </section> <!--Fin menú lateral-->
+
+
     
 </body> <!--Fin del cuerpo de la página-->
 
