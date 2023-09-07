@@ -9,14 +9,17 @@ header { /*Estilo al contenedor raiz del header*/
     align-items: center; /*Alineamos de manera vertical en el centro*/
     background: radial-gradient(ellipse, rgb(95, 120, 224) 0%, rgb(45, 75, 224) 100%);/*Color de fondo, con degradado radial en forma de elipse*/
     border: solid 2px rgba(40, 65, 224); /*Borde del header (estilo, grosor y color)*/
+    box-shadow: 15px 0px 25px rgb(40, 65, 224); /*Sombra del header*/
     display: flex; /*Hacemos responsive(más o menos) el header*/
     flex-direction: row; /*Hacemos que se organizen los items de forma horizontal*/
     flex-wrap: nowrap; /*Hacemos que sea solo una fila*/
     font-size: large; /*Tamaño letra*/
     font-weight: 300; /*Grosor letra*/
-    height: 75px;
+    height: 75px; /*Altura*/
     justify-content: flex-start; /*Alineamos los items al inicio*/
-    width: auto; /*Anchura automática*/
+    position: fixed; /*posición fija en el navegador*/
+    width: 100%; /*Anchura automática*/
+    z-index: 1; /*Importancia al superponer*/
 }
 
 header #logo #show_list { /*Estilo para el espacio del logo*/
@@ -31,6 +34,7 @@ header #logo #show_list { /*Estilo para el espacio del logo*/
     justify-content: center; /*Alineamos horizontalmente*/
     margin: 5px 0px 5px 70px; /*Damos un poco de margen*/
     padding: 2px; /*Damos un poco de margen interna*/
+    transition: margin-left 0.2s ease-in-out; /*Transición para ocultar*/
 }
 
 header #logo #show_list:hover { /*Al posar cursor*/
@@ -50,11 +54,13 @@ header #header1 { /*Estilo para el texto del header*/
 #lateral_menu { /*Estilo para el menú izquierdo*/
     align-items: center; /*Alineamos horizontalmente en el centro*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
+    box-shadow: 0px 15px 25px rgb(192, 192, 192); /*Sombra del menú*/
     display: flex; /*Display flexible*/
     flex-direction: column; /*dirección vertical para acomodar los items*/
     flex-wrap: nowrap; /*No permitimos multiples columnas*/
     justify-content: space-between; /*Ordenamos verticalmente con espacio entre los objetos*/
     height: 100%; /*Altura al 100%*/
+    margin-top: 80px; /*margen superior*/
     overflow: hidden; /*Ocultamos contenido que se salga*/
     padding: 0px; /*Borde interno*/
     position: fixed; /*Posición fija en la página*/
@@ -62,22 +68,14 @@ header #header1 { /*Estilo para el texto del header*/
     max-width: 10%; /*Anchura al 10%*/
 }
 
-#menu_list { /*Estilo para los botones del menu lateral*/
-    align-items: center; /*Alineamos horizontalmente en el centro*/
-    display: flex; /*Display flexible*/
-    flex-direction: column; /*Ordenar verticalmente*/
-    flex-wrap: nowrap; /*No permite más columnas*/
-    height: 20%; /*Altura*/
-    justify-content: center; /*Alineados verticalmente en el centro*/
-    margin-bottom: -50%;
-    width: 70%; /*Anchura*/
-}
-
-#menu_list a { /*Estilo de los botones*/
+#lateral_menu #menu_list button { /*Estilo de los botones*/
     background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
     border: solid 2px rgb(45, 75, 224); /*Borde*/
     border-radius: 25px; /*Radio de las esquinas*/
-    color: rgb(45, 75, 224); /*Color de texto*/
+    color: rgb(40, 65, 224); /*Color de texto*/
+    cursor: pointer; /*Estilo de cursor*/
+    font-family: 'Kalam', cursive; /*Fuente*/
+    font-weight: 900; /*Grosor de letra*/
     margin: 5px; /*Margen*/
     padding: 5px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
@@ -86,7 +84,7 @@ header #header1 { /*Estilo para el texto del header*/
     width: 90%; /*Tamaño de los botones en el div*/
 }
 
-#forum { /*Estilo para los botones del menu lateral*/
+#lateral_menu #forum { /*Estilo para los botones del menu lateral*/
     align-items: center; /*Alineamos horizontalmente en el centro*/
     display: flex; /*Display flexible*/
     flex-direction: column; /*Ordenar verticalmente*/
@@ -96,14 +94,14 @@ header #header1 { /*Estilo para el texto del header*/
     width: 90%; /*Anchura*/
 }
 
-#forum .forum_access { /*Estilo para la vista previa del foro*/
+#lateral_menu #forum .forum_access { /*Estilo para la vista previa del foro*/
     border: solid 1px rgb(45, 75, 224); /*Borde*/
     height: 70%; /*Altura*/
     margin: 5px; /*Margen*/
     width: 100%; /*Anchura*/
 }
 
-#forum a { /*Estilo de los botones*/
+#lateral_menu #forum a { /*Estilo de los botones*/
     background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
     border: solid 2px rgb(45, 75, 224); /*Borde*/
     border-radius: 25px; /*Radio de las esquinas*/
@@ -116,38 +114,39 @@ header #header1 { /*Estilo para el texto del header*/
     width: 90%; /*Tamaño de los botones en el div*/
 }
 
-#list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 5px 5px 5px 10.3%;
+#content { /*Estilo para el contenedor principal*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Dirección vertical*/
+    flex-wrap: nowrap; /*No más de una columna*/
+    transition: padding 0.2s ease-in-out; /*Transición*/
+    padding: 80px 5px 5px 10.3%; /*Margen interno*/
 }
 
-#list #tittle {
-    align-items: center;
-    color: rgb(45, 75, 224);
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
+#content #tittle { /* Estilo para el título*/
+    align-items: center; /*Alineado al centro*/
+    color: rgb(45, 75, 224); /*Color de texto*/
+    justify-content: center; /*Alineado al centro*/
+    text-align: center; /*Texto centrado*/
+    text-transform: uppercase; /*Todo en mayúscula*/
 }
 
-#list #content {
-    align-items: stretch;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#content #content { /*Estilo del contenedor de contenido*/
+    align-items: stretch; /*Estiramos horizontalmente*/
+    display: flex; /*Display flexible*/
+    flex-direction: row; /*Dirección horizontal*/
+    flex-wrap: wrap; /*No más de una fila*/
+    justify-content: space-around; /*Espacio horizontal entre los items*/
 }
 
-#list #content .article {
-    align-items: center;
+#content #content .article { /*Estilo para los productos*/
+    align-items: center; /*Alineado verrticalmente en el centro*/
     background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
     border: solid 2px rgb(45, 75, 224); /*Borde*/
     border-radius: 25px; /*Radio de las esquinas*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    display: flex; /*Display flexible*/
+    flex-direction: row; /*Dirección horizontal*/
+    flex-wrap: nowrap; /*No más de una fila*/
+    justify-content: space-around; /*Contenido centrado horizontalmente*/
     margin: 5px; /*Margen*/
     padding: 5px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
@@ -155,15 +154,15 @@ header #header1 { /*Estilo para el texto del header*/
     width: 10%; /*Tamaño de los botones en el div*/
 }
 
-#list #content .article img {
-    background-color: rgb(212, 212, 212);
+#content #content .article img { /*Estilo para la imagen del producto*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
     border-radius: 25px; /*Radio de las esquinas*/
-    height: 30px;
-    padding: 2px;
-    width: 30px;
+    height: 30px; /*Altura*/
+    padding: 2px; /*Borde interno*/
+    width: 30px; /*Anchura*/
 }
 
-#list #content .article a {
+#content #content .article a { /*Estilo nombre del producto*/
     color: rgb(45, 75, 224); /*Color de texto*/
     text-decoration: none; /*Descativamos la decoración te texto*/
 }
