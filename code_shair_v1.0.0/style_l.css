@@ -59,7 +59,7 @@ header #header1 { /*Estilo para el texto del header*/
     flex-direction: column; /*dirección vertical para acomodar los items*/
     flex-wrap: nowrap; /*No permitimos multiples columnas*/
     justify-content: space-between; /*Ordenamos verticalmente con espacio entre los objetos*/
-    height: 100%; /*Altura al 100%*/
+    height: 90%; /*Altura al 100%*/
     margin-top: 80px; /*margen superior*/
     overflow: hidden; /*Ocultamos contenido que se salga*/
     padding: 0px; /*Borde interno*/
@@ -130,7 +130,7 @@ header #header1 { /*Estilo para el texto del header*/
     text-transform: uppercase; /*Todo en mayúscula*/
 }
 
-#content #content { /*Estilo del contenedor de contenido*/
+#content #content_list { /*Estilo del contenedor de contenido*/
     align-items: stretch; /*Estiramos horizontalmente*/
     display: flex; /*Display flexible*/
     flex-direction: row; /*Dirección horizontal*/
@@ -138,31 +138,33 @@ header #header1 { /*Estilo para el texto del header*/
     justify-content: space-around; /*Espacio horizontal entre los items*/
 }
 
-#content #content .article { /*Estilo para los productos*/
-    align-items: center; /*Alineado verrticalmente en el centro*/
+#content #content_list .article { /*Estilo para los productos*/
+    align-items: center; /*Alineamos verticalmente en el centro*/
     background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
     border: solid 2px rgb(45, 75, 224); /*Borde*/
     border-radius: 25px; /*Radio de las esquinas*/
-    display: flex; /*Display flexible*/
+    color: rgb(45, 75, 224); /*Color de texto*/
+    display: flex; /*display flexible*/
     flex-direction: row; /*Dirección horizontal*/
     flex-wrap: nowrap; /*No más de una fila*/
-    justify-content: space-around; /*Contenido centrado horizontalmente*/
+    justify-content: space-around; /*Espacio alrederor de ellos*/
     margin: 5px; /*Margen*/
-    padding: 5px; /*Margen interno*/
+    padding: 0px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
-    width: 10%; /*Tamaño de los botones en el div*/
+    width: 30%; /*Tamaño de los botones en el div*/
 }
 
-#content #content .article img { /*Estilo para la imagen del producto*/
+#content #content_list .article img { /*Estilo para la imagen del producto*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
-    border-radius: 25px; /*Radio de las esquinas*/
-    height: 30px; /*Altura*/
+    border-radius: 15px; /*Radio de las esquinas*/
+    height: 50%; /*Altura*/
     padding: 2px; /*Borde interno*/
-    width: 30px; /*Anchura*/
+    width: 25%; /*Anchura*/
 }
 
-#content #content .article a { /*Estilo nombre del producto*/
+#content #content_list .article { /*Estilo nombre del producto*/
     color: rgb(45, 75, 224); /*Color de texto*/
     text-decoration: none; /*Descativamos la decoración te texto*/
 }
