@@ -95,7 +95,7 @@
 
     </style> <!--Fin de estilos-->
 
-    <title>Unirse a SHAIR</title> <!--ITítulo de la página-->
+    <title>Crear un espacio en SHAIR</title> <!--ITítulo de la página-->
 
 </head> <!--Fin de la cabeza-->
 
@@ -103,56 +103,49 @@
 
     <div id="new_creator"> <!--Contenedor de registro-->
         
-        <h1>¡Únete a SHAIR!</h1> <!--Título del contenedor-->
+        <h1>¡Crea tu espacio!</h1> <!--Título del contenedor-->
 
-        <form method="post"> <!--Inicio formulario-->
-            <label for="nombre">Nombre:</label> <!--Campo de formulario-->
-            <input type="text" name="nombre" placeholder="Ingresa tu nombre de usuario" required> <!--Espacio para ingresar datos tipo texto, tiene nombre "nombre" y texto de explicación, es obligatorio-->
+        <form method="post">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" name="nombre" placeholder="Ingresa el nombre del producto" required>
             
-            <label for="descripcion">Descripción:</label> <!--Campo de formulario-->
-            <input type="text" name="descripcion" placeholder="Ingresa una descripción" required></input> <!--Espacio para ingresar datos tipo texto, tiene nombre "descripción" y texto de explicación, es obligatorio-->
+            <label for="categoria">Categoría:</label>
+            <select name="categoria" required>
+                <option value="videojuego">Videojuego</option>
+                <option value="web">Web</option>
+            </select>
 
-            <label for="codigo">Código:</label> <!--Campo de formulario-->
-            <input type="password" name="codigo" placeholder="Ingresa tu código de seguridad" required> <!--Espacio para ingresar datos tipo password, tiene nombre "codigo" y texto de explicación, es obligatorio-->
+            <label for="plataforma">Plataforma:</label>
+            <input type="text" name="plataforma" placeholder="Ingresa la plataforma" required>
 
-            <label for="correo">Correo:</label> <!--Campo de formulario-->
-            <input type="email" id="data_creator" name="correo" placeholder="Ingresa tu correo" required> <!--Espacio para ingresar datos tipo email, tiene nombre "correo" y texto de explicación, es obligatorio-->
+            <input type="submit" name="crear_producto" value="Crear Producto">
+        </form>
 
-            <label for="apoyo">Apoyo:</label> <!--Campo de formulario-->
-            <input type="text" name="apoyo" placeholder="Ingresa tu medio de apoyo" required> <!--Espacio para ingresar datos tipo texto, tiene nombre "apoyo" y texto de explicación, es obligatorio-->
 
-            <input type="submit" name="crear" value="¡Unirte!">  <!--Botón para enviar formulario con nombre "crear" y muestra en el botón "¡Unirte!"-->
+        <?php
+        $conexion = new mysqli('localhost', 'root', '', 'shair_v1.1.2_test');
+
+        if ($conexion->connect_error) {
+            die('Error en la conexión: ' . $conexion->connect_error);
+        }
+
+        if (isset($_POST['crear_producto'])) {
+            $nombre_producto = $_POST['nombre'];
+            $categoria = $_POST['categoria'];
+            $plataforma = $_POST['plataforma'];
+
+            $sql = "INSERT INTO producto (nombre, categoria, plataforma) VALUES ('$nombre_producto', '$categoria', '$plataforma')";
             
-        </form> <!--Fin formulario-->
+            if ($conexion->query($sql) === TRUE) {
+                echo '<p>Espacio creado exitosamente</p>';
+            } else {
+                echo 'Error al crear el producto: ' . $conexion->error;
+            }
+        }
 
-        <?php //Código PHP
-        
-        $conexion = new mysqli('localhost', 'root', '', 'shair_v1.1.2_test'); // Conectar a la base de datos (ubicación, usuario, contraseña, base de datos)
+        $conexion->close();
+        ?>
 
-        if ($conexion->connect_error) { //Si condicional que verifica si existe la variable
-            die('Error en la conexión: ' . $conexion->connect_error); //Finalizar script y mostrar este mensaje
-        } //Fin si
-
-        // Si ese Sí no se cumple, se ignora
-
-        if (isset($_POST['crear'])) { //Si condicional que verifica con isset que existe la variable $_POST con el nombre crear, esto verifica si se envió un formulario o se accionó el botón con ese nombre
-            $nombre = $_POST['nombre']; //Crea una variable con el valor enviado a un input con este nombre
-            $descripcion = $_POST['descripcion']; //Crea una variable con el valor enviado a un input con este nombre
-            $codigo = $_POST['codigo']; //Crea una variable con el valor enviado a un input con este nombre
-            $correo = $_POST['correo']; //Crea una variable con el valor enviado a un input con este nombre
-            $apoyo = $_POST['apoyo']; //Crea una variable con el valor enviado a un input con este nombre
-
-            $sql = "INSERT INTO creador (nombre, descripcion, codigo, correo, apoyo) VALUES ('$nombre', '$descripcion', $codigo, '$correo', '$apoyo')"; //Crea una consulta SQL que trata de insertar los valores de las variables ya declaradas en PHP
-            if ($conexion->query($sql) === TRUE) { //Si la inyección de datos es satisfactoria
-                echo '<p>¡Bienvenido a SHAIR!</p>'; //Mostrar este mensaje
-            } else { //Si no
-                echo 'Error al registrar: ' . $conexion->error; //Mostrar este mensaje
-            } //Fin si la inyección de datos es satisfactoria
-        } //Fin si existe la variable $_POST
-
-        $conexion->close(); // Cerrar la conexión
-        ?> <!--Fin código PHP-->
-        
     </div> <!--Fin div de registro-->
 
 </body> <!--Fin cuerpo de del proyecto-->
