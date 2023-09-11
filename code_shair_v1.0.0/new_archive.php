@@ -20,14 +20,15 @@
             padding: 10px; /*Quitamos padding por defecto*/
         }
 
-        #new_creator { /*Estilo al bloque de subida*/
+        #new_archive { /*Estilo al bloque de subida*/
             align-items: center; /*Alineamos en el centro vertical*/
             background: radial-gradient(circle, rgb(190, 200, 244) 0%, rgba(40, 65, 224) 100%); /*Color de fondo*/
             border:  solid 2px rgb(135, 155, 224); /*Estilo, grosor y color de borde*/
             border-radius: 25px; /*Radio de las esquinas*/
             box-shadow: 0 0 20px rgba(30, 55, 214); /*Sombra*/
             display: flex; /*Display flexible*/
-            flex-wrap: wrap; /*Permitimos que se repitan filas*/
+            flex-direction: column; /*Dirección vertical*/
+            flex-wrap: nowrap; /*Permitimos que se repitan filas*/
             height: 400px; /*Altura*/
             justify-content: center; /*Alineamos en el centro horizontal*/
             margin: 25px; /*Margen*/
@@ -35,14 +36,14 @@
             width: 400px; /*Ancho*/
         }
 
-        #new_creator h1 { /*Estilo del título*/
+        #new_archive h1 { /*Estilo del título*/
             color: rgb(228, 224, 20); /*Color de texto*/
             margin: auto;
             text-align: center; /*Alineamo el texto al centro*/
             text-shadow: 1px 1px 2px rgb(0, 0, 0); /*Sombra de texto*/
         }
 
-        #new_creator form { /*Estilo del formulario*/
+        #new_archive form { /*Estilo del formulario*/
             align-items: center; /*Alineamos verticalmente en el centro*/
             display: flex; /*Pantalla flexible*/
             flex-direction: column; /*Ordenamos verticalmente*/
@@ -60,25 +61,21 @@
             width: 100%; /*Tamaño*/
         }
 
-        #new_creator input[type="email"] { /*Estilo para los input tipo email*/
+        #new_archive input[type="file"] { /*Estilo para los input tipo email*/
+            align-items: center;
             border: 1px groove rgb(135, 155, 224); /*Borde*/
             border-radius: 10px; /*Radio de las esquinas*/
             box-shadow: 0 0 20px rgba(30, 55, 114, 0.550); /*Sombra*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
             margin: auto; /*Margen*/
             padding: 5px; /*Borde interno*/
             width: 100%; /*Tamaño*/
         }
 
-        #new_creator input[type="password"] { /*Estilo para los input tipo email*/
-            border: 1px groove rgb(135, 155, 224); /*Borde*/
-            border-radius: 10px; /*Radio de las esquinas*/
-            box-shadow: 0 0 20px rgba(30, 55, 114, 0.550); /*Sombra*/
-            margin: auto; /*Margen*/
-            padding: 5px; /*Borde interno*/
-            width: 100%; /*Tamaño*/
-        }
-
-        #new_creator input[type="submit"] { /*Estilo para el botón confirmar*/
+        #new_archive input[type="submit"] { /*Estilo para el botón confirmar*/
             background-color: rgba(30, 55, 114, 0.550);
             box-shadow: 1 1 10px rgba(0, 0, 0); /*Sombra*/
             color: rgb(255, 255, 255); /*Colorde texto*/
@@ -89,7 +86,7 @@
             margin: 15px 0px 0px 0px; /*margen superior, derecho, inferior, izquierdo*/
         }
 
-        #new_creator input[type="submit"]:hover { /*Estilo para el botón al posar el mouse encima*/
+        #new_archive input[type="submit"]:hover { /*Estilo para el botón al posar el mouse encima*/
             background-color: rgb(20, 50, 134); /*Color de fonrdo*/
         }
 
@@ -101,16 +98,17 @@
 
 <body> <!--Inicio del cuerpo del proyecto-->
 
-    <div id="new_creator"> <!--Contenedor de registro-->
+    <div id="new_archive"> <!--Contenedor de registro-->
         
         <h1>Subir Archivo</h1>
 
         <form method="post" enctype="multipart/form-data">
-            <label for="id_producto">ID del Producto:</label>
-            <input type="text" name="id_producto" placeholder="Ingresa el ID del producto" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre_archivo" required>
             
             <label for="archivo_producto">Selecciona un Archivo:</label>
-            <input type="file" name="archivo_producto" required>
+            <input type="file" name="archivo_producto" id="archivo_producto"  required>
 
             <input type="submit" name="subir_archivo" value="Subir Archivo">
         </form>
@@ -123,11 +121,12 @@
         }
 
         if (isset($_POST['subir_archivo'])) {
-            $id_producto = $_POST['id_producto'];
-
             // Obtener el archivo subido
             $archivo_nombre = $_FILES['archivo_producto']['name'];
             $archivo_tmp = $_FILES['archivo_producto']['tmp_name'];
+
+            // Obtener el nombre del archivo ingresado por el usuario
+            $nombre = $_POST['nombre'];
 
             // Leer el archivo
             $archivo_contenido = file_get_contents($archivo_tmp);
@@ -135,7 +134,7 @@
             // Escapar el contenido del archivo para evitar problemas de SQL Injection
             $archivo_contenido = $conexion->real_escape_string($archivo_contenido);
 
-            $sql = "INSERT INTO archivo (id_producto, archivo_producto) VALUES ('$id_producto', '$archivo_contenido')";
+            $sql = "INSERT INTO archivo (nombre, archivo_producto) VALUES ('$nombre', '$archivo_contenido')";
 
             if ($conexion->query($sql) === TRUE) {
                 echo '<p>Archivo subido exitosamente</p>';
@@ -145,7 +144,7 @@
         }
 
         $conexion->close();
-        ?> <!--Fin código PHP-->
+        ?>
         
     </div> <!--Fin div de registro-->
 
