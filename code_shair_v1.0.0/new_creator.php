@@ -27,7 +27,8 @@
             border-radius: 25px; /*Radio de las esquinas*/
             box-shadow: 0 0 20px rgba(30, 55, 214); /*Sombra*/
             display: flex; /*Display flexible*/
-            flex-wrap: wrap; /*Permitimos que se repitan filas*/
+            flex-direction: column; /*Dirección vertical*/
+            flex-wrap: nowrap; /*Permitimos que se repitan filas*/
             height: 400px; /*Altura*/
             justify-content: center; /*Alineamos en el centro horizontal*/
             margin: 25px; /*Margen*/
@@ -61,15 +62,6 @@
         }
 
         #new_creator input[type="email"] { /*Estilo para los input tipo email*/
-            border: 1px groove rgb(135, 155, 224); /*Borde*/
-            border-radius: 10px; /*Radio de las esquinas*/
-            box-shadow: 0 0 20px rgba(30, 55, 114, 0.550); /*Sombra*/
-            margin: auto; /*Margen*/
-            padding: 5px; /*Borde interno*/
-            width: 100%; /*Tamaño*/
-        }
-
-        #new_creator input[type="password"] { /*Estilo para los input tipo email*/
             border: 1px groove rgb(135, 155, 224); /*Borde*/
             border-radius: 10px; /*Radio de las esquinas*/
             box-shadow: 0 0 20px rgba(30, 55, 114, 0.550); /*Sombra*/
@@ -112,14 +104,8 @@
             <label for="descripcion">Descripción:</label> <!--Campo de formulario-->
             <input type="text" name="descripcion" placeholder="Ingresa una descripción" required></input> <!--Espacio para ingresar datos tipo texto, tiene nombre "descripción" y texto de explicación, es obligatorio-->
 
-            <label for="codigo">Código:</label> <!--Campo de formulario-->
-            <input type="password" name="codigo" placeholder="Ingresa tu código de seguridad" required> <!--Espacio para ingresar datos tipo password, tiene nombre "codigo" y texto de explicación, es obligatorio-->
-
             <label for="correo">Correo:</label> <!--Campo de formulario-->
             <input type="email" id="data_creator" name="correo" placeholder="Ingresa tu correo" required> <!--Espacio para ingresar datos tipo email, tiene nombre "correo" y texto de explicación, es obligatorio-->
-
-            <label for="apoyo">Apoyo:</label> <!--Campo de formulario-->
-            <input type="text" name="apoyo" placeholder="Ingresa tu medio de apoyo" required> <!--Espacio para ingresar datos tipo texto, tiene nombre "apoyo" y texto de explicación, es obligatorio-->
 
             <input type="submit" name="crear" value="¡Unirte!">  <!--Botón para enviar formulario con nombre "crear" y muestra en el botón "¡Unirte!"-->
             
@@ -138,11 +124,10 @@
         if (isset($_POST['crear'])) { //Si condicional que verifica con isset que existe la variable $_POST con el nombre crear, esto verifica si se envió un formulario o se accionó el botón con ese nombre
             $nombre = $_POST['nombre']; //Crea una variable con el valor enviado a un input con este nombre
             $descripcion = $_POST['descripcion']; //Crea una variable con el valor enviado a un input con este nombre
-            $codigo = $_POST['codigo']; //Crea una variable con el valor enviado a un input con este nombre
             $correo = $_POST['correo']; //Crea una variable con el valor enviado a un input con este nombre
-            $apoyo = $_POST['apoyo']; //Crea una variable con el valor enviado a un input con este nombre
 
-            $sql = "INSERT INTO creador (nombre, descripcion, codigo, correo, apoyo) VALUES ('$nombre', '$descripcion', $codigo, '$correo', '$apoyo')"; //Crea una consulta SQL que trata de insertar los valores de las variables ya declaradas en PHP
+            $sql = "INSERT INTO creador (nombre, descripcion, correo) VALUES ('$nombre', '$descripcion', '$correo')"; //Crea una consulta SQL que trata de insertar los valores de las variables ya declaradas en PHP
+
             if ($conexion->query($sql) === TRUE) { //Si la inyección de datos es satisfactoria
                 echo '<p>¡Bienvenido a SHAIR!</p>'; //Mostrar este mensaje
             } else { //Si no
