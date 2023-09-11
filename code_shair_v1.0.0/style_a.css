@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/
+
+body { /*Estilo general en el body*/
+    font-family: 'Carter One', cursive;/*Tipo de letra para toda la página*/
+    margin: 0px; /*Eliminamos el margen predeterminado del navegador*/
+}
+
+header { /*Estilo al contenedor raiz del header*/
+    align-items: center; /*Alineamos de manera vertical en el centro*/
+    background: radial-gradient(ellipse, rgb(95, 120, 224) 0%, rgb(45, 75, 224) 100%);/*Color de fondo, con degradado radial en forma de elipse*/
+    border: solid 2px rgba(40, 65, 224); /*Borde del header (estilo, grosor y color)*/
+    box-shadow: 15px 0px 25px rgb(40, 65, 224); /*Sombra del header*/
+    display: flex; /*Hacemos responsive(más o menos) el header*/
+    flex-direction: row; /*Hacemos que se organizen los items de forma horizontal*/
+    flex-wrap: nowrap; /*Hacemos que sea solo una fila*/
+    font-size: large; /*Tamaño letra*/
+    font-weight: 300; /*Grosor letra*/
+    height: 75px; /*Altura*/
+    justify-content: flex-start; /*Alineamos los items al inicio*/
+    position: fixed;/*Posición fija*/
+    width: 100%; /*Anchura automática*/
+    z-index: 1;/*Nivel para superponer*/
+}
+
+header #logo #show_list { /*Estilo para el espacio del logo*/
+    align-items: center; /*Alineamos verticalmente*/
+    background-color: rgb(255, 255, 255); /*Color de fondo*/
+    border: solid 1px rgba(40, 65, 224); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 100%; /*Redondeamos el ícono*/
+    cursor: pointer; /*Cursor cambia al estar sobre*/
+    display: flex; /*Damos flexibilidad a este espacio*/
+    flex-grow: 0; /*Importancia para aumentar su tamaño*/
+    flex-shrink: 0; /*Importancia para disminuir su tamaño*/
+    justify-content: center; /*Alineamos horizontalmente*/
+    margin-left: 70px; /*Damos un poco de margen*/
+    padding: 2px; /*Damos un poco de margen interna*/
+    transition: margin-left 0.2s ease-in-out; /*Transición para ocultar*/
+}
+
+header #logo #show_list:hover { /*Al posar cursor*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
+}
+
+header #header1 { /*Estilo para el texto del header*/
+    color: rgb(228, 224, 20); /*Color de texto*/
+    flex-grow: 1; /*Importancia para aumentar su tamaño*/
+    flex-shrink: 1; /*Importancia para disminuir su tamaño*/
+    font-family: 'Kalam', cursive; /*Fuente para el header*/
+    text-align: center; /*Alineamos el texto*/
+    text-shadow: 1px 1px 2px rgb(0, 0, 0); /*Sombra de texto*/
+    text-transform: uppercase; /*Convertimos en mayuscula*/
+}
+
+#lateral_menu { /*Estilo para el menú izquierdo*/
+    align-items: center; /*Alineamos horizontalmente en el centro*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
+    box-shadow: 0px 15px 25px rgb(192, 192, 192); /*Sombra del menú*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*dirección vertical para acomodar los items*/
+    flex-wrap: nowrap; /*No permitimos multiples columnas*/
+    justify-content: space-between; /*Ordenamos verticalmente con espacio entre los objetos*/
+    height: 100%; /*Altura al 100%*/
+    padding-top: 5%;/*Margen superior*/
+    overflow: hidden; /*Ocultamos contenido que se salga*/
+    position: fixed; /*Posición fija en la página*/
+    transition: max-width 0.2s ease-in-out; /*Transición para ocultar*/
+    max-width: 10%; /*Anchura al 10%*/
+}
+
+#lateral_menu #menu_list button { /*Estilo de los botones*/
+    background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+    border: solid 2px rgb(45, 75, 224); /*Borde*/
+    border-radius: 25px; /*Radio de las esquinas*/
+    color: rgb(40, 65, 224); /*Color de texto*/
+    cursor: pointer; /*Tipo de cursor*/
+    font-family: 'Kalam', cursive; /*Fuente*/
+    font-weight: 900; /*Grosor de letra*/
+    margin: 5px; /*Margen*/
+    padding: 5px; /*Margen interno*/
+    text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
+    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    width: 90%; /*Tamaño de los botones en el div*/
+}
+
+#lateral_menu #forum { /*Estilo para los botones del menu lateral*/
+    align-items: center; /*Alineamos horizontalmente en el centro*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Ordenar verticalmente*/
+    flex-wrap: nowrap; /*No permite más columnas*/
+    height: 100%; /*Altura*/
+    justify-content: center; /*Alineados verticalmente en el centro*/
+    width: 90%; /*Anchura*/
+}
+
+#lateral_menu #forum .forum_access { /*Estilo para la vista previa del foro*/
+    border: solid 1px rgb(45, 75, 224); /*Borde*/
+    height: 70%; /*Altura*/
+    margin: 5px; /*Margen*/
+    width: 100%; /*Anchura*/
+}
+
+#lateral_menu #forum a { /*Estilo de los botones*/
+    background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+    border: solid 2px rgb(45, 75, 224); /*Borde*/
+    border-radius: 25px; /*Radio de las esquinas*/
+    margin: 5px; /*Margen*/
+    padding: 5px; /*Margen interno*/
+    text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
+    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    width: 90%; /*Tamaño de los botones en el div*/
+}
+
+#content { /*Estilo para el contenedor principal*/
+    align-items: stretch; /*Alineamos horizontalmente que cubra toda la pantalla*/
+    display: flex; /*Caja felxible*/
+    flex-direction: column; /*Dirección vertical*/
+    flex-wrap: nowrap; /*No más de una columna*/
+    justify-content: space-between; /*Espacio vertical entre ellos*/
+    transition: padding 0.2s ease-in-out; /*transición del padding al cambiar*/
+    padding: 80px 5px 5px 10.3%; /*Padding*/
+}
+
+#content #principal_article { /*Estilo para contenedor de aplicaciones destacadas*/
+    align-items: stretch; /*Estiramos horizontalmente*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Dirección de columna*/
+    justify-content: space-between; /*Espacio vertical igualado entre los items*/
+}
+
+#content #principal_article #tittle { /*Estilo para el contenedor del título*/
+    align-items: center; /*Alineamos verticalmente al centro*/
+    display: flex; /*Display flexible*/
+    justify-content: center; /*Alineamos horizontalmente en el centro*/
+}
+
+#content #principal_article #tittle h1 { /*Estilo para el título*/
+    color: rgb(40, 65, 224); /*Color de fuente*/
+    text-transform: uppercase; /*Todo en mayúsculas*/
+}
+
+#content #principal_article #featured { /*Estilo para el contenedor de aplicaciones destacadas*/
+    align-items: center; /*Alineamos verticalmente al centro*/
+    display: flex; /*Display flexible*/
+    flex-direction: row; /*Dirección horizontal*/
+    flex-wrap: nowrap; /*Solo una fila*/
+    justify-content: space-between; /*Alineados horizontalmente con espacio entre ellos*/
+}
+
+#content #principal_article #featured a { /*Estilo para los productos destacados*/
+    margin: 0px; /*Margen*/
+    width: 15%; /*Anchura*/
+}
+
+#content #principal_article #featured a img { /*Estilo para la imagen del producto destacado*/
+    width: 100%; /*Anchura*/
+}
+
+#content #content_list { /*Estilo para el contenido general*/
+    align-items: stretch; /*Alineamos items pra que cubran todo verticalmente*/
+    display: flex; /*Display flexible*/
+    flex-direction: row; /*Dirección horizontal*/
+    justify-content: space-between; /*Espacio horizontal entre ellos*/
+}
+
+#content #content_list .list_principal { /* Estilo para la sección de cada tipo de producto*/
+    align-items: center; /*Horizontalmente centrados*/
+    display: flex; /*Display flexible*/
+    flex-direction: column; /*Dirección vertical*/
+    flex-wrap: nowrap; /*No más de una columna*/
+    justify-content: center; /*Centrado verticalmente*/
+    margin: 25px; /*Margen*/
+    padding: 10px; /*Padding*/
+    width: 20%; /*Anchura*/
+}
+
+#content #content_list .list_principal .name h1 { /*Estilo para el título de la sección*/
+    color: rgb(40, 65, 224); /*Color de texto*/
+    text-transform: uppercase; /*Todo en mayúscula*/
+}
+
+#content #content_list .list_principal .article { /*Estilo para los productos*/
+    align-items: center; /*Alineamos verticalmente en el centro*/
+    background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+    border: solid 2px rgb(45, 75, 224); /*Borde*/
+    border-radius: 25px; /*Radio de las esquinas*/
+    color: rgb(45, 75, 224); /*Color de texto*/
+    display: flex; /*display flexible*/
+    flex-direction: row; /*Dirección horizontal*/
+    flex-wrap: nowrap; /*No más de una fila*/
+    justify-content: space-around; /*Espacio alrederor de ellos*/
+    margin: 5px; /*Margen*/
+    padding: 0px; /*Margen interno*/
+    text-align: center; /*Alineamos texto en el centro*/
+    text-decoration: none; /*Descativamos la decoración te texto*/
+    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    width: 100%; /*Tamaño de los botones en el div*/
+}
+
+#content #content_list .list_principal .article img { /*Estilo para la imagen de los productos*/
+    background-color: rgb(212, 212, 212); /*Color de fondo*/
+    border-radius: 15px; /*Radio de las esquinas*/
+    height: 50%; /*Altura*/
+    padding: 2px; /*Borde interno*/
+    width: 25%; /*Anchura*/
+}
