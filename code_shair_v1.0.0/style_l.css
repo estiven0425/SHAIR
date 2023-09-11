@@ -59,10 +59,9 @@ header #header1 { /*Estilo para el texto del header*/
     flex-direction: column; /*dirección vertical para acomodar los items*/
     flex-wrap: nowrap; /*No permitimos multiples columnas*/
     justify-content: space-between; /*Ordenamos verticalmente con espacio entre los objetos*/
-    height: 90%; /*Altura al 100%*/
-    margin-top: 80px; /*margen superior*/
+    height: 100%; /*Altura al 100%*/
+    padding-top: 5%;/*Margen superior*/
     overflow: hidden; /*Ocultamos contenido que se salga*/
-    padding: 0px; /*Borde interno*/
     position: fixed; /*Posición fija en la página*/
     transition: max-width 0.2s ease-in-out; /*Transición para ocultar*/
     max-width: 10%; /*Anchura al 10%*/
