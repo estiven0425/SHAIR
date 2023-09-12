@@ -41,6 +41,11 @@ header #logo #show_list:hover { /*Al posar cursor*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
 }
 
+header #logo #show_list img {
+    border-radius: 100%;
+}
+
+
 header #header1 { /*Estilo para el texto del header*/
     color: rgb(228, 224, 20); /*Color de texto*/
     flex-grow: 1; /*Importancia para aumentar su tamaño*/
@@ -156,14 +161,8 @@ header #header1 { /*Estilo para el texto del header*/
 }
 
 #content #content_list .article img { /*Estilo para la imagen del producto*/
-    background-color: rgb(212, 212, 212); /*Color de fondo*/
     border-radius: 15px; /*Radio de las esquinas*/
-    height: 50%; /*Altura*/
+    height: 90px; /*Altura*/
     padding: 2px; /*Borde interno*/
-    width: 25%; /*Anchura*/
-}
-
-#content #content_list .article { /*Estilo nombre del producto*/
-    color: rgb(45, 75, 224); /*Color de texto*/
-    text-decoration: none; /*Descativamos la decoración te texto*/
+    width: 90px; /*Anchura*/
 }
