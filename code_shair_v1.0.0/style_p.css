@@ -41,6 +41,10 @@ header #logo #show_list:hover { /*Al posar cursor*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
 }
 
+header #logo #show_list img {
+    border-radius: 100%;
+}
+
 header #header1 { /*Estilo para el texto del header*/
     color: rgb(228, 224, 20); /*Color de texto*/
     flex-grow: 1; /*Importancia para aumentar su tamaño*/
@@ -119,7 +123,7 @@ header #header1 { /*Estilo para el texto del header*/
     flex-wrap: nowrap; /*No más de una columna*/
     justify-content: space-between; /*Espacio vertical entre ellos*/
     transition: padding 0.2s ease-in-out; /*transición del padding al cambiar*/
-    padding: 80px 5px 5px 10.3%; /*Padding*/
+    padding: 90px 5px 5px 10.3%; /*Padding*/
 }
 
 #content #featured_applications { /*Estilo para contenedor de aplicaciones destacadas*/
@@ -154,7 +158,9 @@ header #header1 { /*Estilo para el texto del header*/
 }
 
 #content #featured_applications #featured a img { /*Estilo para la imagen del producto destacado*/
-    width: 100%; /*Anchura*/
+    height: 250px;
+    border-radius: 25px;
+    width: 250px; /*Anchura*/
 }
 
 #content #content_list { /*Estilo para el contenido general*/
@@ -191,7 +197,7 @@ header #header1 { /*Estilo para el texto del header*/
     flex-wrap: nowrap; /*No más de una fila*/
     justify-content: space-around; /*Espacio alrederor de ellos*/
     margin: 5px; /*Margen*/
-    padding: 0px; /*Margen interno*/
+    padding: 5px 5px 5px 0px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
     text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
@@ -199,9 +205,8 @@ header #header1 { /*Estilo para el texto del header*/
 }
 
 #content #content_list .list_principal .article img { /*Estilo para la imagen de los productos*/
-    background-color: rgb(212, 212, 212); /*Color de fondo*/
     border-radius: 15px; /*Radio de las esquinas*/
-    height: 50%; /*Altura*/
+    height: 90px; /*Altura*/
     padding: 2px; /*Borde interno*/
-    width: 25%; /*Anchura*/
+    width: 90px; /*Anchura*/
 }
