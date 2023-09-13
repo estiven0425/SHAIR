@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/
 
+* {
+    text-transform: uppercase; /*Convertimos en mayuscula*/
+}
+
 body { /*Estilo general en el body*/
     font-family: 'Carter One', cursive;/*Tipo de letra para toda la página*/
     margin: 0px; /*Eliminamos el margen predeterminado del navegador*/
@@ -19,7 +23,7 @@ header { /*Estilo al contenedor raiz del header*/
     justify-content: flex-start; /*Alineamos los items al inicio*/
     position: fixed;/*Posición fija*/
     width: 100%; /*Anchura automática*/
-    z-index: 1;/*Nivel para superponer*/
+    z-index: 2;/*Nivel para superponer*/
 }
 
 header #logo #show_list { /*Estilo para el espacio del logo*/
@@ -41,6 +45,10 @@ header #logo #show_list:hover { /*Al posar cursor*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
 }
 
+header #logo #show_list img {
+    border-radius: 100%;
+}
+
 header #header1 { /*Estilo para el texto del header*/
     color: rgb(228, 224, 20); /*Color de texto*/
     flex-grow: 1; /*Importancia para aumentar su tamaño*/
@@ -48,7 +56,28 @@ header #header1 { /*Estilo para el texto del header*/
     font-family: 'Kalam', cursive; /*Fuente para el header*/
     text-align: center; /*Alineamos el texto*/
     text-shadow: 1px 1px 2px rgb(0, 0, 0); /*Sombra de texto*/
-    text-transform: uppercase; /*Convertimos en mayuscula*/
+}
+
+header #login {
+    align-items: center; /*Alineamos verticalmente*/
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 25px; /*Redondeamos el ícono*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    cursor: pointer; /*Cursor cambia al estar sobre*/
+    font-family: 'Carter One', cursive;
+    font-size: 12px;
+    height: 52px;
+    margin: 0px 20px 0px 0px;
+    padding: 2px; /*Damos un poco de margen interna*/
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    width: 52px;
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+header #login:hover {
+    transform: scale(1.3);
 }
 
 #lateral_menu { /*Estilo para el menú izquierdo*/
@@ -65,6 +94,7 @@ header #header1 { /*Estilo para el texto del header*/
     position: fixed; /*Posición fija en la página*/
     transition: max-width 0.2s ease-in-out; /*Transición para ocultar*/
     max-width: 10%; /*Anchura al 10%*/
+    z-index: 1;
 }
 
 #lateral_menu #menu_list button { /*Estilo de los botones*/
@@ -79,8 +109,17 @@ header #header1 { /*Estilo para el texto del header*/
     padding: 5px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
     text-decoration: none; /*Descativamos la decoración te texto*/
-    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
     width: 90%; /*Tamaño de los botones en el div*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+#lateral_menu #menu_list button:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
 }
 
 #lateral_menu #forum { /*Estilo para los botones del menu lateral*/
@@ -110,51 +149,114 @@ header #header1 { /*Estilo para el texto del header*/
     text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
     width: 90%; /*Tamaño de los botones en el div*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+#lateral_menu #forum a:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
 }
 
 #content { /*Estilo para el contenedor principal*/
-    align-items: stretch; /*Alineamos horizontalmente que cubra toda la pantalla*/
+    align-items: center; /*Alineamos horizontalmente que cubra toda la pantalla*/
     display: flex; /*Caja felxible*/
     flex-direction: column; /*Dirección vertical*/
     flex-wrap: nowrap; /*No más de una columna*/
     justify-content: space-between; /*Espacio vertical entre ellos*/
     transition: padding 0.2s ease-in-out; /*transición del padding al cambiar*/
-    padding: 80px 5px 5px 10.3%; /*Padding*/
+    padding: 90px 5px 5px 10.3%; /*Padding*/
 }
 
-#content #principal_article { /*Estilo para contenedor de aplicaciones destacadas*/
-    align-items: stretch; /*Estiramos horizontalmente*/
-    display: flex; /*Display flexible*/
-    flex-direction: column; /*Dirección de columna*/
-    justify-content: space-between; /*Espacio vertical igualado entre los items*/
+#content #name {
+    color: rgb(25, 55, 220);
+    margin: 0px;
 }
 
-#content #principal_article #tittle { /*Estilo para el contenedor del título*/
-    align-items: center; /*Alineamos verticalmente al centro*/
-    display: flex; /*Display flexible*/
-    justify-content: center; /*Alineamos horizontalmente en el centro*/
+#content #info {
+    align-items: stretch;
+    background-color: rgb(212, 212, 212);
+    border: solid 2px rgb(40, 65, 224);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-#content #principal_article #tittle h1 { /*Estilo para el título*/
-    color: rgb(40, 65, 224); /*Color de fuente*/
-    text-transform: uppercase; /*Todo en mayúsculas*/
+#content #info #desc #photo img {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10%;
+    float: left;
+    height: 10%;
+    width: 10%;
 }
 
-#content #principal_article #featured { /*Estilo para el contenedor de aplicaciones destacadas*/
-    align-items: center; /*Alineamos verticalmente al centro*/
-    display: flex; /*Display flexible*/
-    flex-direction: row; /*Dirección horizontal*/
-    flex-wrap: nowrap; /*Solo una fila*/
-    justify-content: space-between; /*Alineados horizontalmente con espacio entre ellos*/
+#content #info #desc_info {
+    margin: 10px;
+    padding: 10px 10px 10px 150px;
 }
 
-#content #principal_article #featured a { /*Estilo para los productos destacados*/
-    margin: 0px; /*Margen*/
-    width: 15%; /*Anchura*/
+#content #info #download {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 0px 25px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: -12px;
+    width: 50%;
 }
 
-#content #principal_article #featured a img { /*Estilo para la imagen del producto destacado*/
-    width: 100%; /*Anchura*/
+#content #info #download #creator {
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: center;
+    padding: 2px;
+    width: 25%;
+}
+
+#content #info #download #creator:hover {
+    border: solid 2px rgb(25, 55, 220); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(25, 55, 220);
+    color: rgb(228, 224, 20);
+    margin: -2px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+#content #info #download #access {
+    align-self: center;
+    background: rgb(192, 192, 102); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: center;
+    padding: 2px;
+    width: 50%;
+}
+
+#content #info #download #access:hover {
+    background: radial-gradient(circle, rgb(192, 192, 102) 0%, rgb(228, 224, 20) 100%);
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+#content #info #download #access img {
+    height: 100%;
+    width: 100%;
 }
 
 #content #content_list { /*Estilo para el contenido general*/
@@ -162,6 +264,7 @@ header #header1 { /*Estilo para el texto del header*/
     display: flex; /*Display flexible*/
     flex-direction: row; /*Dirección horizontal*/
     justify-content: space-between; /*Espacio horizontal entre ellos*/
+    width: 100%;
 }
 
 #content #content_list .list_principal { /* Estilo para la sección de cada tipo de producto*/
@@ -172,7 +275,7 @@ header #header1 { /*Estilo para el texto del header*/
     justify-content: center; /*Centrado verticalmente*/
     margin: 25px; /*Margen*/
     padding: 10px; /*Padding*/
-    width: 20%; /*Anchura*/
+    width: 100%; /*Anchura*/
 }
 
 #content #content_list .list_principal .name h1 { /*Estilo para el título de la sección*/
@@ -191,17 +294,26 @@ header #header1 { /*Estilo para el texto del header*/
     flex-wrap: nowrap; /*No más de una fila*/
     justify-content: space-around; /*Espacio alrederor de ellos*/
     margin: 5px; /*Margen*/
-    padding: 0px; /*Margen interno*/
+    padding: 5px 5px 5px 0px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
     text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
     width: 100%; /*Tamaño de los botones en el div*/
 }
 
+#content #content_list .list_principal .article:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
 #content #content_list .list_principal .article img { /*Estilo para la imagen de los productos*/
-    background-color: rgb(212, 212, 212); /*Color de fondo*/
     border-radius: 15px; /*Radio de las esquinas*/
-    height: 50%; /*Altura*/
+    height: 90px; /*Altura*/
     padding: 2px; /*Borde interno*/
-    width: 25%; /*Anchura*/
+    width: 90px; /*Anchura*/
 }
