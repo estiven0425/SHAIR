@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/
 
+* {
+    text-transform: uppercase; /*Convertimos en mayuscula*/
+}
+
 body { /*Estilo general en el body*/
     font-family: 'Carter One', cursive;/*Tipo de letra para toda la página*/
     margin: 0px; /*Eliminamos el margen predeterminado del navegador*/
@@ -19,7 +23,7 @@ header { /*Estilo al contenedor raiz del header*/
     justify-content: flex-start; /*Alineamos los items al inicio*/
     position: fixed;/*Posición fija*/
     width: 100%; /*Anchura automática*/
-    z-index: 1;/*Nivel para superponer*/
+    z-index: 2;/*Nivel para superponer*/
 }
 
 header #logo #show_list { /*Estilo para el espacio del logo*/
@@ -52,7 +56,28 @@ header #header1 { /*Estilo para el texto del header*/
     font-family: 'Kalam', cursive; /*Fuente para el header*/
     text-align: center; /*Alineamos el texto*/
     text-shadow: 1px 1px 2px rgb(0, 0, 0); /*Sombra de texto*/
-    text-transform: uppercase; /*Convertimos en mayuscula*/
+}
+
+header #login {
+    align-items: center; /*Alineamos verticalmente*/
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 25px; /*Redondeamos el ícono*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    cursor: pointer; /*Cursor cambia al estar sobre*/
+    font-family: 'Carter One', cursive;
+    font-size: 12px;
+    height: 52px;
+    margin: 0px 20px 0px 0px;
+    padding: 2px; /*Damos un poco de margen interna*/
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    width: 52px;
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+header #login:hover {
+    transform: scale(1.3);
 }
 
 #lateral_menu { /*Estilo para el menú izquierdo*/
@@ -69,6 +94,7 @@ header #header1 { /*Estilo para el texto del header*/
     position: fixed; /*Posición fija en la página*/
     transition: max-width 0.2s ease-in-out; /*Transición para ocultar*/
     max-width: 10%; /*Anchura al 10%*/
+    z-index: 1;
 }
 
 #lateral_menu #menu_list button { /*Estilo de los botones*/
@@ -83,8 +109,17 @@ header #header1 { /*Estilo para el texto del header*/
     padding: 5px; /*Margen interno*/
     text-align: center; /*Alineamos texto en el centro*/
     text-decoration: none; /*Descativamos la decoración te texto*/
-    text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
     width: 90%; /*Tamaño de los botones en el div*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+#lateral_menu #menu_list button:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
 }
 
 #lateral_menu #forum { /*Estilo para los botones del menu lateral*/
@@ -114,6 +149,16 @@ header #header1 { /*Estilo para el texto del header*/
     text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
     width: 90%; /*Tamaño de los botones en el div*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+#lateral_menu #forum a:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
 }
 
 #content { /*Estilo para el contenedor principal*/
@@ -161,6 +206,12 @@ header #header1 { /*Estilo para el texto del header*/
     height: 250px;
     border-radius: 25px;
     width: 250px; /*Anchura*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+#content #featured_applications #featured a img:hover {
+    transform: scale(1.1); /* Escala al 110% en hover */
+    z-index: 0;
 }
 
 #content #content_list { /*Estilo para el contenido general*/
@@ -168,6 +219,7 @@ header #header1 { /*Estilo para el texto del header*/
     display: flex; /*Display flexible*/
     flex-direction: row; /*Dirección horizontal*/
     justify-content: space-between; /*Espacio horizontal entre ellos*/
+    width: 100%;
 }
 
 #content #content_list .list_principal { /* Estilo para la sección de cada tipo de producto*/
@@ -178,7 +230,7 @@ header #header1 { /*Estilo para el texto del header*/
     justify-content: center; /*Centrado verticalmente*/
     margin: 25px; /*Margen*/
     padding: 10px; /*Padding*/
-    width: 20%; /*Anchura*/
+    width: 100%; /*Anchura*/
 }
 
 #content #content_list .list_principal .name h1 { /*Estilo para el título de la sección*/
@@ -201,7 +253,17 @@ header #header1 { /*Estilo para el texto del header*/
     text-align: center; /*Alineamos texto en el centro*/
     text-decoration: none; /*Descativamos la decoración te texto*/
     text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
     width: 100%; /*Tamaño de los botones en el div*/
+}
+
+#content #content_list .list_principal .article:hover {
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    transform: scale(1.05);
 }
 
 #content #content_list .list_principal .article img { /*Estilo para la imagen de los productos*/
