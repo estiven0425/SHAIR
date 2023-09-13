@@ -10,6 +10,10 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/
 
+        * {  
+            font-family: 'Carter One', cursive;/*Tipo de letra para toda la página*/
+        }
+
         body { /*Estilo para el body e hijos*/
             align-items: center; /*Alineamos de manera vertical en el centro*/
             background-color: rgba(40, 65, 224, 0.100); /*Color de fondo*/
@@ -70,19 +74,23 @@
             width: 108%; /*Tamaño*/
         }
 
-        #new_product input[type="submit"] { /*Estilo para el botón confirmar*/
+        #new_creator input[type="submit"] { /*Estilo para el botón confirmar*/
+            align-items: center; /*Alineamos verticalmente*/
             background-color: rgba(30, 55, 114, 0.550);
-            box-shadow: 1 1 10px rgba(0, 0, 0); /*Sombra*/
-            color: rgb(255, 255, 255); /*Colorde texto*/
-            padding: 10px 20px; /*margen interno vertical y horizontal*/
-            border: 2px groove rgb(115, 135, 214); /*Borde*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
             border-radius: 8px; /*Radio de las esquinas*/
-            cursor: pointer; /*Estilo de puntero*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            cursor: pointer; /*Cursor cambia al estar sobre*/
             margin: 15px 0px 0px 0px; /*margen superior, derecho, inferior, izquierdo*/
+            padding: 10px 20px; /*margen interno vertical y horizontal*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            text-transform: uppercase;
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
         }
 
-        #new_product input[type="submit"]:hover { /*Estilo para el botón al posar el mouse encima*/
-            background-color: rgb(20, 50, 134); /*Color de fonrdo*/
+        #new_creator input[type="submit"]:hover { /*Estilo para el botón al posar el mouse encima*/
+            transform: scale(1.1);
         }
 
     </style> <!--Fin de estilos-->
