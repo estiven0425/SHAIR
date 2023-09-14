@@ -80,6 +80,49 @@ header #login:hover {
     transform: scale(1.3);
 }
 
+header #login_alt {
+    align-items: center; /*Alineamos verticalmente*/
+    background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 25px; /*Redondeamos el ícono*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    color: rgb(228, 224, 20);
+    cursor: pointer; /*Cursor cambia al estar sobre*/
+    font-family: 'Carter One', cursive;
+    font-size: 10px;
+    height: 52px;
+    margin: 0px 20px 0px 0px;
+    padding: 2px; /*Damos un poco de margen interna*/
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    width: 52px;
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+header #login_alt:hover {
+    transform: scale(1.3);
+}
+
+header #theme {
+    align-items: center; /*Alineamos verticalmente*/
+    background: radial-gradient(circle, rgb(238, 240, 154) 0%, rgb(228, 224, 20) 10%, rgb(255, 255, 220) 100%); /*Color de fondo*/
+    border: solid 2px rgb(255, 255, 220); /*Borde del logo(estilo, grosor y color)*/
+    border-radius: 25px; /*Redondeamos el ícono*/
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+    cursor: pointer; /*Cursor cambia al estar sobre*/
+    font-family: 'Carter One', cursive;
+    font-size: 10px;
+    height: 52px;
+    margin: 0px 20px 0px 0px;
+    padding: 2px; /*Damos un poco de margen interna*/
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    width: 52px;
+    transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+}
+
+header #theme:hover {
+    transform: scale(1.3);
+}
+
 #lateral_menu { /*Estilo para el menú izquierdo*/
     align-items: center; /*Alineamos horizontalmente en el centro*/
     background-color: rgb(212, 212, 212); /*Color de fondo*/
