@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Zoom de la página en diferentes pantallas-->
 
     <link rel="stylesheet" href="style_p.css"> <!--Vinculación con archivo CSS-->
-    <link rel="shortcut icon" href="/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
+    <link rel="shortcut icon" href="http://localhost/shaiR-main/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
     
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!--Libreria react-->
@@ -20,6 +20,8 @@
     <script src="action_list_lc.js" defer></script> <!--Vinculación con el JS-->
     <script src="action_list_p.js" defer></script> <!--Vinculación con el JS-->
     <script src="action_login.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_session_open.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_theme.js" defer></script> <!--Vinculación con el JS-->
 
     <title>SHAIR</title> <!--Título de la página-->
 
@@ -30,7 +32,7 @@
     <header> <!--Cabecera-->
 
         <div id="logo"> <!--Espacio para el logo-->
-            <button id="show_list"><img src="/elements/logo_alternativo.png" alt="Logo de SHAIR" height="50px" width="50px"></button> <!--Logo-->
+            <button id="show_list"><img src="http://localhost/shaiR-main/elements/logo_alternativo.png" alt="Logo de SHAIR" height="50px" width="50px"></button> <!--Logo-->
         </div> <!--Fin de espacio para el logo-->
 
         <div id="header1"> <!--Espacio para el título-->
@@ -39,6 +41,14 @@
 
         <div id="enter/exit">
             <button id="login">Unirte</button>
+        </div>
+
+        <div id="enter/exit">
+            <button id="login_alt">iniciar sesión</button>
+        </div>
+
+        <div id="enter/exit">
+            <button id="theme"><img src="http://localhost/SHAIR-main/elements/sun.svg" alt=""></button>
         </div>
 
     </header> <!--Fin de la cabecera-->
@@ -72,11 +82,11 @@
             </div> <!--Fin contenedor título-->
 
             <div id="featured"> <!--Contenedor de aplicaciones-->
-                <a href="./index_a.html"> <img src="/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
-                <a href="./index_a.html"> <img src="/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
-                <a href="./index_a.html"> <img src="/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
-                <a href="./index_a.html"> <img src="/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
-                <a href="./index_a.html"> <img src="/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
+                <a href="./index_a.html"> <img src="http://localhost/shaiR-main/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
+                <a href="./index_a.html"> <img src="http://localhost/shaiR-main/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
+                <a href="./index_a.html"> <img src="http://localhost/shaiR-main/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
+                <a href="./index_a.html"> <img src="http://localhost/shaiR-main/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
+                <a href="./index_a.html"> <img src="http://localhost/shaiR-main/elements/storefront.svg" alt="Aplicación destacada"></a> <!--Aplicación destacada-->
             </div> <!--Fin contenedor aplicaciones-->
 
         </div> <!--Fin contenedor destacadas-->
@@ -91,35 +101,35 @@
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
@@ -134,35 +144,35 @@
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/game.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/game.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/game.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/game.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/game.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/game.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
 
-                    <img src="/elements/game.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/game.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_a.html">  <!--Artículos-->
-
-                    <img src="/elements/game.svg" alt=""> <!--Imágen del artículo-->
+                
+                    <img src="http://localhost/shaiR-main/elements/game.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
@@ -177,35 +187,35 @@
 
                 <a class="article" href="./index_c.html">  <!--Artículos-->
 
-                    <img src="/elements/person.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/person.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_c.html">  <!--Artículos-->
 
-                    <img src="/elements/person.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/person.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_c.html">  <!--Artículos-->
 
-                    <img src="/elements/person.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/person.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_c.html">  <!--Artículos-->
 
-                    <img src="/elements/person.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/person.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
 
                 <a class="article" href="./index_c.html">  <!--Artículos-->
 
-                    <img src="/elements/person.svg" alt=""> <!--Imágen del artículo-->
+                    <img src="http://localhost/shaiR-main/elements/person.svg" alt=""> <!--Imágen del artículo-->
                     <p>Nombre</p> <!--Nombre del artículo-->
     
                 </a> <!--Fin artículo-->
