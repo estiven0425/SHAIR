@@ -1,0 +1,22 @@
+CREATE TABLE `archivo` (
+  `id_archivo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(25) NOT NULL,
+  `archivo_producto` longblob NOT NULL
+);
+CREATE TABLE `creador` (
+  `id_creador` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `perfil_imagen` blob Null,
+  `contraseña` varchar(50),
+  `descripcion` varchar(500) NULL,
+  `correo` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `producto` (
+  `id_producto` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `categoria` enum('videojuego','web','aplicación') NOT NULL,
+  `plataforma` enum('Windows','Android','MacOs','Linux') NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
