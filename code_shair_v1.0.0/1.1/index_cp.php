@@ -11,7 +11,7 @@
     <meta charset="UTF-8"> <!--Codificación de caracteres-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Zoom de la página en diferentes pantallas-->
 
-    <link rel="shortcut icon" href="http://localhost/shaiR-main/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
+    <link rel="shortcut icon" href="http://localhost/SHAIR/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
     
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!--Libreria react-->
@@ -99,6 +99,99 @@
         }
 
         header #login:hover {
+            transform: scale(1.3);
+        }
+
+        header #cp {
+            align-items: center; /*Alineamos verticalmente*/
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            border-radius: 25px; /*Redondeamos el ícono*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            cursor: pointer; /*Cursor cambia al estar sobre*/
+            font-family: 'Carter One', cursive;
+            font-size: 12px;
+            height: 52px;
+            margin: 0px 20px 0px 0px;
+            padding: 2px; /*Damos un poco de margen interna*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            width: 52px;
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+        }
+
+        header #cp:hover {
+            transform: scale(1.3);
+        }
+
+        header #cp img {
+            border-radius: 25px;
+            height: 100%;
+            width: 100%;
+        }
+
+        header #login_alt {
+            align-items: center; /*Alineamos verticalmente*/
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            border-radius: 25px; /*Redondeamos el ícono*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            cursor: pointer; /*Cursor cambia al estar sobre*/
+            font-family: 'Carter One', cursive;
+            font-size: 10px;
+            height: 52px;
+            margin: 0px 20px 0px 0px;
+            padding: 2px; /*Damos un poco de margen interna*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            width: 52px;
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+        }
+
+        header #logout {
+            align-items: center; /*Alineamos verticalmente*/
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            border-radius: 25px; /*Redondeamos el ícono*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            cursor: pointer; /*Cursor cambia al estar sobre*/
+            font-family: 'Carter One', cursive;
+            font-size: 10px;
+            height: 52px;
+            margin: 0px 20px 0px 0px;
+            padding: 2px; /*Damos un poco de margen interna*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            width: 52px;
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+        }
+
+        header #logout:hover {
+            transform: scale(1.3);
+        }
+
+        header #login_alt:hover {
+            transform: scale(1.3);
+        }
+
+        header #theme {
+            align-items: center; /*Alineamos verticalmente*/
+            background: radial-gradient(circle, rgb(238, 240, 154) 0%, rgb(228, 224, 20) 10%, rgb(255, 255, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(255, 255, 220); /*Borde del logo(estilo, grosor y color)*/
+            border-radius: 25px; /*Redondeamos el ícono*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            cursor: pointer; /*Cursor cambia al estar sobre*/
+            font-family: 'Carter One', cursive;
+            font-size: 10px;
+            height: 52px;
+            margin: 0px 20px 0px 0px;
+            padding: 2px; /*Damos un poco de margen interna*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            width: 52px;
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+        }
+
+        header #theme:hover {
             transform: scale(1.3);
         }
 
@@ -210,6 +303,13 @@
             text-align: center;
         }
 
+        #content #info #desc {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         #content #info #desc #photo {
             background-color: rgb(255, 255, 255);
             border: solid 1px rgb(0, 0, 0);
@@ -228,12 +328,20 @@
         }
 
         #content #info #desc #photoc img {
-            border: solid 1px rgb(0, 0, 0);
             border-radius: 100%;
-            height: 102%;
-            width: 106%;
-            margin-left: -3.5%;
-            margin-top: -0.8%;
+            height: 101.67%;
+            width: 106.5%;
+            margin-left: -3.25%;
+            margin-top: -0.85%;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        #content #info #desc #photoc img:hover {
+            opacity: 25%;
+        }
+
+        #content #info #desc #photoc:hover {
+            background-color: rgba(0, 0, 0, 0.950);
         }
 
         #content #content_list {
@@ -284,7 +392,17 @@
 
     </style>
 
-    <title>SHAIR|</title> <!--Título de la página-->
+    <?php
+
+        // Verificar si la sesión está iniciada
+        if (isset($_SESSION["id_creador"])) {
+            $nombre_usuario = $_SESSION["nombre"]; // Obtener el nombre de usuario de la sesión
+            echo '<title>SHAIR|' . $nombre_usuario . '</title>'; // Agregar el nombre de usuario al título
+        } else {
+            echo '<title>SHAIR</title>'; // Título predeterminado si no hay sesión iniciada
+        }
+
+    ?>
 
 </head> <!--Fin de la cabeza-->
 
@@ -293,12 +411,54 @@
     <header> <!--Cabecera-->
 
         <div id="logo"> <!--Espacio para el logo-->
-            <button id="show_list"><img src="http://localhost/shaiR-main/elements/logo_alternativo.png" alt="Logo de SHAIR" height="50px" width="50px"></button> <!--Logo-->
+            <button id="show_list"><img src="http://localhost/SHAIR/elements/logo_alternativo.png" alt="Logo de SHAIR" height="50px" width="50px"></button> <!--Logo-->
         </div> <!--Fin de espacio para el logo-->
 
         <div id="header1"> <!--Espacio para el título-->
             <h1>Shair</h1> <!--Título-->
         </div> <!--Fin de espacio para el título-->
+
+        <div id="enter/exit">
+            <?php
+            
+                // Verificar si la sesión está iniciada
+                if (isset($_SESSION["id_creador"])) {
+                    // Si la sesión está iniciada, mostrar la imagen de perfil y cambiar el ID del botón
+                    echo '<button id="cp">';
+                    if(isset($_SESSION["imagen_perfil"])){
+                        $imagen_perfil = $_SESSION["imagen_perfil"];
+                        echo '<img src="http://localhost/SHAIR/creators/' . $imagen_perfil . '" alt="">';
+                    } else {
+                        // Si no hay imagen de perfil, muestra una imagen por defecto o un mensaje.
+                        echo '<img src="http://localhost/SHAIR/elements/person.svg" alt="Imagen por defecto">';
+                    }
+                    echo '</button>';
+                } else {
+                    // Si la sesión no está iniciada, mostrar el botón "Unirte" con su ID original
+                    echo '<button id="login">Unirte</button>';
+                }
+            ?>
+        </div>
+
+        <div id="enter/exit">
+            <?php
+
+                // Verificar si la sesión está iniciada
+                if (isset($_SESSION["id_creador"])) {
+                    // Si la sesión está iniciada, mostrar el botón de "Cerrar sesión"
+                    echo '<form method="post" action="logout.php">'; // Asegúrate de que action apunte a tu script de cierre de sesión
+                    echo '<button id="logout" type="submit">Cerrar sesión</button>';
+                    echo '</form>';
+                } else {
+                    // Si la sesión no está iniciada, mostrar el botón de "Iniciar sesión"
+                    echo '<button id="login_alt">Iniciar sesión</button>';
+                }
+                ?>
+        </div>
+
+        <div id="enter/exit">
+            <button id="theme"><img src="http://localhost/SHAIR/elements/theme.svg" alt=""></button>
+        </div>
 
     </header> <!--Fin de la cabecera-->
 
@@ -333,21 +493,26 @@
 
             <div id="desc">
 
-                <div id="photo">
-                    <button id="photoc">
+            <div id="photo">
+
+                <button id="photoc">
 
                     <?php
-                        if(isset($_SESSION["imagen_perfil"])){
-                            $imagen_perfil = $_SESSION["imagen_perfil"];
-                            echo '<img src="http://localhost/SHAIR-main/creators/' . $imagen_perfil . '" alt="">';
-                        } else {
-                            // Si no hay imagen de perfil, muestra una imagen por defecto o un mensaje.
-                            echo '<img src="http://localhost/shaiR-main/elements/person.svg" alt="Imagen por defecto">';
-                        }
+                    if(isset($_SESSION["imagen_perfil"])){
+                        $imagen_perfil = $_SESSION["imagen_perfil"];
+                        $imagen_url = 'http://localhost/SHAIR/creators/' . $imagen_perfil;
+                        // Agrega una cadena de consulta única para evitar la caché
+                        $imagen_url .= '?' . time(); 
+                        echo '<img src="' . $imagen_url . '" alt="">';
+                    } else {
+                        // Si no hay imagen de perfil, muestra una imagen por defecto o un mensaje.
+                        echo '<img src="http://localhost/SHAIR/elements/person.svg" alt="Imagen por defecto">';
+                    }
                     ?>
 
-                    </button>
-                </div>
+                </button>
+                
+            </div>
 
                 <div id="desc_info">
                     <p><?php echo $_SESSION["descripcion"]; ?></p>
@@ -361,70 +526,70 @@
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
 
             <a class="article" href="./index_a.php">  <!--Artículos-->
 
-                <img src="http://localhost/shaiR-main/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
+                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
                 <p>Nombre</p> <!--Nombre del artículo-->
 
             </a> <!--Fin artículo-->
@@ -440,6 +605,10 @@
     <script src="action_list_lc_1.1.js" defer></script> <!--Vinculación con el JS-->
     <script src="action_list_p_1.1.js" defer></script> <!--Vinculación con el JS-->
     <script src="action_photoc_1.1.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_login_1.1.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_session_open_1.1.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_theme_1.1.js" defer></script> <!--Vinculación con el JS-->
+    <script src="action_login_cp_1.1.js" defer></script> <!--Vinculación con el JS-->
   
 </body> <!--Fin del cuerpo de la página-->
 

@@ -5,36 +5,34 @@
         // Verifica si se ha enviado una imagen
         if ($_FILES['imagen_perfil']['error'] === UPLOAD_ERR_OK) {
             // Ruta donde se guardarán las imágenes (debes configurar esto)
-            $uploadDir = 'C:/xampp/htdocs/SHAIR-main/creators/';
-    
+            $uploadDir = 'C:/xampp/htdocs/SHAIR/creators/';
+
             // Nombre del archivo de imagen (puedes cambiar esto si lo deseas)
-            $uploadFile = $uploadDir . basename($_FILES['imagen_perfil']['name']);
-    
+            $imagen_perfil = $_FILES['imagen_perfil']['name'];
+
             // Mueve la imagen cargada al directorio de destino
-            if (move_uploaded_file($_FILES['imagen_perfil']['tmp_name'], $uploadFile)) {
-                // La imagen se ha cargado exitosamente, ahora puedes guardar su información en la base de datos
-                $imagen_perfil = $_FILES['imagen_perfil']['name'];
+            if (move_uploaded_file($_FILES['imagen_perfil']['tmp_name'], $uploadDir . $imagen_perfil)) {
+                // La imagen se ha cargado exitosamente, ahora puedes guardar su nombre en la base de datos
                 $creador_id = $_SESSION['id_creador']; // Utiliza el ID del creador almacenado en la sesión
-    
+
                 // Conecta a la base de datos (debes configurar esto)
                 $conn = new mysqli("localhost", "root", "", "shair_v1.1.2_test");
-    
+
                 // Verifica la conexión
                 if ($conn->connect_error) {
                     die("Error de conexión: " . $conn->connect_error);
                 }
-    
-                // Consulta SQL para actualizar la imagen del perfil del usuario
+
+                // Consulta SQL para actualizar el nombre de la imagen del perfil del usuario
                 $sql = "UPDATE creador SET perfil_imagen = '$imagen_perfil' WHERE id_creador = '$creador_id'";
-    
+
                 if ($conn->query($sql) === TRUE) {
                     // Actualización exitosa
                     $_SESSION['imagen_perfil'] = $imagen_perfil; // Actualiza la variable de sesión
-                    echo "La imagen se ha subido y actualizado.";
                 } else {
                     echo "Error al subir la imagen: " . $conn->error;
                 }
-    
+
                 // Cierra la conexión a la base de datos
                 $conn->close();
             } else {
@@ -53,6 +51,8 @@
 <head> <!--Cabeza-->
 
     <meta charset="UTF-8"> <!--Tipo de caracteres UTF-8-->
+
+    <link rel="shortcut icon" href="http://localhost/SHAIR/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
 
     <style> /*Indexación de CSS (No recomendado a excepción de este caso)*/
 
@@ -194,17 +194,32 @@
 <body> <!--Inicio del cuerpo del proyecto-->
 
     <div id="new_creator"> <!--Contenedor de registro-->
-        
-        <h1 class="tittle">Sube tu foto de perfil</h1> <!--Título del contenedor-->
+
+        <?php
+            // Comprueba si el formulario se ha enviado
+            if (isset($_POST['crear'])) {
+                // Si se envió el formulario, muestra un mensaje
+                echo "<h1 class='tittle'>¡Perfecto!</h1>";
+                echo "<p>La imagen se ha subido y actualizado.</p>";
+                echo "<a href='./index_cp.php'>Volver</a>";
+            } else {
+                // Si no se envió el formulario, muestra el formulario
+        ?>
+
+        <h1 class="tittle">Sube tu foto de perfil</h1>
 
         <form method="post" id="photo" enctype="multipart/form-data">
 
-            <label for="imagen_perfil" class="imagen_perfil">Foto de perfil</label>
+            <label for="imagen_perfil" class="imagen_perfil"></label>
             <input type="file" id="correo" name="imagen_perfil" placeholder="Sube tu foto" required>
 
             <input type="submit" name="crear" value="¡Subir!">
 
         </form>
+
+        <?php
+            }
+        ?>
         
     </div> <!--Fin div de registro-->
 

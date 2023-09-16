@@ -6,6 +6,8 @@
 
     <meta charset="UTF-8"> <!--Tipo de caracteres UTF-8-->
 
+    <link rel="shortcut icon" href="http://localhost/SHAIR/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
+
     <style> /*Indexación de CSS (No recomendado a excepción de este caso)*/
 
         @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/

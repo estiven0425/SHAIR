@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--Tipo de documento-->
+<!DOCTYPE html> <!--Tipo de documento -->
 
 <html lang="es"> <!--Idioma de la página-->
 
