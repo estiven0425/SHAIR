@@ -1,5 +1,6 @@
 CREATE TABLE `archivo` (
   `id_archivo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id_producto` int (11) NOT NULL;
   `nombre` varchar(25) NOT NULL,
   `archivo_producto` longblob NOT NULL
 );
@@ -16,7 +17,6 @@ CREATE TABLE `creador` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `id_producto` int (11) NOT NULL;
   `id_creador` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(500) NOT NULL,
