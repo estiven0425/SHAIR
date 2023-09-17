@@ -3,6 +3,7 @@ CREATE TABLE `archivo` (
   `nombre` varchar(25) NOT NULL,
   `archivo_producto` longblob NOT NULL
 );
+
 CREATE TABLE `creador` (
   `id_creador` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_creador` INT(11) NOT NULL,
@@ -13,8 +14,10 @@ CREATE TABLE `creador` (
   `correo` varchar(100) NOT NULL,
   `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 );
+
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id_producto` int (11) NOT NULL;
   `id_creador` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `descripcion` varchar(500) NOT NULL,
@@ -22,7 +25,13 @@ CREATE TABLE `producto` (
   `plataforma` enum('Windows','Android','MacOs','Linux') NOT NULL,
   `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 );
+
 ALTER TABLE `producto`
 ADD CONSTRAINT `fk_creador_producto`
   FOREIGN KEY (`id_creador`)
   REFERENCES `creador` (`id_creador`);
+
+ALTER TABLE `archivo`
+ADD CONSTRAINT `fk_archivo_producto`
+  FOREIGN KEY (`id_producto`)
+  REFERENCES `producto` (`id_producto`);
