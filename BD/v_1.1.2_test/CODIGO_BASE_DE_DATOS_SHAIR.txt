@@ -6,7 +6,6 @@ CREATE TABLE `archivo` (
 
 CREATE TABLE `creador` (
   `id_creador` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `id_creador` INT(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `perfil_imagen` varchar(500) Null,
   `contraseña` varchar(50),
