@@ -349,7 +349,7 @@
             display: flex; /*Display flexible*/
             flex-direction: row; /*Dirección vertical*/
             flex-wrap: wrap; /*No más de una columna*/
-            justify-content: space-between; /*Centrado verticalmente*/
+            justify-content: space-around; /*Centrado verticalmente*/
             margin: 25px; /*Margen*/
             padding: 10px; /*Padding*/
             width: 90%; /*Anchura*/
@@ -388,6 +388,62 @@
             height: 90px; /*Altura*/
             padding: 2px; /*Borde interno*/
             width: 90px; /*Anchura*/
+        }
+
+        #content #content_list .upload_article { /*Estilo para los productos*/
+            align-items: stretch; /*Alineamos verticalmente en el centro*/
+            background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+            border: solid 2px rgb(45, 75, 224); /*Borde*/
+            border-radius: 25px; /*Radio de las esquinas*/
+            color: rgb(45, 75, 224); /*Color de texto*/
+            display: flex; /*display flexible*/
+            flex-direction: column; /*Dirección horizontal*/
+            flex-wrap: nowrap; /*No más de una fila*/
+            justify-content: center; /*Espacio alrederor de ellos*/
+            margin: 5px; /*Margen*/
+            padding: 5px 5px 5px 0px; /*Margen interno*/
+            text-align: center; /*Alineamos texto en el centro*/
+            text-decoration: none; /*Descativamos la decoración te texto*/
+            text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+            width: 30%; /*Tamaño de los botones en el div*/
+        }
+
+        #content #content_list .upload_article:hover {
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            transform: scale(1.05);
+        }
+
+        #content #content_list .upload_article_alt { /*Estilo para los productos*/
+            align-items: stretch; /*Alineamos verticalmente en el centro*/
+            background-color: rgb(255, 255, 255); /*Color de fondo de los botones*/
+            border: solid 2px rgb(45, 75, 224); /*Borde*/
+            border-radius: 25px; /*Radio de las esquinas*/
+            color: rgb(45, 75, 224); /*Color de texto*/
+            display: none; /*display flexible*/
+            flex-direction: column; /*Dirección horizontal*/
+            flex-wrap: nowrap; /*No más de una fila*/
+            justify-content: center; /*Espacio alrederor de ellos*/
+            margin: 5px; /*Margen*/
+            padding: 5px 5px 5px 0px; /*Margen interno*/
+            text-align: center; /*Alineamos texto en el centro*/
+            text-decoration: none; /*Descativamos la decoración te texto*/
+            text-transform: uppercase; /*Trasnformar en mayúsculas las letras*/
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+            width: 30%; /*Tamaño de los botones en el div*/
+        }
+
+        #content #content_list .upload_article_alt:hover {
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            transform: scale(1.05);
         }
 
     </style>
@@ -524,76 +580,45 @@
 
         <div id="content_list">
 
-            <a class="article" href="./index_a.php">  <!--Artículos-->
+            <?php
 
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "shair_v1.1.2_test";
 
-            </a> <!--Fin artículo-->
+                // Crear conexión
+                $conn = mysqli_connect($servername, $username, $password, $database);
 
-            <a class="article" href="./index_a.php">  <!--Artículos-->
+                // Verificar conexión
+                if (!$conn) {
+                    die("La conexión a la base de datos ha fallado: " . mysqli_connect_error());
+                }
+                $id_creador = $_SESSION["id_creador"]; // Obtener el ID del creador desde la sesión
 
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
+                $sql = "SELECT * FROM producto WHERE id_creador = $id_creador";
+                $result = mysqli_query($conn, $sql);
 
-            </a> <!--Fin artículo-->
+                // Verificar si se obtuvieron resultados
+                if (mysqli_num_rows($result) > 0) {
+                    // Recorrer los resultados y mostrar los productos
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<a class="article" href= "./index_ac.php">';
+                        echo '<img src="C:/xampp/htdocs/SHAIR/products/" alt="">';
+                        echo '<p>' . $row["nombre"] . '</p>';
+                    }
+                } else {
 
-            <a class="article" href="./index_a.php">  <!--Artículos-->
+                }
 
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
+                echo '<a class="upload_article" href="./new_product.php">';
+                echo '<p>¡Sube un producto ahora!</p>';
+                echo '</a>';
 
-            </a> <!--Fin artículo-->
+                // Cerrar la conexión a la base de datos
+                mysqli_close($conn);
 
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
-            <a class="article" href="./index_a.php">  <!--Artículos-->
-
-                <img src="http://localhost/SHAIR/elements/storefront.svg" alt=""> <!--Imágen del artículo-->
-                <p>Nombre</p> <!--Nombre del artículo-->
-
-            </a> <!--Fin artículo-->
-
+            ?>
 
         </div>
 

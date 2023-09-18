@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html> <!--Tipo de documento -->
 
 <html lang="es"> <!--Idioma de la página-->
@@ -93,6 +97,33 @@
             transform: scale(1.1);
         }
 
+        #new_product a {
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            border-radius: 25px; /*Radio de las esquinas*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            cursor: pointer; /*Tipo de cursor*/
+            font-family: 'Kalam', cursive; /*Fuente*/
+            font-weight: 900; /*Grosor de letra*/
+            margin: 5px; /*Margen*/
+            padding: 5px; /*Margen interno*/
+            text-align: center; /*Alineamos texto en el centro*/
+            text-decoration: none; /*Descativamos la decoración te texto*/
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            width: 40%; /*Tamaño de los botones en el div*/
+            transition: transform 0.3s ease-in-out; /*Transición para agrandar*/
+        }
+
+        #new_product a:hover {
+            background: radial-gradient(circle, rgb(130, 150, 230) 0%, rgb(95, 120, 224) 40%, rgb(25, 55, 220) 100%); /*Color de fondo*/
+            border: solid 2px rgb(228, 224, 20); /*Borde del logo(estilo, grosor y color)*/
+            box-shadow: 0px 0px 10px rgb(255, 255, 0);
+            color: rgb(228, 224, 20);
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            transform: scale(1.05);
+        }
+
     </style> <!--Fin de estilos-->
 
     <title>Crea tu producto a SHAIR</title> <!--ITítulo de la página-->
@@ -130,29 +161,40 @@
             <input type="submit" name="crear_producto" value="Crear Producto">
         </form>
 
+        <div id="exito-mensaje" style="display: none;">
+            <!-- Contenido que se mostrará después de enviar el formulario -->
+            <a href="./index_cp.php">Volver</a>
+
+        </div>
 
         <?php
-        $conexion = new mysqli('localhost', 'root', '', 'shair_v1.1.2_test');
 
-        if ($conexion->connect_error) {
-            die('Error en la conexión: ' . $conexion->connect_error);
-        }
+        if (isset($_SESSION['id_creador'])) {
+            $id_creador = $_SESSION['id_creador'];
+            $conexion = new mysqli('localhost', 'root', '', 'shair_v1.1.2_test');
 
-        if (isset($_POST['crear_producto'])) {
-            $nombre_producto = $_POST['nombre'];
-            $categoria = $_POST['categoria'];
-            $plataforma = $_POST['plataforma'];
-            $descripcion = $_POST['descripcion'];
-            $sql = "INSERT INTO producto (nombre, descripcion, categoria, plataforma) VALUES ('$nombre_producto', '$descripcion', '$categoria', '$plataforma')";
-            
-            if ($conexion->query($sql) === TRUE) {
-                echo '<p>producto creado exitosamente</p>';
-            } else {
-                echo 'Error al crear el producto: ' . $conexion->error;
+            if ($conexion->connect_error) {
+                die('Error en la conexión: ' . $conexion->connect_error);
             }
-        }
 
-        $conexion->close();
+            if (isset($_POST['crear_producto'])) {
+                $nombre_producto = $_POST['nombre'];
+                $categoria = $_POST['categoria'];
+                $plataforma = $_POST['plataforma'];
+                $descripcion = $_POST['descripcion'];
+                $sql = "INSERT INTO producto (id_creador, nombre, descripcion, categoria, plataforma) VALUES ('$id_creador', '$nombre_producto', '$descripcion', '$categoria', '$plataforma')";
+
+                if ($conexion->query($sql) === TRUE) {
+                    echo '<p>Producto creado exitosamente</p>';
+                } else {
+                    echo 'Error al crear el producto: ' . $conexion->error;
+                }
+            }
+
+            $conexion->close();
+        } else {
+            echo '<p>Debes iniciar sesión para crear un producto.</p>';
+        }
         ?>
 
     </div> <!--Fin div de registro-->

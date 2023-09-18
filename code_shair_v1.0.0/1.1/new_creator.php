@@ -8,6 +8,34 @@
 
     <link rel="shortcut icon" href="http://localhost/SHAIR/elements/logo_alternativo.png" type="image/x-icon"> <!--Icono de shair-->
 
+    <script>
+        function mostrarMensaje() {
+            var formulario = document.querySelector('#new_creator form');
+            formulario.style.display = 'none'; // Ocultar el formulario
+
+            var botonRegresar = document.createElement('button');
+            botonRegresar.textContent = 'Crear nuevo usuario';
+            botonRegresar.addEventListener('click', function () {
+                formulario.style.display = 'block'; // Mostrar el formulario nuevamente
+                botonRegresar.style.display = 'none'; // Ocultar el botón de regreso
+                var titulo = document.querySelector('#new_creator h1');
+                titulo.textContent = '¡Únete a SHAIR!'; // Restaurar el texto original
+            });
+
+            var contenedorFormulario = document.querySelector('#new_creator');
+            contenedorFormulario.appendChild(botonRegresar); // Agregar el botón de regreso
+
+            var titulo = document.querySelector('#new_creator h1');
+            titulo.textContent = '¡Te has unido!'; // Cambiar el texto del título
+
+            var enlace = document.createElement('a');
+            enlace.href = './index_p.php'; // Ruta al archivo index_p.php
+            enlace.textContent = 'Ir a la página principal';
+            contenedorFormulario.appendChild(enlace); // Agregar el enlace
+        }
+
+    </script>
+
     <style> /*Indexación de CSS (No recomendado a excepción de este caso)*/
 
         @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Kalam:wght@300&display=swap');/*Importamos las fuentes*/
@@ -158,34 +186,6 @@
         }
 
     </style> <!--Fin de estilos-->
-
-    <script>
-        function mostrarMensaje() {
-            var formulario = document.querySelector('#new_creator form');
-            formulario.style.display = 'none'; // Ocultar el formulario
-
-            var botonRegresar = document.createElement('button');
-            botonRegresar.textContent = 'Crear nuevo usuario';
-            botonRegresar.addEventListener('click', function () {
-                formulario.style.display = 'block'; // Mostrar el formulario nuevamente
-                botonRegresar.style.display = 'none'; // Ocultar el botón de regreso
-                var titulo = document.querySelector('#new_creator h1');
-                titulo.textContent = '¡Únete a SHAIR!'; // Restaurar el texto original
-            });
-
-            var contenedorFormulario = document.querySelector('#new_creator');
-            contenedorFormulario.appendChild(botonRegresar); // Agregar el botón de regreso
-
-            var titulo = document.querySelector('#new_creator h1');
-            titulo.textContent = '¡Te has unido!'; // Cambiar el texto del título
-
-            var enlace = document.createElement('a');
-            enlace.href = './index_p.php'; // Ruta al archivo index_p.php
-            enlace.textContent = 'Ir a la página principal';
-            contenedorFormulario.appendChild(enlace); // Agregar el enlace
-        }
-
-    </script>
 
     <title>Unirse a SHAIR</title> <!--ITítulo de la página-->
 

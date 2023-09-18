@@ -316,7 +316,7 @@
             display: flex; /*Display flexible*/
             flex-direction: row; /*Dirección vertical*/
             flex-wrap: wrap; /*No más de una columna*/
-            justify-content: space-between; /*Centrado verticalmente*/
+            justify-content: space-around; /*Centrado verticalmente*/
             margin: 25px; /*Margen*/
             padding: 10px; /*Padding*/
             width: 90%; /*Anchura*/
