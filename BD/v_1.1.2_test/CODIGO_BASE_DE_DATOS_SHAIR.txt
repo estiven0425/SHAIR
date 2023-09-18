@@ -2,6 +2,7 @@ CREATE TABLE `archivo` (
   `id_archivo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_producto` int (11) NOT NULL;
   `nombre` varchar(25) NOT NULL,
+  `producto_imagen` varchar(500) NULL,
   `archivo_producto` longblob NOT NULL
 );
 
