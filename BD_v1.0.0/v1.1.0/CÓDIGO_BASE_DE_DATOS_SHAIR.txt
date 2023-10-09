@@ -1,0 +1,145 @@
+----------CÓDIGO_BASE_DE_DATOS_SHAIR----------
+
+CREATE TABLE `archivo` (
+  `id_producto` int(11) NOT NULL,
+  `archivo_producto` longblob NOT NULL
+);
+CREATE TABLE `creador` (
+  `id_creador` varchar(100) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `categoria` enum('videojuego','web') NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `codigo` int(11) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `foro` (
+  `id_usuario` int(11) NOT NULL,
+  `mensaje` varchar(500) NOT NULL
+);
+CREATE TABLE `producto` (
+  `id_producto` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `categoria` enum('videojuego','web') NOT NULL,
+  `plataforma` varchar(100) NOT NULL,
+  `id_creador` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `shair` (
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL
+);
+
+ALTER TABLE `creador`
+  ADD PRIMARY KEY (`id_creador`);
+ALTER TABLE `foro`
+  ADD PRIMARY KEY (`id_usuario`);
+ALTER TABLE `producto`
+  ADD PRIMARY KEY (`id_producto`);
+ALTER TABLE `archivo`
+  ADD FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+ALTER TABLE `producto`
+  ADD FOREIGN KEY (`id_creador`) REFERENCES `creador` (`id_creador`);
+
+----------VERSION_1.0.1----------
+
+----------VERSION_1.1.0----------
+
+CREATE TABLE `archivo` (
+  `id_producto` int(11) NOT NULL,
+  `archivo_producto` longblob NOT NULL
+);
+CREATE TABLE `creador` (
+  `id_creador` varchar(100) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `categoria` enum('videojuego','web') NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `codigo` int(11) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `foro` (
+  `id_usuario` int(11) NOT NULL,
+  `mensaje` varchar(500) NOT NULL
+);
+CREATE TABLE `producto` (
+  `id_producto` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `categoria` enum('videojuego','web') NOT NULL,
+  `plataforma` varchar(100) NOT NULL,
+  `id_creador` varchar(100) NOT NULL,
+  `fecha_modificacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+CREATE TABLE `shair` (
+  `correo` varchar(100) NOT NULL,
+  `apoyo` varchar(100) NOT NULL
+);
+CREATE TABLE `top` (
+    `posicion` int(2) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id_producto` int(11) NOT NULL
+);
+
+ALTER TABLE `creador`
+  ADD PRIMARY KEY (`id_creador`);
+ALTER TABLE `foro`
+  ADD PRIMARY KEY (`id_usuario`);
+ALTER TABLE `producto`
+  ADD PRIMARY KEY (`id_producto`);
+ALTER TABLE `archivo`
+  ADD FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`);
+ALTER TABLE `producto`
+  ADD FOREIGN KEY (`id_creador`) REFERENCES `creador` (`id_creador`);
+ALTER TABLE top ADD FOREIGN KEY (id_producto) REFERENCES producto (id_producto);
+
+----------DISPARADORES----------
+
+DELIMITER $$
+CREATE TRIGGER ausencia_pro
+AFTER DELETE ON archivo
+FOR EACH ROW
+BEGIN
+  DELETE FROM producto WHERE id_producto = OLD.id_producto;
+END;
+$$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE TRIGGER ausencia_cre
+AFTER DELETE ON creador
+FOR EACH ROW
+BEGIN
+  DECLARE producto_id INT;
+  DECLARE done INT DEFAULT 0; -- Variable para controlar el bucle
+  
+  -- Cursor para obtener los id_producto de los productos asociados al creador eliminado
+  DECLARE productos_cursor CURSOR FOR
+    SELECT id_producto FROM producto WHERE id_creador = OLD.id_creador;
+    
+  -- Manejo de NOT FOUND para evitar errores
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+  
+  -- Abrir el cursor
+  OPEN productos_cursor;
+  
+  -- Recorrer y eliminar los archivos asociados a cada producto
+  productos_loop: LOOP
+    FETCH productos_cursor INTO producto_id;
+    IF done = 1 THEN
+      LEAVE productos_loop;
+    END IF;
+    
+    DELETE FROM archivo WHERE id_producto = producto_id;
+  END LOOP;
+  
+  -- Cerrar el cursor
+  CLOSE productos_cursor;
+  
+  -- Eliminar los productos asociados al creador eliminado
+  DELETE FROM producto WHERE id_creador = OLD.id_creador;
+END;
+$$
+DELIMITER ;
+
