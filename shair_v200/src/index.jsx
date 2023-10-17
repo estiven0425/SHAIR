@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+/*Archivo de entrada (NO ELIMINAR O MODIFICAR)*/
+
+import React from 'react'; /*Importar librería de REACT*/
+import ReactDOM from 'react-dom/client'; /*Importar REACT DOM*/
+import './index.css'; /*importar archivo de estilos globales*/
+import LandingPage from './LandingPage'; /*Importamos ejecutable de REACT*/
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LandingPage/> {/*Llamamos componente*/}
   </React.StrictMode>
 );
 
