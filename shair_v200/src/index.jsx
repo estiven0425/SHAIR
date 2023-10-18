@@ -3,7 +3,7 @@
 import React from 'react'; /*Importar librería de REACT*/
 import ReactDOM from 'react-dom/client'; /*Importar REACT DOM*/
 import './index.css'; /*importar archivo de estilos globales*/
-import LandingPage from './LandingPage'; /*Importamos ejecutable de REACT*/
+import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de REACT*/
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

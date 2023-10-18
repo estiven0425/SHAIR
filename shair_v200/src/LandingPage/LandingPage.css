@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+}
+
+#Principal body {
+    background: linear-gradient(to right, #303030, #606060);
+    color: #FFFFFF;
+}
+
+#Principal body #Section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 900px; /* Ajusta la altura según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.02); /* Color de fondo con transparencia (2%) */
+}
+  
+#Principal body #Section1::before {
+    content: "";
+    background-image: url('./images/logo.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    opacity: 0.05; /* 5% de opacidad para el logo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+  
+#Principal body #Section1::after {
+    content: "";
+    background-image: url('./images/banner.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100% 100%;
+    opacity: 1; /* 100% de opacidad para el banner */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#Principal body #Section1 h1{
+    color: #fdb23b;
+    font-family: 'Bangers';
+    font-size: 130px;
+    margin: 0px 0px 15px 20px;
+    text-shadow: none;
+}
