@@ -2,8 +2,6 @@
 
 .mb-2 {
     font-family: 'Bangers';
-    margin: 100px 0px 0px 390px;
-    z-index: 1;
 }
 
 .mb-2 button {
@@ -11,17 +9,15 @@
     border-color: #fdb23b;
     border-radius: 50px;
     color: #fff;
+    cursor: pointer;
     font-size: 30px;
     height: 80px;
     padding: 2px;
     transition: background-color 0.2s, transform 0.2s;
-    text-transform: uppercase;
-    text-shadow: none;
     width: 200px;
 }
 
 .mb-2 button:hover {
-    cursor: pointer;
     background-color: #da9931;
     border-color: #da9931;
     transform: scale(1.1);

@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#Titulo h1 {
+    color: #fdb23b;
+    font-family: 'Bangers';
+    font-size: 150px;
+    text-shadow: none;
+}

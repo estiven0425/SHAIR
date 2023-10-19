@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
 
-* {  
+.navbar.navbar-expand-lg.bg-body-tertiary .container-fluid .navbar-brand {
+    color: #8e4c98;  
     font-size: 20px;
     font-weight: bold;
     text-shadow: 1px 2px 1px #fdb23b;
-}
-
-.container-fluid .navbar-brand {
-    color: #8e4c98;
 }
