@@ -1,7 +1,7 @@
 import React from 'react'
-import './Titulo.css';
+import './Titulo1.css';
 
-export default function Titulo() {
+export default function Titulo1() {
   return (
     <div id='Titulo'>
         <h1>Bienvenido a SHAIR</h1>

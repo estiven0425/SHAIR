@@ -7,7 +7,7 @@ export default function BarraDeNavegacion() {
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Anuncios</a>
-            <a class="navbar-brand" href="Section1">Inicio</a>
+            <a class="navbar-brand" href="#Seccion1">Inicio</a>
             <a class="navbar-brand" href="#">Shair | Foro</a>
         </div>
     </nav>

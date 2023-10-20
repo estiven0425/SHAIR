@@ -1,16 +1,16 @@
 import Button from 'react-bootstrap/Button';
-import './BotonSeccion1.css';
+import './BotonSeccion2.css';
 
-function BotonSeccion1() {
+function BotonSeccion2() {
   return (
     <>
       <div className="mb-2">
         <Button variant="primary" size="lg">
-          <a href="#Seccion2">Conócenos</a>
+          <a href="#Seccion3">Mira lo que ofrecemos</a>
         </Button>
       </div>
     </>
   );
 }
 
-export default BotonSeccion1;
+export default BotonSeccion2;

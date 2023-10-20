@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#Texto p {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    margin-left: 25%;
+    text-shadow: none;
+    width: 50%;
+}

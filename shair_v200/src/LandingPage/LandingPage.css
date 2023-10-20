@@ -19,30 +19,30 @@
     color: #FFFFFF;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 70px;
+    padding-top: 4%;
     z-index: 1;
 }
 
-#Principal body #Section1 {
+#Principal body #Seccion1 {
     height: 850px;
     position: relative;
     width: 100%;
     z-index: 2;
 }
 
-#Principal body #Section1 #TituloSeccion1{
+#Principal body #Seccion1 #TituloSeccion1{
     margin-left: 1%;
     margin-top: 15%;
     float: left;
     z-index: 3;
 }
 
-#Principal body #Section1 #BannerSeccion1 {
+#Principal body #Seccion1 #BannerSeccion1 {
     float: right;
     z-index: 3;
 }
 
-#Principal body #Section1 #IconoSeccion1 {
+#Principal body #Seccion1 #IconoSeccion1 {
     left: 8%;
     pointer-events: none;
     position: absolute;
@@ -51,9 +51,29 @@
     zoom: 1.28;
 }
 
-#Principal body #Section1 #BotonSeccion1 {
+#Principal body #Seccion1 #BotonSeccion1 {
     margin-left: 23%;
     margin-top: 12%;
     float: left;
     z-index: 3;
+}
+
+#Principal body #Seccion2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+}
+
+#Principal body #Seccion2 #BannerSeccion2 {
+    float: left;
+}
+
+#Principal body #Seccion2 #Contenido2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: space-around;
+    text-align: center;
 }
