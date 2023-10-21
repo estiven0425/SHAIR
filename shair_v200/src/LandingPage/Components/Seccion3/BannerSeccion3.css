@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#BannerSeccion3 {
+    height: 100%;
+    opacity: 100%;
+    width: 20%;
+    z-index: 1;
+    zoom: 115%;
+}

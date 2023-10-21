@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import './BotonSeccion2.css';
+import './BotonSeccion3.css';
 
-function BotonSeccion2() {
+function BotonSeccion3() {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleMouseDown = () => {
@@ -27,11 +27,11 @@ function BotonSeccion2() {
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
         >
-          <a href="#Seccion3">Mira lo que ofrecemos</a>
+          <a href="#Seccion4">¡Adelante!</a>
         </Button>
       </div>
     </>
   );
 }
 
-export default BotonSeccion2;
+export default BotonSeccion3;

@@ -1,9 +1,9 @@
 import React from 'react'
-import './Texto2.css';
+import './TextoSeccion2.css';
 
-export default function Texto2() {
+export default function TextoSeccion2() {
   return (
-    <div id='Texto'>
+    <div id='TextoSeccion2'>
         <p>Somos una plataforma de distribución de software de uso gratuito</p>
     </div>
   )

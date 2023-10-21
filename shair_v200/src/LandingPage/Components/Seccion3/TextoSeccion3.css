@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#TextoSeccion3 p {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    margin-left: 15%;
+    text-shadow: none;
+    width: 100%;
+}
