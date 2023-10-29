@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#BannerSeccion5_1 {
+    height: 100%;
+    margin: 5%;
+    opacity: 5%;
+    width: 100%;
+    z-index: 1;
+    zoom: 120%;
+}
+
+#BannerSeccion5_1 img {
+    border-radius: 50px;
+}

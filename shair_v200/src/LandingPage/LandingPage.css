@@ -1,146 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en la página */
 
-#Principal {
-    font-family: 'Open Sans';
-    text-transform: uppercase;
+#Principal { /* Seleccionamos el elemento con id Principal, que es el div que contiene toda la página */
+    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
-#Principal header {
-    left: 0%;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    z-index: 4;
+#Principal header { /* Seleccionamos el elemento header dentro del elemento con id Principal */
+    left: 0%; /* Lo posicionamos a la izquierda del contenedor */
+    position: fixed; /* Le damos una posición fija para que no se mueva al hacer scroll */
+    top: 0%; /* Lo posicionamos en la parte superior del contenedor */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
+    z-index: 4; /* Le damos un índice de profundidad de 4 para que se superponga a otros elementos */
 }
 
-#Principal body {
-    align-items: stretch;
-    background: linear-gradient(to right, #303030, #606060);
-    display: flex;
-    color: #FFFFFF;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1;
+#Principal body { /* Seleccionamos el elemento body dentro del elemento con id Principal */
+    align-items: stretch; /* Alineamos los elementos hijos para que se estiren verticalmente */
+    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    color: #FFFFFF; /* Le damos un color blanco al texto por defecto */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    justify-content: space-between; /* Justificamos los elementos hijos para que haya espacio entre ellos */
+    z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
 }
 
-#Principal body #Seccion1 {
-    height: 100%;
-    padding-top: 5%;
-    width: 100%;
-    z-index: 2;
+#Principal body #Seccion1 { /* Seleccionamos el elemento con id Seccion1 dentro del elemento body dentro del elemento con id Principal */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
+    z-index: 2; /* Le damos un índice de profundidad de 2 para que se superponga al fondo */
 }
 
-#Principal body #Seccion1 #Titulo1{
-    margin-left: 1%;
-    margin-top: 15%;
-    z-index: 3;
+#Principal body #Seccion1 #Titulo1{ /* Seleccionamos el elemento con id Titulo1 dentro del elemento con id Seccion1 dentro del elemento body dentro del elemento con id Principal */
+    margin-left: 1%; /* Le damos un margen izquierdo del 1% del contenedor */
+    margin-top: 15%; /* Le damos un margen superior del 15% del contenedor */
+    z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al banner y al icono */
 }
 
-#Principal body #Seccion1 #Banner1 {
-    margin: -26.5% 0% 0% -15%;
-    float: right;
-    z-index: 3;
-    zoom: 120%;
+#Principal body #Seccion1 #Banner1 { /* Seleccionamos el elemento con id Banner1 dentro del elemento con id Seccion1 dentro del elemento body dentro del elemento con id Principal */
+    margin: -26.5% 0% 0% -15%; /* Le damos unos márgenes negativos para ajustar su posición respecto al contenedor */
+    float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
+    z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al icono */
+    zoom: 120%; /* Le aplicamos un zoom del 120% para aumentar su tamaño */
 }
 
-#Principal body #Seccion1 #Icono1 {
-    left: 4%;
-    pointer-events: none;
-    position: absolute;
-    top: 5%;
-    z-index: 1;
-    zoom: 130%;
+#Principal body #Seccion1 #Icono1 { /* Seleccionamos el elemento con id Icono1 dentro del elemento con id Seccion1 dentro del elemento body dentro del elemento con id Principal */
+    left: 4%; /* Lo posicionamos a la izquierda del contenedor con un desplazamiento del 4% */
+    pointer-events: none; /* Desactivamos los eventos de puntero para que no se pueda interactuar con él */
+    position: absolute; /* Le damos una posición absoluta para que no afecte al flujo de los demás elementos */
+    top: 5%; /* Lo posicionamos en la parte superior del contenedor con un desplazamiento del 5% */
+    z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de los demás elementos */
+    zoom: 130%; /* Le aplicamos un zoom del 130% para aumentar su tamaño */
 }
 
-#Principal body #Seccion1 #Boton1 {
-    margin: 12% 0% 0% 20%;
-    float: left;
-    width: 10%;
-    z-index: 3;
+#Principal body #Seccion1 #Boton1 { /* Seleccionamos el elemento con id Boton1 dentro del elemento con id Seccion1 dentro del elemento body dentro del elemento con id Principal */
+    margin: 12% 0% 0% 20%; /* Le damos unos márgenes para ajustar su posición respecto al contenedor */
+    float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
+    width: 10%; /* Le damos un ancho del 10% del contenedor */
+    z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al icono */
 }
 
-#Principal body #Seccion2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-top: 5%;
+#Principal body #Seccion2 { /* Seleccionamos el elemento con id Seccion2 dentro del elemento body dentro del elemento con id Principal */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
+    flex-wrap: nowrap; /* Evitamos que los elementos hijos se envuelvan al llegar al final de la línea */
+    padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
 }
 
-#Principal body #Seccion2 #Banner2 {
-    float: left;
-    margin-top: -1%;
-    zoom: 115%;
+#Principal body #Seccion2 #Banner2 { /* Seleccionamos el elemento con id Banner2 dentro del elemento con id Seccion2 dentro del elemento body dentro del elemento con id Principal */
+    float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
+    margin-top: -1%; /* Le damos un margen superior negativo para ajustar su posición respecto al contenedor */
+    zoom: 115%; /* Le aplicamos un zoom del 115% para aumentar su tamaño */
 }
 
-#Principal body #Seccion2 #Contenido2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    float: right;
-    justify-content: space-around;
-    text-align: center;
+#Principal body #Seccion2 #Contenido2 { /* Seleccionamos el elemento con id Contenido2 dentro del elemento con id Seccion2 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
+    justify-content: space-around; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    text-align: center; /* Alineamos el texto en el centro horizontalmente */
 }
 
-#Principal body #Seccion3 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-top: 5%;
+#Principal body #Seccion3 { /* Seleccionamos el elemento con id Seccion3 dentro del elemento body dentro del elemento con id Principal */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
+    flex-wrap: nowrap; /* Evitamos que los elementos hijos se envuelvan al llegar al final de la línea */
+    padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
 }
 
-#Principal body #Seccion3 #Contenido3 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    float: left;
-    justify-content: space-around;
-    text-align: center;
+#Principal body #Seccion3 #Contenido3 { /* Seleccionamos el elemento con id Contenido3 dentro del elemento con id Seccion3 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
+    justify-content: space-around; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    text-align: center; /* Alineamos el texto en el centro horizontalmente */
 }
 
-#Principal body #Seccion3 #Texto3 {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#Principal body #Seccion3 #Texto3 { /* Seleccionamos el elemento con id Texto3 dentro del elemento con id Contenido3 dentro del elemento con id Seccion3 dentro del elemento body dentro del elemento con id Principal */
+    align-items: stretch; /* Alineamos los elementos hijos para que se estiren horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column;  /* Establecemos la dirección de los elementos hijos como columna */
+    justify-content: center; /* Justificamos los elementos hijos en el centro verticalmente */
 }
 
-#Principal body #Seccion3 #Banner3 {
-    float: right;
-    margin-top: -1%;
-    zoom: 35%;
+#Principal body #Seccion3 #Banner3 { /* Seleccionamos el elemento con id Banner3 dentro del elemento con id Seccion3 dentro del elemento body dentro del elemento con id Principal */
+    float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
+    margin-top: -1%; /* Le damos un margen superior negativo para ajustar su posición respecto al contenedor */
+    zoom: 35%; /* Le aplicamos un zoom del 35% para reducir su tamaño */
 }
 
-#Principal body #Seccion4 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    padding-top: 5%;
-    width: 100%;
+#Principal body #Seccion4 { /* Seleccionamos el elemento con id Seccion4 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    justify-content: space-between; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
 }
 
-#Principal body #Seccion4 #Enlaces {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#Principal body #Seccion4 #Enlaces { /* Seleccionamos el elemento con id Enlaces dentro del elemento con id Seccion4 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
+    justify-content: center; /* Justificamos los elementos hijos en el centro horizontalmente */
 }
 
-#Principal body #Seccion4 #Enlaces #Anunciarse {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    float: left;
-    margin-right: 20%;
+#Principal body #Seccion4 #Enlaces #Anunciarse { /* Seleccionamos el elemento con id Anunciarse dentro del elemento con id Enlaces dentro del elemento con id Seccion4 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    justify-content: space-between; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
+    margin-right: 20%; /* Le damos un margen derecho del 20% del contenedor para separarlo del otro enlace */
 }
 
-#Principal body #Seccion4 #Enlaces #Catalogo {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    float: right;
-    margin-left: 20%;
+#Principal body #Seccion4 #Enlaces #Catalogo { /* Seleccionamos el elemento con id Catalogo dentro del elemento con id Enlaces dentro del elemento con id Seccion4 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    justify-content: space-between; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
+    margin-left: 20%; /* Le damos un margen izquierdo del 20% del contenedor para separarlo del otro enlace */
+}
+
+#Principal body #Seccion5 { /* Seleccionamos el elemento con id Seccion5 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    justify-content: space-between; /* Justificamos los elementos hijos para que haya espacio entre ellos verticalmente */
+    padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
+}
+
+#Principal body #Seccion5 #Fondos { /* Seleccionamos el elemento con id Fondos dentro del elemento con id Seccion5 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
+    justify-content: center; /* Justificamos los elementos hijos en el centro horizontalmente */
+    margin-top: -5%; /* Le damos un margen superior negativo para ajustar su posición respecto al contenedor */
+    position: absolute; /* Le damos una posición absoluta para que no afecte al flujo de los demás elementos */
+    zoom: 105%; /* Le aplicamos un zoom del 105% para aumentar su tamaño */
+}
+
+#Principal body #Seccion5 #Final { /* Seleccionamos el elemento con id Final dentro del elemento con id Seccion5 dentro del elemento body dentro del elemento con id Principal */
+    align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
+    display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
+    flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
+    justify-content: center; /* Justificamos los elementos hijos en el centro verticalmente */
+    zoom: 85%; /* Le aplicamos un zoom del 85% para reducir su tamaño */
 }

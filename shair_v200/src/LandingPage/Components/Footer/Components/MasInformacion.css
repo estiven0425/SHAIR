@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+
+#MasInformacion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+#MasInformacion h1 {
+    font-size: 20px;
+}
+
+#MasInformacionEnlaces {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#MasInformacionEnlaces a {
+    color: #ffffff;
+    margin: 5%;
+}

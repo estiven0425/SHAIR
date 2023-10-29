@@ -1,8 +1,8 @@
 import React, { useState } from 'react'; // Importamos la librería de React y el hook useState para manejar el estado del componente
 import Button from 'react-bootstrap/Button'; // Importamos el componente Button de la librería react-bootstrap para crear un botón estilizado
-import './BotonSeccion3.css'; // Importamos el archivo de estilos CSS para el componente
+import './BotonSeccion5.css'; // Importamos el archivo de estilos CSS para el componente
 
-function BotonSeccion3() { // Definimos una función llamada BotonSeccion3 que retorna un elemento JSX
+function BotonSeccion5() { // Definimos una función llamada BotonSeccion5 que retorna un elemento JSX
   
   const [isClicked, setIsClicked] = useState(false); // Usamos el hook useState para crear una variable de estado llamada isClicked que indica si el botón está siendo presionado o no, y una función para actualizarla llamada setIsClicked
 
@@ -28,7 +28,7 @@ function BotonSeccion3() { // Definimos una función llamada BotonSeccion3 que r
           onMouseDown={handleMouseDown} /* Le asignamos la función handleMouseDown al evento onMouseDown para que se ejecute cuando se presione el botón con el ratón */
           onMouseUp={handleMouseUp} /* Le asignamos la función handleMouseUp al evento onMouseUp para que se ejecute cuando se suelte el botón con el ratón */
         >
-          <a href="#Seccion4">¡Adelante!</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "!Adelante¡" y el atributo href con el valor "#Seccion4" para que al hacer clic se desplace a la sección 4 de la página */}
+          <a href="#Seccion1">Volver arriba</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "Volver arriba" y el atributo href con el valor "#Seccion1" para que al hacer clic se desplace a la sección 1 de la página*/}
         </Button>
       </div>
     </>
@@ -36,4 +36,4 @@ function BotonSeccion3() { // Definimos una función llamada BotonSeccion3 que r
 
 }
 
-export default BotonSeccion3; // Exportamos la función BotonSeccion3 como el componente por defecto del módulo
+export default BotonSeccion5; // Exportamos la función BotonSeccion5 como el componente por defecto del módulo

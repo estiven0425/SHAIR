@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-.mb-2 button {
-    background-color: #fdb23b;
-    border-color: #fdb23b;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 25px;
-    height: 100%;
-    padding: 10%;
-    transition: background-color 0.2s, transform 0.2s;
-    width: 120%;
+.mb-2 button { /* Seleccionamos los elementos button dentro de los elementos con la clase mb-2 y les aplicamos los siguientes estilos: */
+    background-color: #fdb23b; /* Le damos un color de fondo naranja */
+    border-color: #fdb23b; /* Le damos un color de borde naranja */
+    border-radius: 50px; /* Le damos un radio de borde de 50px para hacerlo redondeado */
+    color: #fff; /* Le damos un color blanco al texto */
+    cursor: pointer; /* Cambiamos el cursor a puntero cuando pasa sobre el botón */
+    font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    padding: 10%; /* Le damos un relleno del 10% del contenedor */
+    transition: background-color 0.2s, transform 0.2s; /* Le damos una transición suave al cambiar el color de fondo y la transformación */
+    width: 120%; /* Le damos un ancho del 120% del contenedor */
 }
 
-.mb-2 button:hover {
-    background-color: #da9931;
-    border-color: #da9931;
-    transform: scale(110%);
+.mb-2 button:hover { /* Seleccionamos los elementos button dentro de los elementos con la clase mb-2 cuando el cursor pasa sobre ellos y les aplicamos los siguientes estilos: */
+    background-color: #da9931; /* Le damos un color de fondo más oscuro que el naranja */
+    border-color: #da9931; /* Le damos un color de borde más oscuro que el naranja */
+    transform: scale(110%); /* Le aplicamos una transformación de escala de 1.1 para aumentar su tamaño */
 }
-.mb-2 button a {
-    color: #fff;
-    font-family: 'Bangers';
-    font-size: 30px;
-    text-decoration: none;
+.mb-2 button a { /* Seleccionamos los elementos a dentro de los elementos button dentro de los elementos con la clase mb-2 y les aplicamos los siguientes estilos: */
+    color: #fff; /* Le damos un color blanco al texto */
+    font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
+    font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
+    text-decoration: none; /* Quitamos el subrayado al texto */
 }
