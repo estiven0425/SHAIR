@@ -1,20 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente CondicionesdeServicio */
 
-#CondicionesdeServicio {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
+#CondicionesdeServicio { /* Estilizamos el contenedor principal con el ID "CondicionesdeServicio" */
+  align-items: center; /* Centramos los elementos verticalmente */
+  display: flex; /* Configuramos el contenedor como un contenedor flexible (flex) */
+  flex-direction: column; /* Configuramos la dirección de los elementos como una columna */
+  height: 100%; /* Establecemos la altura del contenedor al 100% del tamaño del contenedor padre */
+  justify-content: center; /* Centramos los elementos horizontalmente */
+  width: 100%; /* Establecemos el ancho del contenedor al 100% del tamaño del contenedor padre */
 }
 
-#CondicionesdeServicio h1 {
-    font-size: 20px;
+#CondicionesdeServicio h1 { /* Estilizamos el encabezado h1 dentro de CondicionesdeServicio */
+  font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
 }
 
-#CondicionesdeServicio a {
-    color: #ffffff;
-    font-size: 12px;
-    text-decoration: none;
+#CondicionesdeServicio a { /* Estilizamos los enlaces dentro de CondicionesdeServicio */
+  color: #ffffff; /* Configuramos el color del texto en blanco */
+  font-size: 12px; /* Definimos el tamaño de fuente como 12 píxeles */
+  text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
+}
+
+@media (max-width: 768px) {
+
+  #CondicionesdeServicio h1 {
+      font-size: 10px;
+  }
+
+  #CondicionesdeServicio a {
+    font-size: 8px;
+  }
+
 }

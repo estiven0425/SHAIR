@@ -172,3 +172,15 @@
     justify-content: center; /* Justificamos los elementos hijos en el centro verticalmente */
     zoom: 85%; /* Le aplicamos un zoom del 85% para reducir su tamaño */
 }
+
+/* Cuando la pantalla sea más pequeña que 768px (tamaño de pantalla de tablet), cambiamos el diseño */
+@media (max-width: 768px) {
+
+    #Principal body #Seccion2 {
+      flex-direction: column; /* Cambia la dirección a columna */
+    }
+    #Principal body #Seccion3 {
+      flex-direction: column; /* Cambia la dirección a columna */
+    }
+    /* Agrega más cambios aquí según tus necesidades */
+}

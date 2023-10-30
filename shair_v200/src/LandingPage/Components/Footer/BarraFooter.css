@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos de la barra de pie de página */
 
-#BarraFooter {
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 15%;
-    left: 0%;
-    position: absolute;
-    width: 100%;
+#BarraFooter { /* Estilizamos el contenedor principal con el ID "BarraFooter" */
+  align-items: center; /* Centramos los elementos verticalmente */
+  background-color: rgb(0, 0, 0); /* Establecemos el color de fondo en negro */
+  display: flex; /* Configuramos el contenedor como un contenedor flexible (flex) */
+  flex-direction: column; /* Configuramos la dirección de los elementos como una columna */
+  justify-content: space-around; /* Distribuimos el espacio entre los elementos verticalmente */
+  height: 15%; /* Establecemos la altura del contenedor al 15% del tamaño del contenedor padre */
+  left: 0%; /* Alineamos el contenedor completamente a la izquierda del contenedor padre */
+  position: absolute; /* Establecemos la posición del contenedor como absoluta */
+  width: 100%; /* Establecemos el ancho del contenedor al 100% del contenedor padre */
 }
 
-#BarraFooter #Informacion {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+#BarraFooter #Informacion { /* Estilizamos la sección de información dentro de la barra de pie de página */
+  align-items: center; /* Centramos los elementos verticalmente */
+  display: flex; /* Configuramos la sección como un contenedor flexible (flex) */
+  flex-direction: row; /* Configuramos la dirección de los elementos como una fila */
+  justify-content: space-around; /* Distribuimos el espacio entre los elementos horizontalmente */
+  width: 100%; /* Establecemos el ancho de la sección al 100% del contenedor padre */
 }
 
-#BarraFooter #Derechos {
-    margin: 0%;
-    padding: 0%;
+#BarraFooter #Derechos { /* Estilizamos la sección de derechos dentro de la barra de pie de página */
+  margin: 0%; /* Eliminamos los márgenes (esto es redundante ya que el valor predeterminado es 0) */
+  padding: 0%; /* Eliminamos el relleno (esto es redundante ya que el valor predeterminado es 0) */
 }

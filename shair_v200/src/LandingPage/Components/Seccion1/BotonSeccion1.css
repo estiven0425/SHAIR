@@ -24,3 +24,9 @@
     font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
     text-decoration: none; /* Quitamos el subrayado al texto */
 }
+
+@media (max-width: 768px) {
+    .mb-2 {
+        zoom: 55%;
+    }
+}

@@ -1,27 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente Dueño */
 
-#MasInformacion {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
+#MasInformacion { /* Estas reglas CSS no parecen estar relacionadas con el componente Dueño.
+                     Parece haber una confusión en los nombres de los selectores. 
+                     Debería ser '#Dueño' en lugar de '#MasInformacion'. */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
-#MasInformacion h1 {
-    font-size: 20px;
+#MasInformacion h1 { /* Nuevamente, aquí debería ser '#Dueño' en lugar de '#MasInformacion'. */
+  font-size: 20px;
 }
 
-#MasInformacionEnlaces {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+#MasInformacionEnlaces { /* Debería ser '#Dueño' en lugar de '#MasInformacion'. */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-#MasInformacionEnlaces a {
-    color: #ffffff;
-    margin: 5%;
+#MasInformacionEnlaces a { /* Y nuevamente, aquí debería ser '#Dueño' en lugar de '#MasInformacion'. */
+  color: #ffffff;
+  margin: 5%;
+}
+
+@media (max-width: 768px) {
+
+  #MasInformacion h1 {
+      font-size: 10px;
+  }
+
+  #MasInformacionEnlaces a {
+    zoom: 50%;
+  }
+
 }

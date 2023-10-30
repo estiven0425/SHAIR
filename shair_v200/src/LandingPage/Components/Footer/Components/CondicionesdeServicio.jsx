@@ -1,16 +1,13 @@
-import React from 'react'
-import './CondicionesdeServicio.css';
+import React from 'react'; /* Importamos la librería React para crear componentes */
+import './CondicionesdeServicio.css'; /* Importamos un archivo de estilos personalizados para el componente CondicionesdeServicio */
 
 export default function CondicionesdeServicio() {
-  return (
-    <div id='CondicionesdeServicio'>
-
-        <h1>Condiciones de Servicio</h1>
-
-        <a href="#" target="_blank" rel="noopener noreferrer">Políticas y condiciones de servicio</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Contrato de membresía</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Contrato de anunciante</a>
-
+  return ( /* Definimos un componente funcional llamado CondicionesdeServicio */
+    <div id='CondicionesdeServicio'> {/* Creamos un contenedor con el ID "CondicionesdeServicio" que contiene el contenido */}
+      <h1>Condiciones de Servicio</h1> {/* Agregamos un encabezado con el texto "Condiciones de Servicio" */}
+      <a href="#" target="_blank" rel="noopener noreferrer">Políticas y condiciones de servicio</a> {/* Agregamos un enlace con texto "Políticas y condiciones de servicio" que se abre en una nueva ventana/tabla (_blank) */}
+      <a href="#" target="_blank" rel="noopener noreferrer">Contrato de membresía</a> {/* Agregamos otro enlace con texto "Contrato de membresía" que se abre en una nueva ventana/tabla (_blank) */}
+      <a href="#" target="_blank" rel="noopener noreferrer">Contrato de anunciante</a> {/* Agregamos un tercer enlace con texto "Contrato de anunciante" que se abre en una nueva ventana/tabla (_blank) */}
     </div>
   )
 }

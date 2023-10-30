@@ -12,3 +12,9 @@
 #BannerSeccion4_1 img { /* Seleccionamos los elementos img dentro del elemento con id BannerSeccion4_1 y les aplicamos los siguientes estilos: */
     border-radius: 50px; /* Le damos un borde redondeado de 50px al elemento */
 }
+
+@media (max-width: 768px) {
+    #BannerSeccion4_1 {
+        zoom: 10%;
+    }
+}
