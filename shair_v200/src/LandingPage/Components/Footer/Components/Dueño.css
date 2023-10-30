@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+
+#Dueño h1{
+    font-size: 15px;
+}

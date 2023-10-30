@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#TituloSeccion2 h1 {
-    color: #fdb23b;
-    font-family: 'Bangers';
-    font-size: 150px;
-    text-shadow: none;
+#TituloSeccion2 h1 { /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion2 y les aplicamos los siguientes estilos: */
+    color: #fdb23b; /* Le damos un color naranja al texto */
+    font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
+    font-size: 150px; /* Le damos un tamaño de fuente de 150px al texto */
+    text-shadow: none; /* Quitamos la sombra al texto */
 }

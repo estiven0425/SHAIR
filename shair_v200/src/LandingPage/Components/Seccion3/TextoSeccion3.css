@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#TextoSeccion3 p {
-    color: #fff;
-    font-family: 'Open Sans';
-    font-size: 25px;
-    margin-left: 15%;
-    text-shadow: none;
-    width: 100%;
+#TextoSeccion3 p { /* Seleccionamos los elementos p dentro del elemento con id TextoSeccion3 y les aplicamos los siguientes estilos: */
+    color: #fff; /* Le damos un color blanco al texto */
+    font-family: 'Open Sans'; /* Le damos la fuente Open Sans al texto */
+    font-size: 25px; /* Le damos un tamaño de fuente de 25px al texto */
+    margin-left: 15%; /* Le damos un margen izquierdo del 15% del contenedor para centrar el texto */
+    text-shadow: none; /* Quitamos la sombra al texto */
+    width: 100%; /* Le damos un ancho del 100% del contenedor para ajustar el texto */
 }

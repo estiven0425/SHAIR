@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#IconoSeccion1 {
-    height: 100%;
-    opacity: 5%;
-    width: 100%;
+#IconoSeccion1 { /* Seleccionamos el elemento con id IconoSeccion1 y le aplicamos los siguientes estilos: */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    opacity: 5%; /* Le damos una opacidad del 5% para que se vea muy transparente */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
 }

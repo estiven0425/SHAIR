@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#BannerSeccion4_1 {
-    height: 100%;
-    margin: 5%;
-    opacity: 100%;
-    width: 100%;
-    z-index: 1;
-    zoom: 25%;
+#BannerSeccion4_1 { /* Seleccionamos el elemento con id BannerSeccion4_1 y le aplicamos los siguientes estilos: */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    margin: 5%; /* Le damos un margen del 5% alrededor del elemento */
+    opacity: 100%; /* Le damos una opacidad del 100% al elemento */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
+    z-index: 1; /* Le damos un índice de profundidad de 1 al elemento */
+    zoom: 25%; /* Le damos un zoom del 25% al elemento */
 }
 
-#BannerSeccion4_1 img {
-    border-radius: 50px;
+#BannerSeccion4_1 img { /* Seleccionamos los elementos img dentro del elemento con id BannerSeccion4_1 y les aplicamos los siguientes estilos: */
+    border-radius: 50px; /* Le damos un borde redondeado de 50px al elemento */
 }

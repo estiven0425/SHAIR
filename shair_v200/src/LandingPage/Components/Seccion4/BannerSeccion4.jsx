@@ -1,11 +1,11 @@
-import React from 'react'
-import IconoImage from './img4/anunciarse.jpg'
-import './BannerSeccion4.css';
+import React from 'react' // Importamos la librería de React para crear componentes
+import IconoImage from './img4/anunciarse.jpg' // Importamos la imagen del icono desde el directorio img4
+import './BannerSeccion4.css'; // Importamos el archivo de estilos CSS para el componente
 
-export default function BannerSeccion4() {
-  return (
-    <div id='BannerSeccion4'>
-        <img src={IconoImage} alt="Anunciarse SHAIR" />
+export default function BannerSeccion4() { // Exportamos una función llamada BannerSeccion4 que retorna un elemento JSX
+  return ( // Retornamos el contenido JSX del componente
+    <div id='BannerSeccion4'> {/* Creamos un div con id BannerSeccion4 que contiene un elemento img */}
+        <img src={IconoImage} alt="Anunciarse SHAIR" /> {/* Creamos un elemento img que renderiza la imagen del icono con el atributo alt "Anunciarse SHAIR" */}
     </div>
   )
 }
