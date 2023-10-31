@@ -1,6 +1,6 @@
 import React from 'react' // Importamos la librería de React para crear componentes
 import './LandingPage.css'; // Importamos el archivo de estilos CSS para la página principal
-import BarraDeNavegacion from './Components/BarraDeNavegacion'; // Importamos el componente de la barra de navegación
+import BarraDeNavegacion from './Components/Header/BarraDeNavegacion'; // Importamos el componente de la barra de navegación
 import TituloSeccion1 from './Components/Seccion1/TituloSeccion1';
 import BannerSeccion1 from './Components/Seccion1/BannerSeccion1';
 import IconoSeccion1 from './Components/Seccion1/IconoSeccion1';
