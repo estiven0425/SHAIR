@@ -19,7 +19,19 @@
   text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+
+  #CondicionesdeServicio h1 {
+      font-size: 15px;
+  }
+
+  #CondicionesdeServicio a {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 800px) {
 
   #CondicionesdeServicio h1 {
       font-size: 10px;

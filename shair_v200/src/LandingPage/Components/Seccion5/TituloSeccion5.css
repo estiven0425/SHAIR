@@ -6,3 +6,9 @@
     font-size: 90px; /* Le damos un tamaño de fuente de 90px al texto */
     text-shadow: none; /* Quitamos la sombra al texto */
 }
+
+@media (max-width: 800px) {
+    #TituloSeccion5 h1 {
+        font-size: 45px;
+    }
+}

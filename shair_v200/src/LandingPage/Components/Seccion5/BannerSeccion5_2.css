@@ -13,9 +13,23 @@
     border-radius: 50px; /* Le damos un borde redondeado de 50px al elemento */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
     #BannerSeccion5_2 {
-        padding-left: 12%;
+        padding-left: 2%;
+        zoom: 25%;
+    }
+}
+
+@media (max-width: 880px) {
+    #BannerSeccion5_2 {
+        padding-left: 10%;
+        zoom: 22%;
+    }
+}
+
+@media (max-width: 800px) {
+    #BannerSeccion5_2 {
+        padding-left: 1%;
         zoom: 20%;
     }
 }

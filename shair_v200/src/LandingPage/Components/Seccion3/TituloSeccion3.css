@@ -6,3 +6,27 @@
     font-size: 75px; /* Le damos un tamaño de fuente de 75px al texto */
     text-shadow: none; /* Quitamos la sombra al texto */
 }
+
+@media (max-width: 1400px) {
+    #TituloSeccion3 h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #TituloSeccion3 h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 880px) {
+    #TituloSeccion3 h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    #TituloSeccion3 h1 {
+        font-size: 30px;
+    }
+}

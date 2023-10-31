@@ -16,7 +16,7 @@ function BotonSeccion4() { // Definimos una función llamada BotonSeccion4 que r
 
   return ( // Retornamos el contenido JSX del componente
     <> {/* Usamos un fragmento para agrupar los elementos sin crear un nodo extra */}
-      <div className="mb-2"> {/* Creamos un div con la clase mb-2 que le da un margen inferior de 2 unidades */}
+      <div className="mb-4"> {/* Creamos un div con la clase mb-2 que le da un margen inferior de 2 unidades */}
         <Button /* Creamos un elemento Button que renderiza un botón con los siguientes atributos: */
           variant="primary" /* Le damos una variante primaria que le da un color azul por defecto */
           size="lg" /* Le damos un tamaño grande que le da una altura y un ancho mayores */

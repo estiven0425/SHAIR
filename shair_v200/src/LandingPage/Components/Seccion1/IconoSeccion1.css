@@ -5,3 +5,43 @@
     opacity: 5%; /* Le damos una opacidad del 5% para que se vea muy transparente */
     width: 100%; /* Le damos un ancho del 100% del contenedor */
 }
+
+@media (max-width: 1400px) {
+    #IconoSeccion1 {
+        margin-left: -5%;
+        zoom: 88%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #IconoSeccion1 {
+        margin-left: -10%;
+        zoom: 75%;
+    }
+}
+
+@media (max-width: 880px) {
+    #IconoSeccion1 {
+        margin-left: -10%;
+        zoom: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+    #IconoSeccion1 {
+        zoom: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #IconoSeccion1 {
+        margin-left: 15%;
+        zoom: 50%;
+    }
+}
+
+@media (max-width: 570px) {
+    #IconoSeccion1 {
+        margin-left: 5%;
+    }
+}

@@ -8,3 +8,27 @@
     text-shadow: none; /* Quitamos la sombra al texto */
     width: 50%; /* Le damos un ancho del 50% del contenedor para ajustar el texto */
 }
+
+@media (max-width: 1400px) {
+    #TextoSeccion2 p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #TextoSeccion2 p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 880px) {
+    #TextoSeccion2 p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    #TextoSeccion2 p {
+        font-size: 15px;
+    }
+}

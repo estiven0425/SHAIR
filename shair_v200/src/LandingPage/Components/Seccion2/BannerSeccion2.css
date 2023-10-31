@@ -7,3 +7,33 @@
     z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
     zoom: 115%; /* Le aplicamos un zoom del 115% para aumentar su tamaño */
 }
+
+@media (max-width: 1400px) {
+    #BannerSeccion2 {
+        zoom: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #BannerSeccion2 {
+        zoom: 70%;
+    }
+}
+
+@media (max-width: 880px) {
+    #BannerSeccion2 {
+        zoom: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    #BannerSeccion2 {
+        zoom: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    #BannerSeccion2 {
+        display: none;
+    }
+}
