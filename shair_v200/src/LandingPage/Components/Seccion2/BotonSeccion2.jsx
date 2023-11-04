@@ -28,7 +28,7 @@ function BotonSeccion2() { // Definimos una función llamada BotonSeccion2 que r
           onMouseDown={handleMouseDown} /* Le asignamos la función handleMouseDown al evento onMouseDown para que se ejecute cuando se presione el botón con el ratón */
           onMouseUp={handleMouseUp} /* Le asignamos la función handleMouseUp al evento onMouseUp para que se ejecute cuando se suelte el botón con el ratón */
         >
-          <a href="#Seccion3">Mira lo que ofrecemos</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "Mira lo que ofrecemos" y el atributo href con el valor "#Seccion3" para que al hacer clic se desplace a la sección 3 de la página */}
+          <a href="#Seccion3LandingPage">Mira lo que ofrecemos</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "Mira lo que ofrecemos" y el atributo href con el valor "#Seccion3" para que al hacer clic se desplace a la sección 3 de la página */}
         </Button>
       </div>
     </>

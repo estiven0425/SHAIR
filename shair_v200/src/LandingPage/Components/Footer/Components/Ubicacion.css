@@ -1,44 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente Ubicacion */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente Ubicación */
 
-#Ubicacion { /* Estilizamos el contenedor principal con el ID "Ubicacion" */
-  align-items: center; /* Centramos los elementos verticalmente */
-  display: flex; /* Configuramos el contenedor como un contenedor flexible (flex) */
-  flex-direction: column; /* Configuramos la dirección de los elementos como una columna */
-  height: 100%; /* Establecemos la altura del contenedor al 100% del tamaño del contenedor padre */
-  justify-content: center; /* Centramos los elementos horizontalmente */
-  width: 100%; /* Establecemos el ancho del contenedor al 100% del tamaño del contenedor padre */
+#Ubicacion { /* Estilizamos el contenedor principal con el ID "Ubicación" */
+  align-items: center; /* Centramos verticalmente los elementos del contenedor */
+  display: flex; /* Configuramos el contenedor como un contenedor flexible (flexbox) */
+  flex-direction: column; /* Los elementos se apilan en una columna */
+  height: 100%; /* La altura del contenedor es del 100% del contenedor padre */
+  justify-content: center; /* Centramos horizontalmente los elementos del contenedor */
+  width: 100%; /* El ancho del contenedor es del 100% del contenedor padre */
 }
 
-#Ubicacion h1 { /* Estilizamos el encabezado h1 dentro de Ubicacion */
+#Ubicacion h1 { /* Estilizamos el encabezado h1 dentro del contenedor "Ubicación" */
   font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
+  text-align: center; /* Alineamos el texto en el centro */
 }
 
-#Ubicacion a { /* Estilizamos los enlaces dentro de Ubicacion */
+#Ubicacion a { /* Estilizamos los enlaces dentro del contenedor "Ubicación" */
   color: #ffffff; /* Configuramos el color del texto en blanco */
   font-size: 12px; /* Definimos el tamaño de fuente como 12 píxeles */
+  text-align: center; /* Alineamos el texto en el centro */
   text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
 
   #Ubicacion h1 {
-      font-size: 15px;
+    font-size: 18px; /* Disminuimos el tamaño de fuente a 18px */
   }
-
-  #Ubicacion a {
-    font-size: 10px;
-  }
-
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
 
   #Ubicacion h1 {
-      font-size: 10px;
+    font-size: 15px; /* Disminuimos el tamaño de fuente a 15px */
   }
 
   #Ubicacion a {
-    font-size: 8px;
+    font-size: 10px; /* Disminuimos el tamaño de fuente de los enlaces a 10px */
+  }
+}
+
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+
+  #Ubicacion h1 {
+    font-size: 13px; /* Disminuimos el tamaño de fuente a 13px */
   }
 
+  #Ubicacion a {
+    font-size: 7px; /* Disminuimos el tamaño de fuente de los enlaces a 7px */
+  }
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+
+  #Ubicacion h1 {
+    font-size: 7px; /* Disminuimos el tamaño de fuente a 7px */
+  }
+
+  #Ubicacion a {
+    font-size: 4px; /* Disminuimos el tamaño de fuente de los enlaces a 4px */
+  }
 }

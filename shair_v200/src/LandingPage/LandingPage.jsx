@@ -29,7 +29,7 @@ import BarraFooter from './Components/Footer/BarraFooter'; // Importamos el comp
 export default function LandingPage() { // Exportamos el componente principal de la página web
   return ( // Retornamos el contenido HTML del componente
 
-    <div id='Principal'> {/* Creamos un div que contiene toda la página */}
+    <div id='PrincipalLandingPage'> {/* Creamos un div que contiene toda la página */}
 
       <header> {/* Creamos un elemento header para el encabezado de la página */}
         <BarraDeNavegacion/> {/* Insertamos el componente de la barra de navegación */}
@@ -37,7 +37,7 @@ export default function LandingPage() { // Exportamos el componente principal de
 
       <body> {/* Creamos un elemento body para el cuerpo de la página */}
 
-        <section id='Seccion1'> {/* Creamos un elemento section para la primera sección de la página */}
+        <section id='Seccion1LandingPage'> {/* Creamos un elemento section para la primera sección de la página */}
 
           <div id='Titulo1'> {/* Creamos un div para el título de la sección 1 */}
             <TituloSeccion1/> {/* Insertamos el componente del título de la sección 1 */}
@@ -54,7 +54,7 @@ export default function LandingPage() { // Exportamos el componente principal de
 
         </section>
 
-        <section id='Seccion2'> {/* Creamos un elemento section para la segunda sección de la página */}
+        <section id='Seccion2LandingPage'> {/* Creamos un elemento section para la segunda sección de la página */}
 
           <div id='Banner2'> {/* Creamos un div para el banner de la sección 2 */}
             <BannerSeccion2/> {/* Insertamos el componente del banner de la sección 2 */}
@@ -67,7 +67,7 @@ export default function LandingPage() { // Exportamos el componente principal de
 
         </section>
 
-        <section id='Seccion3'> {/* Creamos un elemento section para la tercera sección de la página */}
+        <section id='Seccion3LandingPage'> {/* Creamos un elemento section para la tercera sección de la página */}
 
           <div id='Contenido3'> {/* Creamos un div para el contenido de la sección 3 */}
 
@@ -87,7 +87,7 @@ export default function LandingPage() { // Exportamos el componente principal de
 
         </section>
 
-        <section id='Seccion4'> {/* Creamos un elemento section para la cuarta sección de la página */}
+        <section id='Seccion4LandingPage'> {/* Creamos un elemento section para la cuarta sección de la página */}
 
           <TituloSeccion4/> {/* Insertamos el componente del título de la sección 4 */}
 
@@ -107,7 +107,7 @@ export default function LandingPage() { // Exportamos el componente principal de
 
         </section>
 
-        <section id='Seccion5'> {/* Creamos un elemento section para la quinta sección de la página */}
+        <section id='Seccion5LandingPage'> {/* Creamos un elemento section para la quinta sección de la página */}
           
           <div id='Fondos'> {/* Creamos un div para los fondos de la sección 5 */}
             <BannerSeccion5/> {/* Insertamos el componente del primer fondo de la sección 5 */}

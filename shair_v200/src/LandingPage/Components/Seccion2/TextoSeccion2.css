@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
+#TextoSeccion {
+    text-align: center; /* Alineamos el texto en el centro */
+}
+
 #TextoSeccion2 p { /* Seleccionamos los elementos p dentro del elemento con id TextoSeccion2 y les aplicamos los siguientes estilos: */
     color: #fff; /* Le damos un color blanco al texto */
     font-family: 'Open Sans'; /* Le damos la fuente Open Sans al texto */
@@ -9,26 +13,26 @@
     width: 50%; /* Le damos un ancho del 50% del contenedor para ajustar el texto */
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+    #TextoSeccion2 p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
     #TextoSeccion2 p {
         font-size: 25px;
     }
 }
 
-@media (max-width: 1024px) {
-    #TextoSeccion2 p {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 880px) {
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
     #TextoSeccion2 p {
         font-size: 20px;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
     #TextoSeccion2 p {
-        font-size: 15px;
+        font-size: 10px;
     }
 }

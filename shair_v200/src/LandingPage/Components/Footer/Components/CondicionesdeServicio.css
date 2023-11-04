@@ -11,34 +11,56 @@
 
 #CondicionesdeServicio h1 { /* Estilizamos el encabezado h1 dentro de CondicionesdeServicio */
   font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
+  text-align: center; /* Alineamos el texto en el centro */
 }
 
 #CondicionesdeServicio a { /* Estilizamos los enlaces dentro de CondicionesdeServicio */
   color: #ffffff; /* Configuramos el color del texto en blanco */
   font-size: 12px; /* Definimos el tamaño de fuente como 12 píxeles */
+  text-align: center; /* Alineamos el texto en el centro */
   text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
 
   #CondicionesdeServicio h1 {
-      font-size: 15px;
-  }
-
-  #CondicionesdeServicio a {
-    font-size: 10px;
+      font-size: 18px; /* Cambiamos el tamaño de fuente a 18px */
   }
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
 
   #CondicionesdeServicio h1 {
-      font-size: 10px;
+      font-size: 15px; /* Cambiamos el tamaño de fuente a 15px */
   }
 
   #CondicionesdeServicio a {
-    font-size: 8px;
+    font-size: 10px; /* Cambiamos el tamaño de fuente de los enlaces a 10px */
+  }
+
+}
+
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+
+  #CondicionesdeServicio h1 {
+      font-size: 13px; /* Cambiamos el tamaño de fuente a 13px */
+  }
+
+  #CondicionesdeServicio a {
+    font-size: 7px; /* Cambiamos el tamaño de fuente de los enlaces a 7px */
+  }
+
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+
+  #CondicionesdeServicio h1 {
+      font-size: 7px; /* Cambiamos el tamaño de fuente a 7px */
+  }
+
+  #CondicionesdeServicio a {
+    font-size: 4px; /* Cambiamos el tamaño de fuente de los enlaces a 4px */
   }
 
 }

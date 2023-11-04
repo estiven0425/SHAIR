@@ -9,6 +9,7 @@
     font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
     height: 100%; /* Le damos una altura del 100% del contenedor */
     padding: 10%; /* Le damos un relleno del 10% del contenedor */
+    text-align: center; /* Alineamos el texto en el centro */
     transition: background-color 0.2s, transform 0.2s; /* Le damos una transición suave al cambiar el color de fondo y la transformación */
     width: 120%; /* Le damos un ancho del 120% del contenedor */
 }
@@ -18,6 +19,7 @@
     border-color: #da9931; /* Le damos un color de borde más oscuro que el naranja */
     transform: scale(110%); /* Le aplicamos una transformación de escala de 1.1 para aumentar su tamaño */
 }
+
 .mb-2 button a { /* Seleccionamos los elementos a dentro de los elementos button dentro de los elementos con la clase mb-2 y les aplicamos los siguientes estilos: */
     color: #fff; /* Le damos un color blanco al texto */
     font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
@@ -25,20 +27,14 @@
     text-decoration: none; /* Quitamos el subrayado al texto */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
     .mb-2 {
-        zoom: 75%;
+        zoom: 75%; /* Aplicamos un zoom del 75% para reducir el tamaño de los elementos con la clase mb-2 */
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
     .mb-2 {
-        zoom: 55%;
-    }
-}
-
-@media (max-width: 600px) {
-    .mb-2 {
-        display: none;
+        display: none; /* Ocultamos los elementos con la clase mb-2 */
     }
 }

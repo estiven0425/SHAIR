@@ -25,8 +25,26 @@
     text-decoration: none; /* Quitamos el subrayado al texto */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
     .mb-5 {
-        zoom: 55%;
+        zoom: 90%; /* Aplicamos un zoom del 90% (puedes ajustar este valor según tus necesidades) */
+    }
+}
+
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+    .mb-5 {
+        zoom: 75%; /* Aplicamos un zoom del 75% (puedes ajustar este valor según tus necesidades) */
+    }
+}
+
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+    .mb-5 {
+        zoom: 35%; /* Aplicamos un zoom del 35% (puedes ajustar este valor según tus necesidades) */
+    }
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+    .mb-5 {
+        zoom: 30%; /* Aplicamos un zoom del 30% (puedes ajustar este valor según tus necesidades) */
     }
 }

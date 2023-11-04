@@ -7,56 +7,26 @@
     text-shadow: none; /* Quitamos la sombra al texto */
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1440px) {
     #TituloSeccion1 h1 {
-        font-size: 120px;
+        font-size: 120px; /* Reducimos el tamaño de fuente a 120px en pantallas de hasta 1440px de ancho */
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1366px) {
     #TituloSeccion1 h1 {
-        font-size: 100px;
+        font-size: 110px; /* Reducimos el tamaño de fuente a 110px en pantallas de hasta 1366px de ancho */
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 720px) {
     #TituloSeccion1 h1 {
-        font-size: 90px;
+        font-size: 65px; /* Reducimos el tamaño de fuente a 65px en pantallas de hasta 720px de ancho */
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 375px) {
     #TituloSeccion1 h1 {
-        font-size: 80px;
-    }
-}
-
-@media (max-width: 940px) {
-    #TituloSeccion1 h1 {
-        font-size: 75px;
-    }
-}
-
-@media (max-width: 910px) {
-    #TituloSeccion1 h1 {
-        font-size: 70px;
-    }
-}
-
-@media (max-width: 800px) {
-    #TituloSeccion1 h1 {
-        font-size: 60px;
-    }
-}
-
-@media (max-width: 710px) {
-    #TituloSeccion1 h1 {
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 600px) {
-    #TituloSeccion1 h1 {
-        font-size: 70px;
+        font-size: 35px; /* Reducimos el tamaño de fuente a 35px en pantallas de hasta 375px de ancho */
     }
 }

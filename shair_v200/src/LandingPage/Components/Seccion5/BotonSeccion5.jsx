@@ -28,7 +28,7 @@ function BotonSeccion5() { // Definimos una función llamada BotonSeccion5 que r
           onMouseDown={handleMouseDown} /* Le asignamos la función handleMouseDown al evento onMouseDown para que se ejecute cuando se presione el botón con el ratón */
           onMouseUp={handleMouseUp} /* Le asignamos la función handleMouseUp al evento onMouseUp para que se ejecute cuando se suelte el botón con el ratón */
         >
-          <a href="#Seccion1">Volver arriba</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "Volver arriba" y el atributo href con el valor "#Seccion1" para que al hacer clic se desplace a la sección 1 de la página*/}
+          <a href="#Seccion1LandingPage">Volver arriba</a> {/* Dentro del botón, creamos un elemento a que renderiza un enlace con el texto "Volver arriba" y el atributo href con el valor "#Seccion1" para que al hacer clic se desplace a la sección 1 de la página*/}
         </Button>
       </div>
     </>
