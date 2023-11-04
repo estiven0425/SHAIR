@@ -8,7 +8,7 @@ export default function BarraDeNavegacion() { /* Definimos un componente funcion
       <div class="container-fluid"> {/* Creamos un contenedor fluido dentro de la barra de navegación */}
         <a class="navbar-brand" href="#">Anuncios</a> {/* Creamos un enlace con la clase "navbar-brand" y texto "Anuncios" */} 
         <a class="navbar-brand" href="#Seccion1LandingPage">Inicio</a> {/* Creamos otro enlace con la clase "navbar-brand" y texto "Inicio", que redirige a la Sección 1 */}
-        <a class="navbar-brand" href='#'>Shair | Foro</a> {/* Creamos un tercer enlace con la clase "navbar-brand" y texto "Shair | Foro" */}       
+        <a class="navbar-brand" href='#'>Shair | Foro</a> {/* Creamos un tercer enlace con la clase "navbar-brand" y texto "Shair | Foro" */}
       </div>
     </nav>
   )

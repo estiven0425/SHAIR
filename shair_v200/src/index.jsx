@@ -2,14 +2,26 @@
 
 import React from 'react'; /*Importar librería de REACT*/
 import ReactDOM from 'react-dom/client'; /*Importar REACT DOM*/
+import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './index.css'; /*importar archivo de estilos globales*/
 import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de REACT*/
+import Home from './Home/Home';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage/>,
+  },
+  {
+    path: "/Home",
+    element: <Home/>,
+  }
+]);
+
+const root = ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LandingPage/> {/*Llamamos componente*/}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
