@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+
+#IconoSeccion1LandingPage {
+    height: 100%; /* Establecemos la altura del elemento al 100% del tamaño de su contenedor */
+    opacity: 5%; /* Configuramos la opacidad al 5% para que el elemento sea apenas visible */
+    text-align: center; /* Alineamos el contenido del elemento en el centro horizontalmente */
+    width: 100%; /* Establecemos el ancho del elemento al 100% del tamaño de su contenedor */
+}
+
+@media (max-width: 1440px) {
+    #IconoSeccion1LandingPage {
+        zoom: 90%; /* Aplicamos un zoom del 90% para reducir el tamaño del elemento en pantallas de hasta 1440px de ancho */
+    }
+}
+
+@media (max-width: 1366px) {
+    #IconoSeccion1LandingPage {
+        zoom: 75%; /* Aplicamos un zoom del 75% para reducir el tamaño del elemento en pantallas de hasta 1366px de ancho */
+    }
+}
+
+@media (max-width: 720px) {
+    #IconoSeccion1LandingPage {
+        zoom: 40%; /* Aplicamos un zoom del 40% para reducir el tamaño del elemento en pantallas de hasta 720px de ancho */
+    }
+}
+
+@media (max-width: 375px) {
+    #IconoSeccion1LandingPage {
+        padding-top: 10%; /* Agregamos un relleno superior del 10% para ajustar el espaciado en pantallas de hasta 375px de ancho */
+        zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento en pantallas de hasta 375px de ancho */
+    }
+}

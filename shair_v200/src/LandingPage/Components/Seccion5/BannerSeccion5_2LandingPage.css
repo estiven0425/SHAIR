@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+
+#BannerSeccion5_2LandingPage { /* Seleccionamos el elemento con id BannerSeccion5_2LandingPage y le aplicamos los siguientes estilos: */
+    height: 100%; /* Le damos una altura del 100% del contenedor */
+    margin: 5%; /* Le damos un margen del 5% alrededor del elemento */
+    opacity: 100%; /* Le damos una opacidad del 100% al elemento (lo cual lo hace completamente visible) */
+    text-align: center; /* Alineamos el texto en el centro horizontalmente */
+    width: 100%; /* Le damos un ancho del 100% del contenedor */
+    z-index: 1; /* Le damos un índice de profundidad de 1 al elemento para que esté detrás de otros elementos */
+    zoom: 28%; /* Aplicamos un zoom del 28% al elemento (puedes ajustar este valor según tus necesidades) */
+}
+
+#BannerSeccion5_2LandingPage img { /* Seleccionamos los elementos img dentro del elemento con id BannerSeccion5_2LandingPage y les aplicamos los siguientes estilos: */
+    border-radius: 50px; /* Le damos un borde redondeado de 50px al elemento */
+}
+
+@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+    #BannerSeccion5_2LandingPage {
+        zoom: 25%; /* Reducimos el zoom a 25% */
+    }
+}
+
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+    #BannerSeccion5_2LandingPage {
+        zoom: 20%; /* Reducimos el zoom a 20% */
+    }
+}
+
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+    #BannerSeccion5_2LandingPage {
+        zoom: 15%; /* Reducimos el zoom a 15% */
+    }
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+    #BannerSeccion5_2LandingPage {
+        zoom: 10%; /* Reducimos el zoom a 10% (puedes ajustar este valor según tus necesidades) */
+    }
+}

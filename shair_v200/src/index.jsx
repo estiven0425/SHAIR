@@ -2,11 +2,11 @@
 
 import React from 'react'; /*Importar librería de REACT*/
 import ReactDOM from 'react-dom/client'; /*Importar REACT DOM*/
-import {createBrowserRouter, RouterProvider,} from "react-router-dom";
+import {createBrowserRouter, RouterProvider,} from "react-router-dom"; /*Importamos el navegador de pestañas de REACT*/
 import './index.css'; /*importar archivo de estilos globales*/
 import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de REACT*/
-import Home from './Home/Home';
-import reportWebVitals from './reportWebVitals';
+import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
+import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 
 const router = createBrowserRouter([
   {

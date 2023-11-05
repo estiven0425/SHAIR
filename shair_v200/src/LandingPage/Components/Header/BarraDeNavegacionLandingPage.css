@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos de navegación */
+
+.navbar.navbar-expand-lg.bg-body-tertiary-LandingPage {
+  background-color: #ffffff;
+}
+
+.navbar.navbar-expand-lg.bg-body-tertiary-LandingPage .container-fluid .navbar-brand { /* Seleccionamos elementos con las clases específicas en la barra de navegación */
+  color: #8e4c98; /* Establecemos el color del texto como un tono de púrpura (#8e4c98) */
+  font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
+  font-weight: bold; /* Configuramos el texto en negrita */
+  text-align: center; /* Alineamos el texto en el centro */
+  text-shadow: 1px 2px 1px #fdb23b; /* Aplicamos una sombra al texto con desplazamiento y color especificados */
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+  .navbar.navbar-expand-lg.bg-body-tertiary-LandingPage .container-fluid .navbar-brand { /* Seleccionamos elementos con las clases específicas en la barra de navegación */
+    font-size: 10px; /* Disminuimos el tamaño de fuente a 10px en pantallas pequeñas */
+  }
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+
+#TituloSeccion1LandingPage h1 { /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion1LandingPage y les aplicamos los siguientes estilos: */
+    color: #fdb23b; /* Le damos un color naranja al texto */
+    font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
+    font-size: 150px; /* Le damos un tamaño de fuente de 150px al texto */
+    text-shadow: none; /* Quitamos la sombra al texto */
+}
+
+@media (max-width: 1440px) {
+    #TituloSeccion1LandingPage h1 {
+        font-size: 120px; /* Reducimos el tamaño de fuente a 120px en pantallas de hasta 1440px de ancho */
+    }
+}
+
+@media (max-width: 1366px) {
+    #TituloSeccion1LandingPage h1 {
+        font-size: 110px; /* Reducimos el tamaño de fuente a 110px en pantallas de hasta 1366px de ancho */
+    }
+}
+
+@media (max-width: 720px) {
+    #TituloSeccion1LandingPage h1 {
+        font-size: 65px; /* Reducimos el tamaño de fuente a 65px en pantallas de hasta 720px de ancho */
+    }
+}
+
+@media (max-width: 375px) {
+    #TituloSeccion1LandingPage h1 {
+        font-size: 35px; /* Reducimos el tamaño de fuente a 35px en pantallas de hasta 375px de ancho */
+    }
+}

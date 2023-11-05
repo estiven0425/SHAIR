@@ -1,1 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#PrincipalHome {
+    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
+}
+
+#PrincipalHome body {
+    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+}

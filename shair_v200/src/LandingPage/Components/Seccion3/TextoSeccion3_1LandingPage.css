@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+
+#TextoSeccion3_1LandingPage {
+    text-align: center; /* Alineamos el texto en el centro horizontalmente */
+}
+
+#TextoSeccion3_1LandingPage p { /* Seleccionamos los elementos p dentro del elemento con id TextoSeccion3_1LandingPage y les aplicamos los siguientes estilos: */
+    color: #fff; /* Le damos un color blanco al texto */
+    font-family: 'Open Sans'; /* Le damos la fuente Open Sans al texto */
+    font-size: 25px; /* Le damos un tamaño de fuente de 25px al texto */
+    margin-left: 15%; /* Aplicamos un margen izquierdo del 15% del contenedor para centrar el texto */
+    text-align: center; /* Alineamos el texto en el centro horizontalmente */
+    text-shadow: none; /* Quitamos la sombra al texto */
+    width: 100%; /* Establecemos un ancho del 100% del contenedor para ajustar el texto */
+}
+
+@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+    #TextoSeccion3_1LandingPage p {
+        font-size: 25px; /* Modificamos el tamaño de fuente a 25px */
+    }
+}
+
+@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+    #TextoSeccion3_1LandingPage p {
+        font-size: 20px; /* Modificamos el tamaño de fuente a 20px */
+    }
+}
+
+@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+    #TextoSeccion3_1LandingPage p {
+        font-size: 10px; /* Modificamos el tamaño de fuente a 10px */
+    }
+}
