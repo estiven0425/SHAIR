@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
 
+#BarraDeNavegacionSesionCuentaHomePrincipal {
+    text-align: center;
+}
+
 #BarraDeNavegacionSesionCuentaHomePrincipal .Perfil {
     background-color: transparent;
     border: 2px solid #303030;

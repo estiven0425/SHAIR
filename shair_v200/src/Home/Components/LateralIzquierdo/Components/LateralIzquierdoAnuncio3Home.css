@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#LateralIzquierdoAnuncio3HomePrincipal {
+    align-items: center;
+    background-color: #303030;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 160px;
+    justify-content: center;
+    padding: 2%;
+    text-align: center;
+    width: 160px;
+}
+
+#LateralIzquierdoAnuncio3HomePrincipal .Anuncio{
+    font-size: 15px;
+}

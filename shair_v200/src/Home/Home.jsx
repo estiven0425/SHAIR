@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css';
 import BarraDeNavegacionHome from './Components/Header/BarraDeNavegacionHome';
+import LateralIzquierdoHome from './Components/LateralIzquierdo/LateralIzquierdoHome';
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
 
       <body>
 
-        
+        <section id='IzquierdaHome'>
+          <LateralIzquierdoHome/>
+        </section>
 
       </body>
 
