@@ -1,12 +1,12 @@
 import Figure from 'react-bootstrap/Figure';
-import './LateralIzquierdoAnuncioHome.css';
+import './LateralDerechoAnuncioHome.css';
 
-function LateralIzquierdoAnuncio2Home() {
+function LateralDerechoAnuncioHome() {
   return (
-    <Figure className='LateralIzquierdoAnuncioHomePrincipal'>
-      <Figure.Image className='Anuncios'
+    <Figure id='LateralDerechoAnuncioHomePrincipal'>
+      <Figure.Image className='Anuncio'
         width={160}
-        height={250}
+        height={160}
         alt="Este espacio es reservado para nuestros patrocinadores, descubre como puedes promocionarte en la sección de anuncios"
         src=""
       />
@@ -14,4 +14,4 @@ function LateralIzquierdoAnuncio2Home() {
   );
 }
 
-export default LateralIzquierdoAnuncio2Home;
+export default LateralDerechoAnuncioHome;

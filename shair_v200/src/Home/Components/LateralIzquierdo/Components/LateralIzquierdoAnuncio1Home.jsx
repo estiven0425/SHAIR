@@ -4,7 +4,7 @@ import './LateralIzquierdoAnuncioHome.css';
 function LateralIzquierdoAnuncio1Home() {
   return (
     <Figure className='LateralIzquierdoAnuncioHomePrincipal'>
-      <Figure.Image className='Anuncio'
+      <Figure.Image className='Anuncios'
         width={160}
         height={250}
         alt="Este espacio es reservado para nuestros patrocinadores, descubre como puedes promocionarte en la sección de anuncios"

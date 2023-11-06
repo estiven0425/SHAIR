@@ -7,5 +7,5 @@
 
 #PrincipalHome body {
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-    padding-top: 8%;
+    padding: 6% 12% 0% 12%;
 }
