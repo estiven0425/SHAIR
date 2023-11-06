@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#BarraDeNavegacionBusquedaBotonHomePrincipal #BarraDeNavegacionBusquedaBotonBuscarHome {
+    background-color: #8e4c98;
+    border: 2px solid #606060;
+    display: flex;
+    height: 40px;
+}
+
+#BarraDeNavegacionBusquedaBotonHomePrincipal #BarraDeNavegacionBusquedaBotonBuscarHome:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}

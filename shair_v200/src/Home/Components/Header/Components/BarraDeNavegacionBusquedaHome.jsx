@@ -1,4 +1,5 @@
 import React from 'react'
+import './BarraDeNavegacionBusquedaHome.css';
 import BarraDeNavegacionBusquedaEspacioHome from './BarraDeNavegacionBusquedaComponents/BarraDeNavegacionBusquedaEspacioHome'
 import BarraDeNavegacionBusquedaBotonHome from './BarraDeNavegacionBusquedaComponents/BarraDeNavegacionBusquedaBotonHome'
 

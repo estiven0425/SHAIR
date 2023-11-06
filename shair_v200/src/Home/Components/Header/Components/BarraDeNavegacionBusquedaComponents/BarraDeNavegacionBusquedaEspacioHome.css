@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#BarraDeNavegacionBusquedaEspacioHomePrincipal {
+    margin-right: 5%;
+}
+
+#BarraDeNavegacionBusquedaEspacioHomePrincipal #BarraDeNavegacionBusquedaEspacioBusquedaHomePrincipal {
+    background-color: transparent;
+    border-color: #606060;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#BarraDeNavegacionBusquedaEspacioHomePrincipal #BarraDeNavegacionBusquedaEspacioBusquedaHomePrincipal::placeholder {
+    color: #606060;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#BarraDeNavegacionBusquedaEspacioHomePrincipal #BarraDeNavegacionBusquedaEspacioBusquedaHomePrincipal:focus::placeholder {
+    color: #ffffff;
+}
+
+#BarraDeNavegacionBusquedaEspacioHomePrincipal #BarraDeNavegacionBusquedaEspacioBusquedaHomePrincipal:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
