@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios';
 import './BarraDeNavegacionEnlacesContenidoHome.css';
 
 export default function BarraDeNavegacionEnlacesContenidoHome() {

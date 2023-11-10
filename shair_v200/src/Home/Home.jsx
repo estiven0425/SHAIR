@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+import axios from 'axios';
 import BarraDeNavegacionHome from './Components/Header/BarraDeNavegacionHome';
 import LateralIzquierdoHome from './Components/LateralIzquierdo/LateralIzquierdoHome';
 import LateralDerechoHome from './Components/LateralDerecho/LateralDerechoHome';

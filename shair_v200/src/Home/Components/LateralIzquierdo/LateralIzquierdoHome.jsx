@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios';
 import './LateralIzquierdoHome.css';
 import LateralIzquierdoTituloHome from './Components/LateralIzquierdoTituloHome';
 import LateralIzquierdoAnuncio1Home from './Components/LateralIzquierdoAnuncio1Home';

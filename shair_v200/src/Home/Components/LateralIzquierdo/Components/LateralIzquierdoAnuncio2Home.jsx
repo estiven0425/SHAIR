@@ -1,4 +1,5 @@
 import Figure from 'react-bootstrap/Figure';
+import axios from 'axios';
 import './LateralIzquierdoAnuncioHome.css';
 
 function LateralIzquierdoAnuncio2Home() {

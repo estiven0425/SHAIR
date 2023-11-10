@@ -665,27 +665,27 @@ exports.deleteespacio = (req, res) => {
 
 // función para obtener todos los documentos de la base de datos
 exports.getAllfacturacion = (req, res) => {
-    // consulta SQL para seleccionar todos los documentos
-    var sql = 'SELECT * FROM facturacion';
-    // ejecuta la consulta
+  // consulta SQL para seleccionar todos los documentos
+  var sql = 'SELECT * FROM facturacion';
+  // ejecuta la consulta
     connection.query(sql, (err, results) => {
       if (err) {
       // si hay un error, envía un mensaje de error
       res.status(500).send({ message: 'Error al obtener la factura' });
       } else {
-        // si no hay error, envía los resultados como una respuesta JSON
-        res.status(200).json(results);
+      // si no hay error, envía los resultados como una respuesta JSON
+      res.status(200).json(results);
       }
-    });
+  });
 };
     
-    // función para obtener un documento por su id
-    exports.getByNivelMembresiafacturacion = (req, res) => {
-    // obtiene el id del documento desde el parámetro de la ruta
-    var id = req.params.id;
-    // consulta SQL para seleccionar el documento con el id dado
-    var sql = 'SELECT * FROM facturacion WHERE NivelMembresia = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
+// función para obtener un documento por su id
+exports.getByNivelMembresiafacturacion = (req, res) => {
+  // obtiene el id del documento desde el parámetro de la ruta
+  var id = req.params.id;
+  // consulta SQL para seleccionar el documento con el id dado
+  var sql = 'SELECT * FROM facturacion WHERE NivelMembresia = ?';
+  // ejecuta la consulta con el id como un valor de sustitución
     connection.query(sql, [id], (err, results) => {
     if (err) {
     // si hay un error, envía un mensaje de error
@@ -696,195 +696,195 @@ exports.getAllfacturacion = (req, res) => {
       // si hay un resultado, envía el resultado como una respuesta JSON
       res.status(200).json(results[0]);
     } else {
-      // si no hay ningún resultado, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'La factura no existe' });
+        // si no hay ningún resultado, envía un mensaje de que el documento no existe
+        res.status(404).send({ message: 'La factura no existe' });
     }
     }
-    });
-    };
+  });
+};
     
-    // función para crear un documento en la base de datos
-    exports.createfacturacion = (req, res) => {
-    // obtiene los datos del documento desde el cuerpo de la petición
-    var data = req.body;
-    // consulta SQL para insertar el documento en la tabla
-    var sql = 'INSERT INTO facturacion SET ?';
-    // ejecuta la consulta con los datos como un valor de sustitución
+// función para crear un documento en la base de datos
+exports.createfacturacion = (req, res) => {
+  // obtiene los datos del documento desde el cuerpo de la petición
+  var data = req.body;
+  // consulta SQL para insertar el documento en la tabla
+  var sql = 'INSERT INTO facturacion SET ?';
+  // ejecuta la consulta con los datos como un valor de sustitución
     connection.query(sql, [data], (err, results) => {
     if (err) {
     // si hay un error, envía un mensaje de error
     res.status(500).send({ message: 'Error al crear la facturacion' });
     } else {
-    // si no hay error, envía un mensaje de éxito con el id del documento creado
-    res.status(201).send({ message: 'Factura creada con éxito', NivelMembresiafacturacion: results.insertId });
+      // si no hay error, envía un mensaje de éxito con el id del documento creado
+      res.status(201).send({ message: 'Factura creada con éxito', NivelMembresiafacturacion: results.insertId });
     }
-    });
-    };
+  });
+};
     
-    // función para actualizar un documento en la base de datos
-    exports.updatefacturacion = (req, res) => {
+// función para actualizar un documento en la base de datos
+exports.updatefacturacion = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para actualizar el documento con el id dado
     var sql = 'UPDATE facturacion SET ? WHERE NivelMembresia = ?';
-    // ejecuta la consulta con los datos y el id como valores de sustitución
-    connection.query(sql, [data, id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al actualizar la factura' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'facturacion actualizada con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'La factura no existe' });
+      // ejecuta la consulta con los datos y el id como valores de sustitución
+      connection.query(sql, [data, id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al actualizar la factura' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+        // si se afectó alguna fila, envía un mensaje de éxito
+        res.status(200).send({ message: 'facturacion actualizada con éxito' });
+        } else {
+        // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+        res.status(404).send({ message: 'La factura no existe' });
+      }
     }
-    }
-    });
-    };
+  });
+};
     
-    // función para eliminar un documento de la base de datos
-    exports.deletefacturacion = (req, res) => {
+// función para eliminar un documento de la base de datos
+exports.deletefacturacion = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para eliminar el documento con el id dado
     var sql = 'DELETE FROM facturacion WHERE NivelMembresia = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al eliminar la factrua' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'Factura eliminada con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'la factrua no ese pudo eliminar' });
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al eliminar la factrua' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+        // si se afectó alguna fila, envía un mensaje de éxito
+        res.status(200).send({ message: 'Factura eliminada con éxito' });
+        } else {
+        // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+        res.status(404).send({ message: 'la factrua no ese pudo eliminar' });
+      }
     }
-    }
-    });
-    };
+  });
+};
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
     
-  // función para obtener todos los documentos de la base de datos
-  exports.getAllforo = (req, res) => {
+// función para obtener todos los documentos de la base de datos
+exports.getAllforo = (req, res) => {
     // consulta SQL para seleccionar todos los documentos
     var sql = 'SELECT * FROM foro';
     // ejecuta la consulta
-    connection.query(sql, (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el foro' });
-    } else {
-    // si no hay error, envía los resultados como una respuesta JSON
-    res.status(200).json(results);
-    }
+      connection.query(sql, (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el foro' });
+      } else {
+        // si no hay error, envía los resultados como una respuesta JSON
+        res.status(200).json(results);
+        }
     });
-    };
+};
     
-    // función para obtener un documento por su id
-    exports.getByNivelMembresiaforo = (req, res) => {
+// función para obtener un documento por su id
+exports.getByNivelMembresiaforo = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para seleccionar el documento con el id dado
     var sql = 'SELECT * FROM foro WHERE NivelMembresia = ?';
     // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el foro' });
-    } else {
-    // si no hay error, verifica si hay algún resultado
-    if (results.length > 0) {
-      // si hay un resultado, envía el resultado como una respuesta JSON
-      res.status(200).json(results[0]);
-    } else {
-      // si no hay ningún resultado, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'Su contenido en el foro no existe' });
-    }
-    }
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el foro' });
+      } else {
+        // si no hay error, verifica si hay algún resultado
+        if (results.length > 0) {
+          // si hay un resultado, envía el resultado como una respuesta JSON
+          res.status(200).json(results[0]);
+        } else {
+          // si no hay ningún resultado, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'Su contenido en el foro no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para crear un documento en la base de datos
-    exports.createforo = (req, res) => {
+// función para crear un documento en la base de datos
+exports.createforo = (req, res) => {
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para insertar el documento en la tabla
     var sql = 'INSERT INTO foro SET ?';
-    // ejecuta la consulta con los datos como un valor de sustitución
-    connection.query(sql, [data], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al crear el foro' });
-    } else {
-    // si no hay error, envía un mensaje de éxito con el id del documento creado
-    res.status(201).send({ message: 'Foro creado con éxito', NivelMembresiaforo: results.insertId });
-    }
+      // ejecuta la consulta con los datos como un valor de sustitución
+      connection.query(sql, [data], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al crear el foro' });
+      } else {
+        // si no hay error, envía un mensaje de éxito con el id del documento creado
+        res.status(201).send({ message: 'Foro creado con éxito', NivelMembresiaforo: results.insertId });
+      }
     });
-    };
+};
     
-    // función para actualizar un documento en la base de datos
-    exports.updateforo = (req, res) => {
+// función para actualizar un documento en la base de datos
+exports.updateforo = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para actualizar el documento con el id dado
     var sql = 'UPDATE foro SET ? WHERE NivelMembresia = ?';
-    // ejecuta la consulta con los datos y el id como valores de sustitución
-    connection.query(sql, [data, id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al actualizar el foro' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'foro actualizado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El foro no existe' });
-    }
-    }
+      // ejecuta la consulta con los datos y el id como valores de sustitución
+      connection.query(sql, [data, id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al actualizar el foro' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'foro actualizado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El foro no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para eliminar un documento de la base de datos
-    exports.deleteforo = (req, res) => {
+// función para eliminar un documento de la base de datos
+exports.deleteforo = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para eliminar el documento con el id dado
     var sql = 'DELETE FROM foro WHERE NivelMembresia = ?';
     // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al eliminar el foro' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'Foro eliminado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El foro no ese pudo eliminar' });
-    }
-    }
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al eliminar el foro' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'Foro eliminado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El foro no ese pudo eliminar' });
+        }
+      }
     });
-    };
+};
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
 
-    // función para obtener todos los documentos de la base de datos
-  exports.getAllmiembro = (req, res) => {
+// función para obtener todos los documentos de la base de datos
+exports.getAllmiembro = (req, res) => {
     // consulta SQL para seleccionar todos los documentos
     var sql = 'SELECT * FROM miembro';
     // ejecuta la consulta
@@ -897,52 +897,52 @@ exports.getAllfacturacion = (req, res) => {
     res.status(200).json(results);
     }
     });
-    };
+};
     
-    // función para obtener un documento por su id
-    exports.getByNivelMembresia = (req, res) => {
+// función para obtener un documento por su id
+exports.getByNivelMembresia = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para seleccionar el documento con el id dado
     var sql = 'SELECT * FROM miembro WHERE NivelMembresia = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el miembro' });
-    } else {
-    // si no hay error, verifica si hay algún resultado
-    if (results.length > 0) {
-      // si hay un resultado, envía el resultado como una respuesta JSON
-      res.status(200).json(results[0]);
-    } else {
-      // si no hay ningún resultado, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El miembro no existe' });
-    }
-    }
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el miembro' });
+      } else {
+        // si no hay error, verifica si hay algún resultado
+        if (results.length > 0) {
+          // si hay un resultado, envía el resultado como una respuesta JSON
+          res.status(200).json(results[0]);
+        } else {
+          // si no hay ningún resultado, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El miembro no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para crear un documento en la base de datos
-    exports.createmiembro = (req, res) => {
+// función para crear un documento en la base de datos
+exports.createmiembro = (req, res) => {
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para insertar el documento en la tabla
     var sql = 'INSERT INTO miembro SET ?';
     // ejecuta la consulta con los datos como un valor de sustitución
-    connection.query(sql, [data], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al crear el miembro' });
-    } else {
-    // si no hay error, envía un mensaje de éxito con el id del documento creado
-    res.status(201).send({ message: 'miembro creado con éxito', NivelMembresia: results.insertId });
-    }
+      connection.query(sql, [data], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al crear el miembro' });
+      } else {
+        // si no hay error, envía un mensaje de éxito con el id del documento creado
+        res.status(201).send({ message: 'miembro creado con éxito', NivelMembresia: results.insertId });
+      }
     });
-    };
+};
     
-    // función para actualizar un documento en la base de datos
-    exports.updatemiembro = (req, res) => {
+// función para actualizar un documento en la base de datos
+exports.updatemiembro = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // obtiene los datos del documento desde el cuerpo de la petición
@@ -950,263 +950,263 @@ exports.getAllfacturacion = (req, res) => {
     // consulta SQL para actualizar el documento con el id dado
     var sql = 'UPDATE miembro SET ? WHERE NivelMembresia = ?';
     // ejecuta la consulta con los datos y el id como valores de sustitución
-    connection.query(sql, [data, id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al actualizar el miembro' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'miembro actualizado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El miembro no existe' });
-    }
-    }
+      connection.query(sql, [data, id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al actualizar el miembro' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'miembro actualizado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El miembro no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para eliminar un documento de la base de datos
-    exports.deletemiembro = (req, res) => {
+// función para eliminar un documento de la base de datos
+exports.deletemiembro = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para eliminar el documento con el id dado
     var sql = 'DELETE FROM miembro WHERE NivelMembresia = ?';
     // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al eliminar el miembro' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'miembro eliminado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El miembro no ese pudo eliminar' });
-    }
-    }
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al eliminar el miembro' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'miembro eliminado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El miembro no ese pudo eliminar' });
+        }
+      }
     });
-    };
+};
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
 
-    // función para obtener todos los documentos de la base de datos
-  exports.getAllresponsableshair = (req, res) => {
+// función para obtener todos los documentos de la base de datos
+exports.getAllresponsableshair = (req, res) => {
     // consulta SQL para seleccionar todos los documentos
     var sql = 'SELECT * FROM responsableshair';
-    // ejecuta la consulta
-    connection.query(sql, (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el responsableshair' });
-    } else {
-    // si no hay error, envía los resultados como una respuesta JSON
-    res.status(200).json(results);
-    }
+      // ejecuta la consulta
+      connection.query(sql, (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el responsableshair' });
+      } else {
+        // si no hay error, envía los resultados como una respuesta JSON
+        res.status(200).json(results);
+      }
     });
-    };
+};
     
-    // función para obtener un documento por su id
-    exports.getByIdResponsableShair = (req, res) => {
+// función para obtener un documento por su id
+exports.getByIdResponsableShair = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para seleccionar el documento con el id dado
     var sql = 'SELECT * FROM responsableshair WHERE IdResponsableShair = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el responsableshair' });
-    } else {
-    // si no hay error, verifica si hay algún resultado
-    if (results.length > 0) {
-      // si hay un resultado, envía el resultado como una respuesta JSON
-      res.status(200).json(results[0]);
-    } else {
-      // si no hay ningún resultado, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El responsableshair no existe' });
-    }
-    }
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el responsableshair' });
+      } else {
+        // si no hay error, verifica si hay algún resultado
+        if (results.length > 0) {
+          // si hay un resultado, envía el resultado como una respuesta JSON
+          res.status(200).json(results[0]);
+        } else {
+          // si no hay ningún resultado, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El responsableshair no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para crear un documento en la base de datos
-    exports.createresponsableshair = (req, res) => {
+// función para crear un documento en la base de datos
+exports.createresponsableshair = (req, res) => {
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para insertar el documento en la tabla
     var sql = 'INSERT INTO responsableshair SET ?';
-    // ejecuta la consulta con los datos como un valor de sustitución
-    connection.query(sql, [data], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al crear el responsableshair' });
-    } else {
-    // si no hay error, envía un mensaje de éxito con el id del documento creado
-    res.status(201).send({ message: 'responsableshair creado con éxito', IdResponsableShair: results.insertId });
-    }
+      // ejecuta la consulta con los datos como un valor de sustitución
+      connection.query(sql, [data], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al crear el responsableshair' });
+      } else {
+        // si no hay error, envía un mensaje de éxito con el id del documento creado
+        res.status(201).send({ message: 'responsableshair creado con éxito', IdResponsableShair: results.insertId });
+      }
     });
-    };
+};
     
-    // función para actualizar un documento en la base de datos
-    exports.updateresponsableshair = (req, res) => {
+// función para actualizar un documento en la base de datos
+exports.updateresponsableshair = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para actualizar el documento con el id dado
     var sql = 'UPDATE responsableshair SET ? WHERE IdResponsableShair = ?';
-    // ejecuta la consulta con los datos y el id como valores de sustitución
-    connection.query(sql, [data, id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al actualizar el responsableshair' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'responsableshair actualizado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El responsableshair no existe' });
-    }
-    }
+      // ejecuta la consulta con los datos y el id como valores de sustitución
+      connection.query(sql, [data, id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al actualizar el responsableshair' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'responsableshair actualizado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El responsableshair no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para eliminar un documento de la base de datos
-    exports.deleteresponsableshair = (req, res) => {
+// función para eliminar un documento de la base de datos
+exports.deleteresponsableshair = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para eliminar el documento con el id dado
     var sql = 'DELETE FROM responsableshair WHERE IdResponsableShair = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al eliminar el responsableshair' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'responsableshair eliminado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El responsableshair no ese pudo eliminar' });
-    }
-    }
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al eliminar el responsableshair' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'responsableshair eliminado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El responsableshair no ese pudo eliminar' });
+        }
+      }
     });
-    };
+};
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------//
     
-    // función para obtener todos los documentos de la base de datos
-  exports.getAllusuario = (req, res) => {
+// función para obtener todos los documentos de la base de datos
+exports.getAllusuario = (req, res) => {
     // consulta SQL para seleccionar todos los documentos
     var sql = 'SELECT * FROM usuario';
-    // ejecuta la consulta
-    connection.query(sql, (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el usuario' });
-    } else {
-    // si no hay error, envía los resultados como una respuesta JSON
-    res.status(200).json(results);
-    }
+      // ejecuta la consulta
+      connection.query(sql, (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el usuario' });
+      } else {
+        // si no hay error, envía los resultados como una respuesta JSON
+        res.status(200).json(results);
+      }
     });
-    };
+};
     
-    // función para obtener un documento por su id
-    exports.getByIdUsuario = (req, res) => {
+// función para obtener un documento por su id
+exports.getByIdUsuario = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para seleccionar el documento con el id dado
     var sql = 'SELECT * FROM usuario WHERE IdUsuario = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al obtener el usuario' });
-    } else {
-    // si no hay error, verifica si hay algún resultado
-    if (results.length > 0) {
-      // si hay un resultado, envía el resultado como una respuesta JSON
-      res.status(200).json(results[0]);
-    } else {
-      // si no hay ningún resultado, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El usuario no existe' });
-    }
-    }
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al obtener el usuario' });
+      } else {
+        // si no hay error, verifica si hay algún resultado
+        if (results.length > 0) {
+          // si hay un resultado, envía el resultado como una respuesta JSON
+          res.status(200).json(results[0]);
+        } else {
+          // si no hay ningún resultado, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El usuario no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para crear un documento en la base de datos
-    exports.createusuario = (req, res) => {
+// función para crear un documento en la base de datos
+exports.createusuario = (req, res) => {
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para insertar el documento en la tabla
     var sql = 'INSERT INTO usuario SET ?';
-    // ejecuta la consulta con los datos como un valor de sustitución
-    connection.query(sql, [data], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al crear el usuario' });
-    } else {
-    // si no hay error, envía un mensaje de éxito con el id del documento creado
-    res.status(201).send({ message: 'usuario creado con éxito', IdUsuario: results.insertId });
-    }
+      // ejecuta la consulta con los datos como un valor de sustitución
+      connection.query(sql, [data], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al crear el usuario' });
+      } else {
+        // si no hay error, envía un mensaje de éxito con el id del documento creado
+        res.status(201).send({ message: 'usuario creado con éxito', IdUsuario: results.insertId });
+      }
     });
-    };
+};
     
-    // función para actualizar un documento en la base de datos
-    exports.updateusuario = (req, res) => {
+// función para actualizar un documento en la base de datos
+exports.updateusuario = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // obtiene los datos del documento desde el cuerpo de la petición
     var data = req.body;
     // consulta SQL para actualizar el documento con el id dado
     var sql = 'UPDATE usuario SET ? WHERE IdUsuario = ?';
-    // ejecuta la consulta con los datos y el id como valores de sustitución
-    connection.query(sql, [data, id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al actualizar el usuario' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'usuario actualizado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El usuario no existe' });
-    }
-    }
+      // ejecuta la consulta con los datos y el id como valores de sustitución
+      connection.query(sql, [data, id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al actualizar el usuario' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'usuario actualizado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El usuario no existe' });
+        }
+      }
     });
-    };
+};
     
-    // función para eliminar un documento de la base de datos
-    exports.deleteusuario = (req, res) => {
+// función para eliminar un documento de la base de datos
+exports.deleteusuario = (req, res) => {
     // obtiene el id del documento desde el parámetro de la ruta
     var id = req.params.id;
     // consulta SQL para eliminar el documento con el id dado
     var sql = 'DELETE FROM usuario WHERE IdUsuario = ?';
-    // ejecuta la consulta con el id como un valor de sustitución
-    connection.query(sql, [id], (err, results) => {
-    if (err) {
-    // si hay un error, envía un mensaje de error
-    res.status(500).send({ message: 'Error al eliminar el usuario' });
-    } else {
-    // si no hay error, verifica si se afectó alguna fila
-    if (results.affectedRows > 0) {
-      // si se afectó alguna fila, envía un mensaje de éxito
-      res.status(200).send({ message: 'usuario eliminado con éxito' });
-    } else {
-      // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
-      res.status(404).send({ message: 'El usuario no ese pudo eliminar' });
-    }
-    }
+      // ejecuta la consulta con el id como un valor de sustitución
+      connection.query(sql, [id], (err, results) => {
+      if (err) {
+      // si hay un error, envía un mensaje de error
+      res.status(500).send({ message: 'Error al eliminar el usuario' });
+      } else {
+        // si no hay error, verifica si se afectó alguna fila
+        if (results.affectedRows > 0) {
+          // si se afectó alguna fila, envía un mensaje de éxito
+          res.status(200).send({ message: 'usuario eliminado con éxito' });
+        } else {
+          // si no se afectó ninguna fila, envía un mensaje de que el documento no existe
+          res.status(404).send({ message: 'El usuario no ese pudo eliminar' });
+        }
+      }
     });
-    };
+};

@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 import './LateralDerechoAccionesBotonHome.css';
 
 function LateralDerechoAccionesBotonSesionHome() {
