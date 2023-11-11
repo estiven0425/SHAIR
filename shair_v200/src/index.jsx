@@ -6,7 +6,8 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom"; /*Importa
 import './index.css'; /*importar archivo de estilos globales*/
 import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de REACT*/
 import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
-import CrearCuenta from './CrearCuenta/CrearCuenta';
+import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
+import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/CrearCuenta",
     element: <CrearCuenta/>,
+  },
+  {
+    path: "/IniciarSesion",
+    element: <IniciarSesion/>,
   }
 ]);
 

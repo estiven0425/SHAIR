@@ -6,7 +6,7 @@ function BarraDeNavegacionSesionBotonHome() {
   return (
     <div id='BarraDeNavegacionSesionBotonHomePrincipal'>
       <Button variant="outline-primary" className='BotonBarraDeNavegacion' href= '/CrearCuenta'>Crear cuenta</Button>{' '}
-      <Button variant="outline-primary" className='BotonBarraDeNavegacion'>Iniciar sesión</Button>{' '}
+      <Button variant="outline-primary" className='BotonBarraDeNavegacion' href='/IniciarSesion'>Iniciar sesión</Button>{' '}
     </div>
   );
 }
