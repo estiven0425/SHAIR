@@ -5,7 +5,7 @@ import './LateralDerechoAccionesBotonHome.css';
 function LateralDerechoAccionesBotonSesionHome() {
   return (
     <div id='LateralDerechoAccionesBotonSesionHomePrincipal'>
-      <Button variant="outline-primary" className='BotonDerecha'>Inicia sesión para ver tus espacios</Button>{' '}
+      <Button variant="outline-primary" className='BotonDerecha' href='/IniciarSesion'>Inicia sesión para ver tus espacios</Button>{' '}
     </div>
   );
 }
