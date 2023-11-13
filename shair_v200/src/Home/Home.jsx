@@ -46,7 +46,7 @@ export default function Home() {
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>
                   <p>Creado por: <a href={`/UsuarioOtro/${item.IdUsuario}`}>{item.NombreUsuario}</a></p>
-                  <p>Fecha de cración: {item.FechaCreacion}</p>
+                  <p>Fecha de creación: {item.FechaCreacion}</p>
                 </div>
               </a>
             ))}

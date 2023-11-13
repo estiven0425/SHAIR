@@ -29,6 +29,24 @@
     width: 100%;
 }
 
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #InformacionUsuarioOtro {
+    align-items: center;
+    background-color: #606060;
+    border: 2px solid #8e4c98;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0% 0% 1% 0%;
+    text-align: center;
+}
+
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #InformacionUsuarioOtro h1 {
+    color: #ffffff;
+    width: 100%;
+}
+
 #PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA {
     height: auto;
     margin: 1%;

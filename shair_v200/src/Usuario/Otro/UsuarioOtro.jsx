@@ -50,12 +50,13 @@ const UsuarioOtro = () => {
           <div id='ContenidoCentroUsuarioOtro'>
             <h1>Espacios</h1>
             {espaciosData.map(item => (
-              <div key={item.IdEspacio}>
-                <h2>{item.NombreEspacio}</h2>
-                <p>{item.DescripcionEspacio}</p>
-                <p>Fecha de creación: {item.FechaCreacion}</p>
-                {/* Agrega más detalles según sea necesario */}
-              </div>
+              <a href="#" key={item.IdEspacio} id='ContenidoCentroUsuarioOtroA'>
+                <div className='EspacioCentroUsuarioOtro'>
+                  <h1>{item.NombreEspacio}</h1>
+                  <p>{item.DescripcionEspacio}</p>
+                  <p>Fecha de creación: {item.FechaCreacion}</p>
+                </div>
+              </a>
             ))}
           </div>
         </section>
