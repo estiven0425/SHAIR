@@ -5,12 +5,12 @@ import BarraDeNavegacioEnlacesHome from './Components/BarraDeNavegacioEnlacesHom
 import BarraDeNavegacionBusquedaHome from './Components/BarraDeNavegacionBusquedaHome';
 import BarraDeNavegacionSesionHome from './Components/BarraDeNavegacionSesionHome';
 
-export default function BarraDeNavegacionHome() {
+export default function BarraDeNavegacionHome({ isLoggedIn, setIsLoggedIn }) {
   return (
     <div id='BarraDeNavegacionHomePrincipal'>
       <BarraDeNavegacioEnlacesHome/>
       <BarraDeNavegacionBusquedaHome/>
-      <BarraDeNavegacionSesionHome/>
+      <BarraDeNavegacionSesionHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
     </div>
   )
 }

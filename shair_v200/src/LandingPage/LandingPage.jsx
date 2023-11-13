@@ -35,7 +35,7 @@ export default function LandingPage() { // Exportamos el componente principal de
         <BarraDeNavegacionLandingPage/> {/* Insertamos el componente de la barra de navegación */}
       </header>
 
-      <body> {/* Creamos un elemento body para el cuerpo de la página */}
+      <div id='bodyLandingPage'> {/* Creamos un elemento div para el cuerpo de la página */}
 
         <section id='Seccion1LandingPage'> {/* Creamos un elemento section para la primera sección de la página */}
 
@@ -126,7 +126,7 @@ export default function LandingPage() { // Exportamos el componente principal de
           <BarraFooterLandingPage/> {/* Insertamos el componente de la barra del pie de página */}
         </footer>
 
-      </body>
+      </div>
 
   </div>
   

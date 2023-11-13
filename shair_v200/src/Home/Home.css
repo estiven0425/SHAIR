@@ -5,13 +5,13 @@
     text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
-#PrincipalHome body {
+#PrincipalHome #bodyHome {
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
     height: 100%;
     padding: 6% 12% 1% 12%;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome {
     align-items: center;
     background-color: #606060;
     border: 2px solid #8e4c98;
@@ -24,12 +24,12 @@
     text-align: center;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome h1 {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome h1 {
     color: #ffffff;
     width: 100%;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome a {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome a {
     height: auto;
     margin: 1%;
     text-align: center;
@@ -37,13 +37,13 @@
     width: 30%;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome a:focus {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome a:focus {
     background-color: #8e4c98;
     box-shadow: 0px 0px 10px  #8e4c98;
     outline: none;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome .EspacioCentroHome {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome .EspacioCentroHome {
     align-items: stretch;
     background-color: #8e4c98;
     border-radius: 5px;
@@ -56,14 +56,14 @@
     text-align: center;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome .EspacioCentroHome h1 {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome .EspacioCentroHome h1 {
     background-color: #693870;
     border-radius: 5px 5px 0px 0px;
     font-size: 20px;
     margin: 0%;
 }
 
-#PrincipalHome body #CentroHome #ContenidoCentroHome .EspacioCentroHome p {
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome .EspacioCentroHome p {
     font-size: 15px;
     margin: 1%;
 }

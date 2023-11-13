@@ -13,7 +13,7 @@
     z-index: 4; /* Le damos un índice de profundidad de 4 para que se superponga a otros elementos */
 }
 
-#PrincipalLandingPage body { /* Seleccionamos el elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage { /* Seleccionamos el elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: stretch; /* Alineamos los elementos hijos para que se estiren verticalmente */
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
@@ -23,27 +23,27 @@
     z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
 }
 
-#PrincipalLandingPage body #Seccion1LandingPage { /* Seleccionamos el elemento con id Seccion1LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage { /* Seleccionamos el elemento con id Seccion1LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     height: 100%; /* Le damos una altura del 100% del contenedor */
     padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
     width: 100%; /* Le damos un ancho del 100% del contenedor */
     z-index: 2; /* Le damos un índice de profundidad de 2 para que se superponga al fondo */
 }
 
-#PrincipalLandingPage body #Seccion1LandingPage #Titulo1LandingPage { /* Seleccionamos el elemento con id Titulo1 dentro del elemento con id Seccion1LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage #Titulo1LandingPage { /* Seleccionamos el elemento con id Titulo1 dentro del elemento con id Seccion1LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     margin-left: 1%; /* Le damos un margen izquierdo del 1% del contenedor */
     margin-top: 15%; /* Le damos un margen superior del 15% del contenedor */
     z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al banner y al icono */
 }
 
-#PrincipalLandingPage body #Seccion1LandingPage #Banner1LandingPage { /* Seleccionamos el elemento con id Banner1 dentro del elemento con id Seccion1LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage #Banner1LandingPage { /* Seleccionamos el elemento con id Banner1 dentro del elemento con id Seccion1LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     margin: -26.5% 0% 0% -15%; /* Le damos unos márgenes negativos para ajustar su posición respecto al contenedor */
     float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
     z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al icono */
     zoom: 120%; /* Le aplicamos un zoom del 120% para aumentar su tamaño */
 }
 
-#PrincipalLandingPage body #Seccion1LandingPage #Icono1LandingPage { /* Seleccionamos el elemento con id Icono1 dentro del elemento con id Seccion1LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage #Icono1LandingPage { /* Seleccionamos el elemento con id Icono1 dentro del elemento con id Seccion1LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     left: 4%; /* Lo posicionamos a la izquierda del contenedor con un desplazamiento del 4% */
     pointer-events: none; /* Desactivamos los eventos de puntero para que no se pueda interactuar con él */
     position: absolute; /* Le damos una posición absoluta para que no afecte al flujo de los demás elementos */
@@ -52,27 +52,27 @@
     zoom: 130%; /* Le aplicamos un zoom del 130% para aumentar su tamaño */
 }
 
-#PrincipalLandingPage body #Seccion1LandingPage #Boton1LandingPage { /* Seleccionamos el elemento con id Boton1 dentro del elemento con id Seccion1LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage #Boton1LandingPage { /* Seleccionamos el elemento con id Boton1 dentro del elemento con id Seccion1LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     margin: 12% 0% 0% 20%; /* Le damos unos márgenes para ajustar su posición respecto al contenedor */
     float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
     width: 10%; /* Le damos un ancho del 10% del contenedor */
     z-index: 3; /* Le damos un índice de profundidad de 3 para que se superponga al icono */
 }
 
-#PrincipalLandingPage body #Seccion2LandingPage { /* Seleccionamos el elemento con id Seccion2LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion2LandingPage { /* Seleccionamos el elemento con id Seccion2LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
     flex-wrap: nowrap; /* Evitamos que los elementos hijos se envuelvan al llegar al final de la línea */
     padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
 }
 
-#PrincipalLandingPage body #Seccion2LandingPage #Banner2LandingPage { /* Seleccionamos el elemento con id Banner2 dentro del elemento con id Seccion2LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion2LandingPage #Banner2LandingPage { /* Seleccionamos el elemento con id Banner2 dentro del elemento con id Seccion2LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     float: left; /* Lo flotamos a la izquierda para que se alinee con el borde izquierdo del contenedor */
     margin-top: -1%; /* Le damos un margen superior negativo para ajustar su posición respecto al contenedor */
     zoom: 115%; /* Le aplicamos un zoom del 115% para aumentar su tamaño */
 }
 
-#PrincipalLandingPage body #Seccion2LandingPage #Contenido2LandingPage { /* Seleccionamos el elemento con id Contenido2 dentro del elemento con id Seccion2LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion2LandingPage #Contenido2LandingPage { /* Seleccionamos el elemento con id Contenido2 dentro del elemento con id Seccion2LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -81,14 +81,14 @@
     text-align: center; /* Alineamos el texto en el centro horizontalmente */
 }
 
-#PrincipalLandingPage body #Seccion3LandingPage { /* Seleccionamos el elemento con id Seccion3LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion3LandingPage { /* Seleccionamos el elemento con id Seccion3LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
     flex-wrap: nowrap; /* Evitamos que los elementos hijos se envuelvan al llegar al final de la línea */
     padding-top: 5%; /* Le damos un relleno superior del 5% del contenedor */
 }
 
-#PrincipalLandingPage body #Seccion3LandingPage #Contenido3LandingPage { /* Seleccionamos el elemento con id Contenido3 dentro del elemento con id Seccion3LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion3LandingPage #Contenido3LandingPage { /* Seleccionamos el elemento con id Contenido3 dentro del elemento con id Seccion3LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -97,20 +97,20 @@
     text-align: center; /* Alineamos el texto en el centro horizontalmente */
 }
 
-#PrincipalLandingPage body #Seccion3LandingPage #Texto3LandingPage { /* Seleccionamos el elemento con id Texto3 dentro del elemento con id Contenido3 dentro del elemento con id Seccion3LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion3LandingPage #Texto3LandingPage { /* Seleccionamos el elemento con id Texto3 dentro del elemento con id Contenido3 dentro del elemento con id Seccion3LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: stretch; /* Alineamos los elementos hijos para que se estiren horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column;  /* Establecemos la dirección de los elementos hijos como columna */
     justify-content: center; /* Justificamos los elementos hijos en el centro verticalmente */
 }
 
-#PrincipalLandingPage body #Seccion3LandingPage #Banner3LandingPage { /* Seleccionamos el elemento con id Banner3 dentro del elemento con id Seccion3LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion3LandingPage #Banner3LandingPage { /* Seleccionamos el elemento con id Banner3 dentro del elemento con id Seccion3LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     float: right; /* Lo flotamos a la derecha para que se alinee con el borde derecho del contenedor */
     margin-top: -1%; /* Le damos un margen superior negativo para ajustar su posición respecto al contenedor */
     zoom: 35%; /* Le aplicamos un zoom del 35% para reducir su tamaño */
 }
 
-#PrincipalLandingPage body #Seccion4LandingPage { /* Seleccionamos el elemento con id Seccion4LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion4LandingPage { /* Seleccionamos el elemento con id Seccion4LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -120,14 +120,14 @@
     width: 100%; /* Le damos un ancho del 100% del contenedor */
 }
 
-#PrincipalLandingPage body #Seccion4LandingPage #EnlacesLandingPage { /* Seleccionamos el elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion4LandingPage #EnlacesLandingPage { /* Seleccionamos el elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
     justify-content: center; /* Justificamos los elementos hijos en el centro horizontalmente */
 }
 
-#PrincipalLandingPage body #Seccion4LandingPage #EnlacesLandingPage #AnunciarseLandingPage { /* Seleccionamos el elemento con id Anunciarse dentro del elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion4LandingPage #EnlacesLandingPage #AnunciarseLandingPage { /* Seleccionamos el elemento con id Anunciarse dentro del elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -136,7 +136,7 @@
     margin-right: 20%; /* Le damos un margen derecho del 20% del contenedor para separarlo del otro enlace */
 }
 
-#PrincipalLandingPage body #Seccion4LandingPage #EnlacesLandingPage #CatalogoLandingPage { /* Seleccionamos el elemento con id Catalogo dentro del elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion4LandingPage #EnlacesLandingPage #CatalogoLandingPage { /* Seleccionamos el elemento con id Catalogo dentro del elemento con id Enlaces dentro del elemento con id Seccion4LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -145,7 +145,7 @@
     margin-left: 20%; /* Le damos un margen izquierdo del 20% del contenedor para separarlo del otro enlace */
 }
 
-#PrincipalLandingPage body #Seccion5LandingPage { /* Seleccionamos el elemento con id Seccion5LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion5LandingPage { /* Seleccionamos el elemento con id Seccion5LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -155,7 +155,7 @@
     width: 100%; /* Le damos un ancho del 100% del contenedor */
 }
 
-#PrincipalLandingPage body #Seccion5LandingPage #FondosLandingPage { /* Seleccionamos el elemento con id Fondos dentro del elemento con id Seccion5LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion5LandingPage #FondosLandingPage { /* Seleccionamos el elemento con id Fondos dentro del elemento con id Seccion5LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro verticalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: row; /* Establecemos la dirección de los elementos hijos como fila */
@@ -165,7 +165,7 @@
     zoom: 105%; /* Le aplicamos un zoom del 105% para aumentar su tamaño */
 }
 
-#PrincipalLandingPage body #Seccion5LandingPage #FinalLandingPage { /* Seleccionamos el elemento con id Final dentro del elemento con id Seccion5LandingPage dentro del elemento body dentro del elemento con id PrincipalLandingPage */
+#PrincipalLandingPage #bodyLandingPage #Seccion5LandingPage #FinalLandingPage { /* Seleccionamos el elemento con id Final dentro del elemento con id Seccion5LandingPage dentro del elemento #bodyLandingPage dentro del elemento con id PrincipalLandingPage */
     align-items: center; /* Alineamos los elementos hijos en el centro horizontalmente */
     display: flex; /* Le damos un display flex para poder usar las propiedades de flexbox */
     flex-direction: column; /* Establecemos la dirección de los elementos hijos como columna */
@@ -175,7 +175,7 @@
 
 
 @media (max-width: 375px) { /* Ajuste de relleno para la Sección 1 en pantallas con un ancho máximo de 375px */
-    #PrincipalLandingPage body #Seccion1LandingPage {
+    #PrincipalLandingPage #bodyLandingPage #Seccion1LandingPage {
         padding-top: 15%;
     }
 }

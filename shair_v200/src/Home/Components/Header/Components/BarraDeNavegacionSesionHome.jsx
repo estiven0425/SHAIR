@@ -4,12 +4,12 @@ import BarraDeNavegacionSesionBotonHome from './BarraDeNavegacionSesionComponent
 import BarraDeNavegacionSesionCuentaHome from './BarraDeNavegacionSesionComponents/BarraDeNavegacionSesionCuentaHome'
 import './BarraDeNavegacionSesionHome.css';
 
-export default function BarraDeNavegacionSesionHome() {
+export default function BarraDeNavegacionSesionHome({ isLoggedIn, setIsLoggedIn }) {
   return (
     <div id='BarraDeNavegacionSesionHomePrincipal'>
 
-        <BarraDeNavegacionSesionBotonHome/>
-        <BarraDeNavegacionSesionCuentaHome/>
+      <BarraDeNavegacionSesionBotonHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <BarraDeNavegacionSesionCuentaHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
 
     </div>
   )

@@ -15,6 +15,9 @@ if ($conn->connect_error) {
     die("Conexión fallida, intente de nuevo más tarde: " . $conn->connect_error);
 }
 
+// Iniciar o reanudar la sesión
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents("php://input"), true);
 
@@ -34,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $userRow = $userResult->fetch_assoc();
 
             if (password_verify($ContraseñaUsuario, $userRow['ContraseñaUsuario'])) {
-                session_start();
                 $_SESSION['IdUsuario'] = $userRow['IdUsuario'];
                 echo json_encode(array("message" => "Inicio de sesión exitoso"));
             } else {

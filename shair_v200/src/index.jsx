@@ -9,6 +9,7 @@ import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
 import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
 import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
+import { AuthProvider } from './BD_v200/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
 
