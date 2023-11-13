@@ -8,6 +8,7 @@ import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de 
 import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
 import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
 import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
+import UsuarioOtro from './Usuario/Otro/UsuarioOtro';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 import { AuthProvider } from './BD_v200/AuthContext';
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/IniciarSesion",
     element: <IniciarSesion/>,
+  },
+  {
+    path: "/UsuarioOtro/:idUsuario",
+    element: <UsuarioOtro/>,
   }
 ]);
 

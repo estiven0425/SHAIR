@@ -41,11 +41,11 @@ export default function Home() {
             <h1>Contenido Destacado de SHAIR</h1>
 
             {espacioData.map(item => (
-              <a href='#' key={item.IdEspacio}>
+              <a href={`/UsuarioOtro/${item.IdUsuario}`} key={item.IdEspacio} id='ContenidoCentroHomeA'>
                 <div className='EspacioCentroHome'>
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>
-                  <p>Creado por: {item.NombreUsuario}</p>
+                  <p>Creado por: <a href={`/UsuarioOtro/${item.IdUsuario}`}>{item.NombreUsuario}</a></p>
                   <p>Fecha de cración: {item.FechaCreacion}</p>
                 </div>
               </a>
@@ -58,6 +58,7 @@ export default function Home() {
         </section>
         
         <button onClick={simulateLogin}>Simular inicio de sesión</button>
+        
       </div>
     </div>
   );

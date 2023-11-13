@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
 
-#PrincipalHome {
+#PrincipalUsuarioOtro {
     font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
     text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
-#PrincipalHome #bodyHome {
+#PrincipalUsuarioOtro #bodyUsuarioOtro {
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
     height: 100%;
     padding: 6% 12% 1% 12%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro {
     align-items: center;
     background-color: #606060;
     border: 2px solid #8e4c98;
@@ -24,12 +24,12 @@
     text-align: center;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome h1 {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro h1 {
     color: #ffffff;
     width: 100%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA {
     height: auto;
     margin: 1%;
     text-align: center;
@@ -37,13 +37,13 @@
     width: 30%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA:focus {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA:focus {
     background-color: #8e4c98;
     box-shadow: 0px 0px 10px  #8e4c98;
     outline: none;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA .EspacioCentroUsuarioOtro {
     align-items: stretch;
     background-color: #8e4c98;
     border-radius: 5px;
@@ -56,19 +56,19 @@
     text-align: center;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome h1 {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA .EspacioCentroUsuarioOtro h1 {
     background-color: #693870;
     border-radius: 5px 5px 0px 0px;
     font-size: 20px;
     margin: 0%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome p {
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA .EspacioCentroUsuarioOtro p {
     font-size: 15px;
     margin: 1%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome a{
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA .EspacioCentroUsuarioOtro a{
     color: #ffffff;
     font-size: 15px;
     margin: 1%;
