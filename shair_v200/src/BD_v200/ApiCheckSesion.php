@@ -1,6 +1,5 @@
 <?php
-
-// Iniciar o reanudar la sesión
+// ApiCheckSesion.php
 session_start();
 
 // Configuración de CORS

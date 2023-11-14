@@ -16,6 +16,10 @@ if (isset($_SESSION['IdUsuario'])) {
 
     // Responde con un JSON indicando el éxito
     echo json_encode(array("success" => true, "message" => "Sesión cerrada exitosamente"));
+
+    // Agrega un encabezado de redirección
+    header('Location: /Home'); // Cambia esto según tu estructura de rutas
+    exit(); // Asegura que el script se detenga después de la redirección
 } else {
     // Responde con un JSON indicando que no hay sesión activa
     echo json_encode(array("success" => false, "message" => "No hay sesión activa para cerrar"));
