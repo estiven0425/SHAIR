@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import './Home.css';
 import axios from 'axios';
 import BarraDeNavegacionHome from './Components/Header/BarraDeNavegacionHome';
 import LateralIzquierdoHome from './Components/LateralIzquierdo/LateralIzquierdoHome';
 import LateralDerechoHome from './Components/LateralDerecho/LateralDerechoHome';
+import { useState } from 'react';
+import { useAuth } from '../BD_v200/AuthContext';
 
 export default function Home() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useAuth();
   const [espacioData, setEspacioData] = useState([]);
 
   useEffect(() => {
@@ -19,15 +21,10 @@ export default function Home() {
       });
   }, []);
 
-  // Esta función simula el inicio de sesión, asegúrate de que se esté llamando cuando esperas
-  const simulateLogin = () => {
-    setIsLoggedIn(true);
-  };
-
   return (
     <div id='PrincipalHome'>
       <header>
-        <BarraDeNavegacionHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <BarraDeNavegacionHome isLoggedIn={isLoggedIn} />
       </header>
 
       <div id='bodyHome'>
@@ -56,9 +53,6 @@ export default function Home() {
         <section id='DerechoHome'>
           <LateralDerechoHome isLoggedIn={isLoggedIn} />
         </section>
-
-        <button onClick={simulateLogin}>Simular inicio de sesión</button>
-
       </div>
     </div>
   );

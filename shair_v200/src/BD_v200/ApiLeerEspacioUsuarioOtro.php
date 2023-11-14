@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-error_log(print_r($_SESSION, true));
 
 header('Access-Control-Allow-Origin: http://localhost:3000');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Credentials: true');
 header('Content-Type: application/json');
 
 $servername = "localhost";

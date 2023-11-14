@@ -28,20 +28,27 @@ const IniciarSesion = () => {
       setSuccessMessage('');
   
       if (response.data.error) {
+        // Manejar el error
         setErrorMessage(response.data.message);
         setSuccessMessage('');
         setFieldsVisible(true);
       } else {
+        // Si el ID del usuario no está disponible, manejarlo adecuadamente
+        const { IdUsuario } = response.data;
+        if (!IdUsuario) {
+          console.error('El ID del usuario no está disponible en la respuesta del servidor.');
+          // Realizar cualquier acción necesaria
+          return;
+        }
+      
         setIsLoggedIn(true);
         setSuccessMessage(response.data.message);
         setFieldsVisible(false);
-  
-        // No necesitas guardar en local storage, ya que usaremos $_SESSION en el servidor.
-  
+      
         // Redirigir a la página del perfil del usuario que inició sesión
         setTimeout(() => {
           // Redirigir a la página del perfil del usuario actual
-          navigate(`/UsuarioPropio/${response.data.IdUsuario}`);
+          navigate(`/UsuarioPropio/${IdUsuario}`);
         }, 3000);
       }
     } catch (error) {

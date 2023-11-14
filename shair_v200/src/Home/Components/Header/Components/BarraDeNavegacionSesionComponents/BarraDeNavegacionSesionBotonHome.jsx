@@ -2,8 +2,10 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import './BarraDeNavegacionSesionBotonHome.css';
+import { useAuth } from '../../../../../BD_v200/AuthContext';
 
-function BarraDeNavegacionSesionBotonHome({ isLoggedIn, setIsLoggedIn }) {
+function BarraDeNavegacionSesionBotonHome() {
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
 
   const handleLogout = async () => {
     try {

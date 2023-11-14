@@ -5,20 +5,22 @@ import BarraDeNavegacionHome from '../../Home/Components/Header/BarraDeNavegacio
 import LateralIzquierdoHome from '../../Home/Components/LateralIzquierdo/LateralIzquierdoHome';
 import LateralDerechoHome from '../../Home/Components/LateralDerecho/LateralDerechoHome';
 import { useParams } from 'react-router-dom';
+import { useAuth } from '../../BD_v200/AuthContext'; // Importar el contexto
 
 function UsuarioPropio() {
   const { IdUsuario } = useParams();
   const [userData, setUserData] = useState({});
   const [espaciosData, setEspaciosData] = useState([]);
-  const userId = localStorage.getItem('sessionId');
+  const { isLoggedIn } = useAuth(); // Obtener el estado de inicio de sesión del contexto
+  
 
   useEffect(() => {
     // Verificar si IdUsuario está definido antes de hacer la solicitud
-    if (IdUsuario) {
+    if (IdUsuario, isLoggedIn) {
       const fetchUserData = async () => {
         try {
           // Obtener información del usuario y sus espacios
-          const response = await axios.get(`http://localhost/SHAIR/shair_v200/src/BD_v200/ApiLeerEspacioUsuarioPropio.php?IdUsuario=${IdUsuario}`);
+          const response = await axios.get(`http://localhost/SHAIR/shair_v200/src/BD_v200/ApiLeerEspacioUsuarioPropio.php?id=${IdUsuario}`);
           
           const userData = response.data[0];
           setUserData(userData);
@@ -32,7 +34,7 @@ function UsuarioPropio() {
   
       fetchUserData();
     }
-  }, [IdUsuario]);
+  }, [IdUsuario, isLoggedIn]);  
 
   return (
     <div id='PrincipalUsuarioPropio'>
@@ -46,10 +48,14 @@ function UsuarioPropio() {
         </section>
 
         <section id='CentroUsuarioPropio'>
-          <div id='InformacionUsuarioPropio'>
-            <h1>{userData.NombreUsuario}</h1>
-            <p>{userData.DescripcionUsuario}</p>
-          </div>
+        <div id='InformacionUsuarioPropio'>
+          {userData && (
+            <>
+              <h1>{userData.NombreUsuario}</h1>
+              <p>{userData.DescripcionUsuario}</p>
+            </>
+          )}
+        </div>
 
           <div id='ContenidoCentroUsuarioPropio'>
             <h1>Tus espacios</h1>

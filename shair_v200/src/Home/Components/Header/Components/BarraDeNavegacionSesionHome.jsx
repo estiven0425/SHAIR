@@ -2,13 +2,15 @@ import React from 'react';
 import './BarraDeNavegacionSesionHome.css';
 import BarraDeNavegacionSesionBotonHome from './BarraDeNavegacionSesionComponents/BarraDeNavegacionSesionBotonHome';
 import BarraDeNavegacionSesionCuentaHome from './BarraDeNavegacionSesionComponents/BarraDeNavegacionSesionCuentaHome';
-import './BarraDeNavegacionSesionHome.css';
+import { useAuth } from '../../../../BD_v200/AuthContext';
 
-const BarraDeNavegacionSesionHome = ({ isLoggedIn, setIsLoggedIn }) => {
+const BarraDeNavegacionSesionHome = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
     <div id='BarraDeNavegacionSesionHomePrincipal'>
-      <BarraDeNavegacionSesionBotonHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <BarraDeNavegacionSesionCuentaHome isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <BarraDeNavegacionSesionBotonHome isLoggedIn={isLoggedIn} />
+      <BarraDeNavegacionSesionCuentaHome isLoggedIn={isLoggedIn} />
     </div>
   );
 };

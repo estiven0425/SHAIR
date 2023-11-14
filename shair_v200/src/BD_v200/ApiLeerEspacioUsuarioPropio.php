@@ -2,11 +2,11 @@
 
 // Iniciar o reanudar la sesión
 session_start();
-error_log(print_r($_SESSION, true));
 
 header('Access-Control-Allow-Origin: http://localhost:3000');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Credentials: true');
 header('Content-Type: application/json');
 
 $servername = "localhost";
@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    // Obtener el IdUsuario desde localStorage
+    // Obtener el IdUsuario desde $_SESSION en lugar de localStorage
     $userId = isset($_SESSION['IdUsuario']) ? $_SESSION['IdUsuario'] : (isset($_GET['userId']) ? $_GET['userId'] : null);
 
     if ($userId) {

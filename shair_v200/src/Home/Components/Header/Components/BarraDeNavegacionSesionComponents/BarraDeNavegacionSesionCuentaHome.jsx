@@ -1,25 +1,24 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../../../BD_v200/AuthContext';
 import './BarraDeNavegacionSesionCuentaHome.css';
 
 function BarraDeNavegacionSesionCuentaHome() {
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
 
   // Manejador de clic para redirigir al perfil del usuario actual
   const handleProfileClick = () => {
     try {
-      // Obtén el IdUsuario del localStorage
-      const userId = localStorage.getItem('sessionId');
-
-      if (userId) {
+      if (isLoggedIn) {
         // Redirige al perfil del usuario actual
-        navigate(`/UsuarioPropio/${userId}`);
+        navigate('/UsuarioPropio');
       } else {
-        console.error('No se pudo obtener la ID del usuario actual desde localStorage');
+        console.error('No se puede redirigir al perfil: usuario no autenticado');
       }
     } catch (error) {
-      console.error('Error al obtener la ID del usuario actual desde localStorage:', error);
+      console.error('Error al redirigir al perfil:', error);
     }
   };
 
