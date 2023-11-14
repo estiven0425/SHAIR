@@ -9,6 +9,7 @@ import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
 import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
 import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
 import UsuarioOtro from './Usuario/Otro/UsuarioOtro';
+import UsuarioPropio from './Usuario/Propio/UsuarioPropio';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 import { AuthProvider } from './BD_v200/AuthContext';
 
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
   {
     path: "/UsuarioOtro/:idUsuario",
     element: <UsuarioOtro/>,
-  }
+  },
+  {
+    path: "/UsuarioPropio",
+    element: <UsuarioPropio/>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root')).render(

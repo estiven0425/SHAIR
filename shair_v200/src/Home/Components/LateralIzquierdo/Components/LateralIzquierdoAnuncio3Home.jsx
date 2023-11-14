@@ -6,8 +6,8 @@ function LateralIzquierdoAnuncio3Home() {
   return (
     <Figure id='LateralIzquierdoAnuncio3HomePrincipal'>
       <Figure.Image className='Anuncios'
-        width={160}
-        height={160}
+        width={"100%"}
+        height={"100%"}
         alt="Este espacio es reservado para nuestros patrocinadores, descubre como puedes promocionarte en la sección de anuncios"
         src=""
       />

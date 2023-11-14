@@ -1,13 +1,20 @@
+import React from 'react';
 import Button from 'react-bootstrap/Button';
-import axios from 'axios';
+import { useAuth } from '../../../../../BD_v200/AuthContext';
 import './LateralDerechoAccionesBotonHome.css';
 
-function LateralDerechoAccionesBotonSesionHome() {
+const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
   return (
     <div id='LateralDerechoAccionesBotonSesionHomePrincipal'>
-      <Button variant="outline-primary" className='BotonDerecha' href='/IniciarSesion'>Inicia sesión para ver tus espacios</Button>{' '}
+      {isLoggedIn ? (
+        // Muestra un título si la sesión está iniciada
+        <h3>Hola</h3>
+      ) : (
+        // Muestra el botón para iniciar sesión si no está autenticado
+        <Button variant="outline-primary" className='BotonDerecha' href='/IniciarSesion'>Inicia sesión para ver tus espacios</Button>
+      )}
     </div>
   );
-}
+};
 
 export default LateralDerechoAccionesBotonSesionHome;

@@ -1,12 +1,13 @@
-import React from 'react'
-import axios from 'axios';
-import './LateralDerechoAccionesHome.css';
+import React from 'react';
+import './LateralDerechoAnuncioHome.css';
 import LateralDerechoAccionesBotonSesionHome from './LateralDerechoAccionesHomeComponents/LateralDerechoAccionesBotonSesionHome';
 
-export default function LateralDerechoAccionesHome() {
+const LateralDerechoAccionesHome = ({ isLoggedIn }) => {
   return (
     <section id='LateralDerechoAccionesHomePrincipal'>
-      <LateralDerechoAccionesBotonSesionHome/>
+      <LateralDerechoAccionesBotonSesionHome isLoggedIn={isLoggedIn} />
     </section>
-  )
-}
+  );
+};
+
+export default LateralDerechoAccionesHome;

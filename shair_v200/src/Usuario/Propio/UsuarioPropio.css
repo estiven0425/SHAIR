@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#PrincipalUsuarioPropio {
+    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio {
+    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+    height: 100%;
+    padding: 6% 12% 1% 12%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio {
+    align-items: center;
+    background-color: #606060;
+    border: 2px solid #8e4c98;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0%;
+    text-align: center;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio h1 {
+    color: #ffffff;
+    width: 100%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #InformacionUsuarioPropio {
+    align-items: center;
+    background-color: #606060;
+    border: 2px solid #8e4c98;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0% 0% 1% 0%;
+    text-align: center;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #InformacionUsuarioPropio h1 {
+    color: #ffffff;
+    width: 100%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA {
+    height: auto;
+    margin: 1%;
+    text-align: center;
+    text-decoration: none;
+    width: 30%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio {
+    align-items: stretch;
+    background-color: #8e4c98;
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: -1%;
+    text-align: center;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio h1 {
+    background-color: #693870;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 20px;
+    margin: 0%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio p {
+    font-size: 15px;
+    margin: 1%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio a{
+    color: #ffffff;
+    font-size: 15px;
+    margin: 1%;
+    text-decoration: none;
+}

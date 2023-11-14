@@ -1,5 +1,6 @@
 <?php
 
+// Iniciar o reanudar la sesión
 session_start();
 error_log(print_r($_SESSION, true));
 
@@ -20,9 +21,11 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['userId'])) {
+    // Obtener el IdUsuario desde localStorage
+    $userId = isset($_SESSION['IdUsuario']) ? $_SESSION['IdUsuario'] : (isset($_GET['userId']) ? $_GET['userId'] : null);
+
+    if ($userId) {
         // Obtener datos del usuario y sus espacios
-        $userId = $_GET['userId'];
         $result = $conn->query("SELECT usuario.*, espacio.* FROM usuario
                                 LEFT JOIN espacio ON usuario.IdUsuario = espacio.IdUsuario
                                 WHERE usuario.IdUsuario = $userId");
@@ -39,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             echo json_encode(array());
         }
     } else {
-        echo json_encode(array("message" => "Falta el parámetro userId", "error" => true));
+        echo json_encode(array("message" => "Usuario no autenticado", "error" => true));
     }
 } else {
     echo json_encode(array("message" => "Método no permitido", "error" => true));

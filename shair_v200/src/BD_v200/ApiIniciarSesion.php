@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+error_log(print_r($_SESSION, true));
+
 header('Access-Control-Allow-Origin: http://localhost:3000');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
@@ -16,7 +20,6 @@ if ($conn->connect_error) {
 }
 
 // Iniciar o reanudar la sesión
-session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents("php://input"), true);
@@ -38,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (password_verify($ContraseñaUsuario, $userRow['ContraseñaUsuario'])) {
                 $_SESSION['IdUsuario'] = $userRow['IdUsuario'];
-                echo json_encode(array("message" => "Inicio de sesión exitoso"));
+                echo json_encode(array("message" => "Inicio de sesión exitoso", "IdUsuario" => $userRow['IdUsuario']));
             } else {
                 echo json_encode(array("message" => "Uno de los campos es incorrecto", "error" => true));
             }            

@@ -32,7 +32,7 @@ export default function Home() {
 
       <div id='bodyHome'>
         <section id='IzquierdaHome'>
-          <LateralIzquierdoHome/>
+          <LateralIzquierdoHome isLoggedIn={isLoggedIn} />
         </section>
 
         <section id='CentroHome'>
@@ -41,7 +41,7 @@ export default function Home() {
             <h1>Contenido Destacado de SHAIR</h1>
 
             {espacioData.map(item => (
-              <a href={`/UsuarioOtro/${item.IdUsuario}`} key={item.IdEspacio} id='ContenidoCentroHomeA'>
+              <a href="#" key={item.IdEspacio} id='ContenidoCentroHomeA'>
                 <div className='EspacioCentroHome'>
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>
@@ -54,11 +54,11 @@ export default function Home() {
         </section>
 
         <section id='DerechoHome'>
-          <LateralDerechoHome/>
+          <LateralDerechoHome isLoggedIn={isLoggedIn} />
         </section>
-        
+
         <button onClick={simulateLogin}>Simular inicio de sesión</button>
-        
+
       </div>
     </div>
   );

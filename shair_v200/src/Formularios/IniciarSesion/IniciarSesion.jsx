@@ -6,27 +6,27 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../BD_v200/AuthContext';
 import './IniciarSesion.css';
 
-function IniciarSesion() {
+const IniciarSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [fieldsVisible, setFieldsVisible] = useState(true);
-  const { setIsLoggedIn } = useAuth(); // Usa el hook de autenticación para obtener la función setIsLoggedIn
+  const { setIsLoggedIn } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.post('http://localhost/SHAIR/shair_v200/src/BD_v200/ApiIniciarSesion.php', {
         EmailUsuario: email,
         ContraseñaUsuario: password,
       });
-
+  
       setErrorMessage('');
       setSuccessMessage('');
-
+  
       if (response.data.error) {
         setErrorMessage(response.data.message);
         setSuccessMessage('');
@@ -35,9 +35,13 @@ function IniciarSesion() {
         setIsLoggedIn(true);
         setSuccessMessage(response.data.message);
         setFieldsVisible(false);
-
+  
+        // No necesitas guardar en local storage, ya que usaremos $_SESSION en el servidor.
+  
+        // Redirigir a la página del perfil del usuario que inició sesión
         setTimeout(() => {
-          navigate('/Home');
+          // Redirigir a la página del perfil del usuario actual
+          navigate(`/UsuarioPropio/${response.data.IdUsuario}`);
         }, 3000);
       }
     } catch (error) {
@@ -60,7 +64,7 @@ function IniciarSesion() {
         {successMessage && (
           <div className="success-message">
             {successMessage}
-            <p>Redirigiendo a la página principal...</p>
+            <p>Redirigiendo a la página de perfil...</p>
           </div>
         )}
 
