@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import axios from 'axios';
 
 const AuthContext = createContext();
 
@@ -9,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await fetch('http://localhost/SHAIR/shair_v200/src/BD_v200/ApiCheckSesion.php', {
+        const response = await axios.post('http://localhost/SHAIR/shair_v200/src/BD_v200/ApiCheckSesion.php', {
           method: 'GET',
           credentials: 'include', // Incluye las cookies en la solicitud
           headers: {
@@ -17,7 +18,7 @@ export const AuthProvider = ({ children }) => {
           },
         });
 
-        const data = await response.json();
+        const data = response.data;
 
         if (data.IdUsuario) {
           setIsLoggedIn(true);

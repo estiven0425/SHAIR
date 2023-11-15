@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useAuth } from '../BD_v200/AuthContext';
 
 export default function Home() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLogedIn } = useAuth();
   const [espacioData, setEspacioData] = useState([]);
 
   useEffect(() => {
