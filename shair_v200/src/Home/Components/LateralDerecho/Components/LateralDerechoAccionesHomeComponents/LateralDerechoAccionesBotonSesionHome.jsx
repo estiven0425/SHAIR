@@ -8,7 +8,7 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
     <div id='LateralDerechoAccionesBotonSesionHomePrincipal'>
       {isLoggedIn ? (
         // Muestra un título si la sesión está iniciada
-        <h3>Hola</h3>
+        <h1>Espacios</h1>
       ) : (
         // Muestra el botón para iniciar sesión si no está autenticado
         <Button variant="outline-primary" className='BotonDerecha' href='/IniciarSesion'>Inicia sesión para ver tus espacios</Button>

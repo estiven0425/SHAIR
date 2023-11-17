@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import './Home.css';
+import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import BarraDeNavegacionHome from './Components/Header/BarraDeNavegacionHome';
 import LateralIzquierdoHome from './Components/LateralIzquierdo/LateralIzquierdoHome';
@@ -63,7 +64,9 @@ export default function Home() {
                 <h5>¡Un abrazo fuerte de parte de SHAIR!</h5>
               </p>
             </a>
-            <button onClick={simulateLogin}>Simular inicio de sesión</button>
+
+            <Button  variant="outline-primary" className='BotonDerecha' onClick={simulateLogin}>Simular inicio de sesión</Button>
+
           </div>
 
           <div id='ContenidoCentroHome'>

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+.success-message, .error-message {
+    color: white;
+    text-align: center;
+}
+
+#CrearEspacioPrincipal {
+    align-items: center;
+    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 917px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio {
+    align-items: stretch;
+    background-color: #454545;
+    border: 2px solid #8e4c98;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 90%;
+    justify-content: space-around;
+    padding: 2%;
+    width: 50%;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio .TextoLabel {
+    color: #ffffff;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio .TextoCheck {
+    color: #ffffff;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio .TextoCheck a {
+    color: #8e4c98;
+    text-decoration: none;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio .Input:focus {
+    border: 2px solid #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio #AnadirCrearEspacio {
+    background-color: #8e4c98;
+    border-color: #606060;
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#CrearEspacioPrincipal #FormularioCrearEspacio #AnadirCrearEspacio:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}

@@ -6,9 +6,11 @@ import LateralIzquierdoHome from '../../Home/Components/LateralIzquierdo/Lateral
 import LateralDerechoHome from '../../Home/Components/LateralDerecho/LateralDerechoHome';
 import { useParams } from 'react-router-dom'; // Importar useParams de react-router-dom
 import { AuthProvider } from '../../BD_v200/AuthContext'; // Si es necesario
+import { useAuth } from '../../BD_v200/AuthContext';
 
 const UsuarioOtro = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
   const [userData, setUserData] = useState({});
   const [espaciosData, setEspaciosData] = useState([]);
 
@@ -38,7 +40,7 @@ const UsuarioOtro = () => {
 
       <div id='bodyUsuarioOtro'>
         <section id='IzquierdaUsuarioOtro'>
-          <LateralIzquierdoHome />
+          <LateralIzquierdoHome  isLoggedIn={isLoggedIn}  />
         </section>
 
         <section id='CentroUsuarioOtro'>
@@ -62,7 +64,7 @@ const UsuarioOtro = () => {
         </section>
 
         <section id='DerechoUsuarioOtro'>
-          <LateralDerechoHome />
+          <LateralDerechoHome isLoggedIn={isLoggedIn} />
         </section>
       </div>
     </div>

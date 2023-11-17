@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../../../BD_v200/AuthContext';
@@ -6,21 +7,21 @@ import './BarraDeNavegacionSesionCuentaHome.css';
 
 function BarraDeNavegacionSesionCuentaHome() {
   const navigate = useNavigate();
-  const { isLoggedIn } = useAuth();
+ // const { isLoggedIn } = useAuth();
 
   // Manejador de clic para redirigir al perfil del usuario actual
   const handleProfileClick = () => {
-    try {
-      if (isLoggedIn) {
+    // try {
+      // if (isLoggedIn) {
         // Redirige al perfil del usuario actual
-        navigate('/UsuarioPropio');
-      } else {
-        console.error('No se puede redirigir al perfil: usuario no autenticado');
-      }
-    } catch (error) {
-      console.error('Error al redirigir al perfil:', error);
-    }
-  };
+        navigate(`/UsuarioPropio/29`);
+      // } else {
+      //  console.error('No se puede redirigir al perfil: usuario no autenticado');
+      // }
+    // } catch (error) {
+    //  console.error('Error al redirigir al perfil:', error);
+    // }
+   };
 
   return (
     <div id='BarraDeNavegacionSesionCuentaHomePrincipal'>
@@ -35,4 +36,4 @@ function BarraDeNavegacionSesionCuentaHome() {
   );
 }
 
-export default BarraDeNavegacionSesionCuentaHome;
+export default BarraDeNavegacionSesionCuentaHome; 

@@ -1,8 +1,10 @@
 import Figure from 'react-bootstrap/Figure';
 import axios from 'axios';
 import './LateralDerechoAnuncioHome.css';
+import { useAuth } from '../../../../BD_v200/AuthContext';
 
 function LateralDerechoAnuncioHome() {
+  const { isLoggedIn } = useAuth();
   return (
     <Figure id='LateralDerechoAnuncioHomePrincipal'>
       <Figure.Image className='Anuncio'

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 import './UsuarioPropio.css';
 import BarraDeNavegacionHome from '../../Home/Components/Header/BarraDeNavegacionHome';
 import LateralIzquierdoHome from '../../Home/Components/LateralIzquierdo/LateralIzquierdoHome';
@@ -12,7 +13,6 @@ function UsuarioPropio() {
   const [userData, setUserData] = useState({});
   const [espaciosData, setEspaciosData] = useState([]);
   const { isLoggedIn } = useAuth(); // Obtener el estado de inicio de sesión del contexto
-  
 
   useEffect(() => {
     // Verificar si IdUsuario está definido antes de hacer la solicitud
@@ -20,7 +20,7 @@ function UsuarioPropio() {
       const fetchUserData = async () => {
         try {
           // Obtener información del usuario y sus espacios
-          const response = await axios.get(`http://localhost/SHAIR/shair_v200/src/BD_v200/ApiLeerEspacioUsuarioPropio.php?id=${IdUsuario}`);
+          const response = await axios.get(`http://localhost/SHAIR/shair_v200/src/BD_v200/ApiLeerEspacioUsuarioPropio.php?id=29`);
           
           const userData = response.data[0];
           setUserData(userData);
@@ -39,38 +39,47 @@ function UsuarioPropio() {
   return (
     <div id='PrincipalUsuarioPropio'>
       <header>
-        <BarraDeNavegacionHome />
+        <BarraDeNavegacionHome isLoggedIn={isLoggedIn} />
       </header>
 
       <div id='bodyUsuarioPropio'>
         <section id='IzquierdaUsuarioPropio'>
-          <LateralIzquierdoHome />
+          <LateralIzquierdoHome  isLoggedIn={isLoggedIn} />
         </section>
 
         <section id='CentroUsuarioPropio'>
-        <div id='InformacionUsuarioPropio'>
-          {userData && (
-            <>
-              <h1>{userData.NombreUsuario}</h1>
-              <p>{userData.DescripcionUsuario}</p>
-            </>
-          )}
-        </div>
+          <div id='InformacionUsuarioPropio'>
+            {userData && (
+              <>
+                <h1>{userData.NombreUsuario}</h1>
+                <p>{userData.DescripcionUsuario}</p>
+              </>
+            )}
+          </div>
 
           <div id='ContenidoCentroUsuarioPropio'>
             <h1>Tus espacios</h1>
-            {espaciosData.map(item => (
-              <div key={item.IdEspacio}>
-                <h2>{item.NombreEspacio}</h2>
-                <p>{item.DescripcionEspacio}</p>
-                <p>Fecha de creación: {item.FechaCreacion}</p>
-              </div>
-            ))}
+            {espaciosData.length === 0 ? (
+              // Mostrar mensaje cuando no hay espacios
+              <p>No tienes espacios. ¡Crea uno ahora!</p>
+            ) : (
+              // Mostrar la lista de espacios
+              espaciosData.map(item => (
+                <div key={item.IdEspacio}>
+                  <h2>{item.NombreEspacio}</h2>
+                  <p>{item.DescripcionEspacio}</p>
+                  <p>Fecha de creación: {item.FechaCreacion}</p>
+                </div>
+              ))
+            )}
+
+            {/* Mostrar el botón para crear espacio */}
+            <Button variant="outline-primary" className='BotonDerecha' href='/CrearEspacio'>Crear un espacio</Button>
           </div>
         </section>
 
         <section id='DerechoUsuarioPropio'>
-          <LateralDerechoHome />
+          <LateralDerechoHome isLoggedIn={isLoggedIn} />
         </section>
       </div>
     </div>

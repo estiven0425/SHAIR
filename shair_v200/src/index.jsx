@@ -10,6 +10,7 @@ import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
 import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
 import UsuarioOtro from './Usuario/Otro/UsuarioOtro';
 import UsuarioPropio from './Usuario/Propio/UsuarioPropio';
+import CrearEspacio from './Formularios/CrearEspacio/CrearEspacio';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 import { AuthProvider } from './BD_v200/AuthContext';
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/UsuarioPropio/:IdUsuario",
     element: <UsuarioPropio/>,
+  },
+  {
+    path: "/CrearEspacio",
+    element: <CrearEspacio/>,
   }
 ]);
 

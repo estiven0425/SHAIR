@@ -10,8 +10,8 @@ const BarraDeNavegacionHome = () => {
 
   return (
     <div id='BarraDeNavegacionHomePrincipal'>
-      <BarraDeNavegacioEnlacesHome />
-      <BarraDeNavegacionBusquedaHome />
+      <BarraDeNavegacioEnlacesHome isLoggedIn={isLoggedIn} />
+      <BarraDeNavegacionBusquedaHome isLoggedIn={isLoggedIn} />
       <BarraDeNavegacionSesionHome isLoggedIn={isLoggedIn} />
     </div>
   );

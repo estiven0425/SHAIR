@@ -10,7 +10,7 @@ header('Access-Control-Allow-Credentials: true');
 header('Content-Type: application/json');
 
 // Simula el inicio de sesión estableciendo algún valor en la sesión
-$_SESSION['IdUsuario'] = 1;
+$_SESSION['IdUsuario'] = 29;
 
 // Respuesta exitosa
 echo json_encode(array("success" => true));

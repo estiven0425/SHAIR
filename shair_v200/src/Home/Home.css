@@ -53,6 +53,21 @@
     text-align: center;
 }
 
+#PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome .BotonDerecha {
+    background-color: #8e4c98;
+    border-color: #555555;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+}
+
+#PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome .BotonDerecha:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
+
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN:focus {
     background-color: #8e4c98;
     box-shadow: 0px 0px 10px  #8e4c98;

@@ -24,9 +24,24 @@
     text-align: center;
 }
 
-#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio h1 {
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio h1, p {
     color: #ffffff;
     width: 100%;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio .BotonDerecha {
+    background-color: #8e4c98;
+    border-color: #555555;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio .BotonDerecha:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
 }
 
 #PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #InformacionUsuarioPropio {

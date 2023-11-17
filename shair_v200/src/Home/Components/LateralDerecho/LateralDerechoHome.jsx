@@ -2,8 +2,10 @@ import React from 'react';
 import './LateralDerechoHome.css';
 import LateralDerechoAccionesHome from './Components/LateralDerechoAccionesHome';
 import LateralDerechoAnuncio1Home from './Components/LateralDerechoAnuncioHome';
+import { useAuth } from '../../../BD_v200/AuthContext';
 
-const LateralDerechoHome = ({ isLoggedIn }) => {
+function LateralDerechoHome() {
+  const { isLoggedIn } = useAuth();
   return (
     <div id='LateralDerechoHomePrincipal'>
       <section id='DerechaAcciones'>
