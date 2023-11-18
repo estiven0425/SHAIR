@@ -5,12 +5,12 @@ import BarraDeNavegacionSesionCuentaHome from './BarraDeNavegacionSesionComponen
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 const BarraDeNavegacionSesionHome = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
 
   return (
     <div id='BarraDeNavegacionSesionHomePrincipal'>
-      <BarraDeNavegacionSesionBotonHome isLoggedIn={isLoggedIn} />
-      <BarraDeNavegacionSesionCuentaHome isLoggedIn={isLoggedIn} />
+      <BarraDeNavegacionSesionBotonHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
+      <BarraDeNavegacionSesionCuentaHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
     </div>
   );
 };

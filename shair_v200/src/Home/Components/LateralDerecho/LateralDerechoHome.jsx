@@ -5,15 +5,15 @@ import LateralDerechoAnuncio1Home from './Components/LateralDerechoAnuncioHome';
 import { useAuth } from '../../../BD_v200/AuthContext';
 
 function LateralDerechoHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario, location } = useAuth();
   return (
     <div id='LateralDerechoHomePrincipal'>
       <section id='DerechaAcciones'>
-        <LateralDerechoAccionesHome isLoggedIn={isLoggedIn} />
+        <LateralDerechoAccionesHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="UsuarioOtro, UsuarioPropio" />
       </section>
 
       <section id='DerechaAnuncio'>
-        <LateralDerechoAnuncio1Home isLoggedIn={isLoggedIn} />
+        <LateralDerechoAnuncio1Home isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="UsuarioOtro"  />
       </section>
     </div>
   );

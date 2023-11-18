@@ -9,22 +9,22 @@ import LateralIzquierdoSubtituloHome from './Components/LateralIzquierdoSubtitul
 import { useAuth } from '../../../BD_v200/AuthContext';
 
 export default function LateralIzquierdoHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <div id='LateralIzquierdoHomePrincipal'>
 
       <section id='IzquierdaTitulo'>
-        <LateralIzquierdoTituloHome isLoggedIn={isLoggedIn} />
+        <LateralIzquierdoTituloHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
       </section>
 
       <section id='IzquierdaAnuncios'>
-        <LateralIzquierdoAnuncio1Home isLoggedIn={isLoggedIn} />
-        <LateralIzquierdoAnuncio2Home isLoggedIn={isLoggedIn} />
-        <LateralIzquierdoAnuncio3Home isLoggedIn={isLoggedIn} />
+        <LateralIzquierdoAnuncio1Home isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
+        <LateralIzquierdoAnuncio2Home isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
+        <LateralIzquierdoAnuncio3Home isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
       </section>
 
       <section id='IzquierdaSubtitulo'>
-        <LateralIzquierdoSubtituloHome isLoggedIn={isLoggedIn} />
+        <LateralIzquierdoSubtituloHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
       </section>
 
     </div>

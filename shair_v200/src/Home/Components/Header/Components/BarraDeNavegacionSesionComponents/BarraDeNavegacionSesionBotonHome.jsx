@@ -5,7 +5,7 @@ import './BarraDeNavegacionSesionBotonHome.css';
 import { useAuth } from '../../../../../BD_v200/AuthContext';
 
 function BarraDeNavegacionSesionBotonHome() {
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
 
   const handleLogout = async () => {
     try {

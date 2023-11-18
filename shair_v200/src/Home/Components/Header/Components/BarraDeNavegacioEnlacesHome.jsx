@@ -6,12 +6,12 @@ import BarraDeNavegacionEnlacesContenidoHome from './BarraDeNavegacionEnlacesCom
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 export default function BarraDeNavegacioEnlacesHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <div id='BarraDeNavegacioEnlacesHomePrincipal'>
 
-        <BarraDeNavegacionEnlacesContenidoHome isLoggedIn={isLoggedIn} />
-        <BarraDeNavegacionEnlacesAcordeonHome isLoggedIn={isLoggedIn} />
+        <BarraDeNavegacionEnlacesContenidoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
+        <BarraDeNavegacionEnlacesAcordeonHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
         
     </div>
   )

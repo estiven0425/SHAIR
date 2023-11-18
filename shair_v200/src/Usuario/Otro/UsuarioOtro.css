@@ -7,6 +7,9 @@
 
 #PrincipalUsuarioOtro #bodyUsuarioOtro {
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     height: 100%;
     padding: 6% 12% 1% 12%;
 }
@@ -45,6 +48,21 @@
 #PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #InformacionUsuarioOtro h1 {
     color: #ffffff;
     width: 100%;
+}
+
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #InformacionUsuarioOtro .BotonDerecha {
+    background-color: #8e4c98;
+    border-color: #555555;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+}
+
+#PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #InformacionUsuarioOtro .BotonDerecha:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
 }
 
 #PrincipalUsuarioOtro #bodyUsuarioOtro #CentroUsuarioOtro #ContenidoCentroUsuarioOtro #ContenidoCentroUsuarioOtroA {

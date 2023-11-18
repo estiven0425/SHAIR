@@ -7,8 +7,9 @@
 
 #PrincipalUsuarioPropio #bodyUsuarioPropio {
     background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-    height: 100%;
+    height: 100vh;
     padding: 6% 12% 1% 12%;
+    text-align: center;
 }
 
 #PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio {
@@ -62,6 +63,21 @@
     width: 100%;
 }
 
+#PrincipalUsuarioPropio #bodyUsuarioPropio .BotonDerecha {
+    background-color: #8e4c98;
+    border-color: #555555;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 1%;
+    text-transform: uppercase;
+}
+
+#PrincipalUsuarioPropio #bodyUsuarioPropio .BotonDerecha:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
+
 #PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA {
     height: auto;
     margin: 1%;
@@ -76,7 +92,7 @@
     outline: none;
 }
 
-#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio {
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA {
     align-items: stretch;
     background-color: #8e4c98;
     border-radius: 5px;
@@ -89,19 +105,19 @@
     text-align: center;
 }
 
-#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio h1 {
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA h1 {
     background-color: #693870;
     border-radius: 5px 5px 0px 0px;
     font-size: 20px;
     margin: 0%;
 }
 
-#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio p {
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA p {
     font-size: 15px;
     margin: 1%;
 }
 
-#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA .EspacioCentroUsuarioPropio a{
+#PrincipalUsuarioPropio #bodyUsuarioPropio #CentroUsuarioPropio #ContenidoCentroUsuarioPropio #ContenidoCentroUsuarioPropioA a{
     color: #ffffff;
     font-size: 15px;
     margin: 1%;

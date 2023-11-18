@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(array("message" => "Usuario no encontrado", "error" => true));
         }
 
-        $checkUserQuery->close();
+        //$checkUserQuery->close();
     } else {
         echo json_encode(array("message" => "Datos incompletos o inválidos", "error" => true));
     }

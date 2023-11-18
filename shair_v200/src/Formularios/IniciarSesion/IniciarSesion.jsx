@@ -12,7 +12,7 @@ const IniciarSesion = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [fieldsVisible, setFieldsVisible] = useState(true);
-  const { setIsLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {

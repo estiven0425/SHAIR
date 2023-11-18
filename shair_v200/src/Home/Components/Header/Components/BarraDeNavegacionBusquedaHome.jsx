@@ -6,12 +6,12 @@ import BarraDeNavegacionBusquedaBotonHome from './BarraDeNavegacionBusquedaCompo
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 export default function BarraDeNavegacionBusquedaHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <div id='BarraDeNavegacionBusquedaHomePrincipal'>
 
-        <BarraDeNavegacionBusquedaEspacioHome isLoggedIn={isLoggedIn} />
-        <BarraDeNavegacionBusquedaBotonHome isLoggedIn={isLoggedIn} />
+        <BarraDeNavegacionBusquedaEspacioHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
+        <BarraDeNavegacionBusquedaBotonHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
         
     </div>
   )

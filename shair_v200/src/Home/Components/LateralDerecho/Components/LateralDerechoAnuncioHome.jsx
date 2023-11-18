@@ -4,7 +4,7 @@ import './LateralDerechoAnuncioHome.css';
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 function LateralDerechoAnuncioHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <Figure id='LateralDerechoAnuncioHomePrincipal'>
       <Figure.Image className='Anuncio'

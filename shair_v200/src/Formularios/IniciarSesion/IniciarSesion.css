@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 917px;
+    height: 100vh;
     justify-content: center;
     text-align: center;
     text-transform: uppercase;

@@ -4,10 +4,10 @@ import LateralDerechoAccionesBotonSesionHome from './LateralDerechoAccionesHomeC
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 function LateralDerechoAccionesHome() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario, location } = useAuth();
   return (
     <section id='LateralDerechoAccionesHomePrincipal'>
-      <LateralDerechoAccionesBotonSesionHome isLoggedIn={isLoggedIn} />
+      <LateralDerechoAccionesBotonSesionHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="UsuarioOtro, UsuarioPropio" />
     </section>
   );
 };

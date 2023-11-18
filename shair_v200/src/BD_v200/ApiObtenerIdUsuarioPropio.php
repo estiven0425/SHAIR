@@ -16,11 +16,12 @@ error_log(print_r($_SESSION, true));
 
 // Verificar si el usuario ha iniciado sesión
 
-if (isset($_SESSION['IdUsuario'])) {
-    $userId = $_SESSION['IdUsuario'];
-    echo json_encode(array("IdUsuario" => $userId));
+if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['IdUsuario'])) {
+    $IdUsuario = $_SESSION['IdUsuario'];
+    echo json_encode(array("IdUsuario" => $IdUsuario));
 } else {
     echo json_encode(array("message" => "Usuario no autenticado", "error" => true));
 }
+
 
 ?>

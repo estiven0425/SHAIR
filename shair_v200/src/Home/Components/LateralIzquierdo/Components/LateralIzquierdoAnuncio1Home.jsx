@@ -5,7 +5,7 @@ import { useAuth } from '../../../../BD_v200/AuthContext';
 
 
 function LateralIzquierdoAnuncio1Home() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <Figure className='LateralIzquierdoAnuncioHomePrincipal'>
       <Figure.Image className='Anuncios'

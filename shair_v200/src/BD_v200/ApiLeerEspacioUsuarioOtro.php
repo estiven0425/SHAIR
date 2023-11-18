@@ -20,12 +20,12 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['userId'])) {
+    if (isset($_GET['IdUsuario'])) {
         // Obtener datos del usuario y sus espacios
-        $userId = $_GET['userId'];
+        $IdUsuario = $_GET['IdUsuario'];
         $result = $conn->query("SELECT usuario.*, espacio.* FROM usuario
                                 LEFT JOIN espacio ON usuario.IdUsuario = espacio.IdUsuario
-                                WHERE usuario.IdUsuario = $userId");
+                                WHERE usuario.IdUsuario = $IdUsuario");
 
         if ($result->num_rows > 0) {
             $userData = array();
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             echo json_encode(array());
         }
     } else {
-        echo json_encode(array("message" => "Falta el parámetro userId", "error" => true));
+        echo json_encode(array("message" => "Falta el parámetro IdUsuario", "error" => true));
     }
 } else {
     echo json_encode(array("message" => "Método no permitido", "error" => true));

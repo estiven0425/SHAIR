@@ -4,7 +4,7 @@ import './LateralIzquierdoAnuncio3Home.css';
 import { useAuth } from '../../../../BD_v200/AuthContext';
 
 function LateralIzquierdoAnuncio3Home() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   return (
     <Figure id='LateralIzquierdoAnuncio3HomePrincipal'>
       <Figure.Image className='Anuncios'

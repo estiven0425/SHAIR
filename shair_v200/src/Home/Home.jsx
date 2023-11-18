@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { useAuth } from '../BD_v200/AuthContext';
 
 export default function Home() {
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const { isLoggedIn, setIsLoggedIn, IdUsuario } = useAuth();
   const [espacioData, setEspacioData] = useState([]);
 
   useEffect(() => {
@@ -40,12 +40,12 @@ export default function Home() {
   return (
     <div id='PrincipalHome'>
       <header>
-        <BarraDeNavegacionHome isLoggedIn={isLoggedIn} />
+        <BarraDeNavegacionHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
       </header>
 
       <div id='bodyHome'>
         <section id='IzquierdaHome'>
-          <LateralIzquierdoHome isLoggedIn={isLoggedIn} />
+          <LateralIzquierdoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
         </section>
 
         <section id='CentroHome'>
@@ -87,7 +87,7 @@ export default function Home() {
         </section>
 
         <section id='DerechoHome'>
-          <LateralDerechoHome isLoggedIn={isLoggedIn} />
+          <LateralDerechoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} />
         </section>
       </div>
     </div>
