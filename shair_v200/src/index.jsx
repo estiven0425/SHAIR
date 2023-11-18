@@ -9,7 +9,9 @@ import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
 import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
 import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
 import UsuarioOtro from './Usuario/Otro/UsuarioOtro';
+import EspacioOtro from './Espacio/EspacioOtro/EspacioOtro';
 import UsuarioPropio from './Usuario/Propio/UsuarioPropio';
+import EspacioPropio from './Espacio/EspacioPropio/EspacioPropio';
 import CrearEspacio from './Formularios/CrearEspacio/CrearEspacio';
 import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
 import { AuthProvider } from './BD_v200/AuthContext';
@@ -36,8 +38,16 @@ const router = createBrowserRouter([
     element: <UsuarioOtro/>,
   },
   {
+    path: "/EspacioOtro/:IdEspacio",
+    element: <EspacioOtro/>,
+  },
+  {
     path: "/UsuarioPropio/:IdUsuario",
     element: <UsuarioPropio/>,
+  },
+  {
+    path: "/EspacioPropio/:IdEspacio",
+    element: <EspacioPropio/>,
   },
   {
     path: "/CrearEspacio",

@@ -5,13 +5,17 @@
     margin: 2%;
 }
 
-#LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomePrincipalAccesos {
+#LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos {
     margin-bottom: 5%;
 }
 
-#LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomePrincipalAccesos h1 {
+#LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos h1 {
     color: #ffffff;
     font-size: 15px;
+}
+
+#LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos .BotonDerecha {
+    margin-bottom: 5%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomePrincipalAccesosP {
@@ -47,7 +51,7 @@
     justify-content: space-around;
     margin: 0%;
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-top: 100%;
     text-align: center;
 }

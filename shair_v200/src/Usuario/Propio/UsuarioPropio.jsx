@@ -81,19 +81,20 @@ function UsuarioPropio() {
             ) : (
               // Mostrar la lista de espacios
               espaciosData.map(item => (
-                <div key={item.IdEspacio} id='ContenidoCentroUsuarioPropioA'>
+                <a href={`/EspacioPropio/${item.IdEspacio}`} key={item.IdEspacio} id='ContenidoCentroUsuarioPropioA'>
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>
                   <p>Fecha de creación: {item.FechaCreacion}</p>
-                </div>
+                </a>
               ))
             )}
             
           </div>
-        </section>
-        
-        <Button variant="outline-primary" className='BotonDerecha' href='/CrearEspacio'>Crear un espacio</Button>
+          
+          <Button variant="outline-primary" className='BotonDerecha' href='/CrearEspacio'>Crear un espacio</Button>
 
+        </section>
+ 
         <section id='DerechoUsuarioPropio'>
           <LateralDerechoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="UsuarioPropio"  />
         </section>

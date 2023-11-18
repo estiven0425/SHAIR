@@ -69,7 +69,7 @@ const UsuarioOtro = () => {
           <div id='ContenidoCentroUsuarioOtro'>
             <h1>Espacios</h1>
             {espaciosData.map(item => (
-              <a href="#" key={item.IdEspacio} id='ContenidoCentroUsuarioOtroA'>
+              <a href={`/EspacioOtro/${item.IdEspacio}`} key={item.IdEspacio} id='ContenidoCentroUsuarioOtroA'>
                 <div className='EspacioCentroUsuarioOtro'>
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>

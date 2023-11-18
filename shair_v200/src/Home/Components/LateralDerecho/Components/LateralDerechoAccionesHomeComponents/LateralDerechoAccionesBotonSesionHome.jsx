@@ -31,16 +31,35 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
   return (
     <div id='LateralDerechoAccionesBotonSesionHomePrincipal'>
       {location.pathname.startsWith("/UsuarioOtro") && 
-        <div id='LateralDerechoAccionesBotonSesionHomePrincipalAccesos'>
+        <div className='LateralDerechoAccionesBotonSesionHomePrincipalAccesos'>
           <h1>Opciones de perfil</h1>
           <Button variant="outline-primary" className='BotonDerecha' href='#'>Denunciar Cuenta</Button>
         </div>
-        }
+      }
+
+      {location.pathname.startsWith("/EspacioOtro") && 
+        <div className='LateralDerechoAccionesBotonSesionHomePrincipalAccesos'>
+          <h1>Opciones del espacio</h1>
+          <Button variant="outline-primary" className='BotonDerecha' href='#'>Descargar Espacio</Button>
+          <Button variant="outline-primary" className='BotonDerecha' href='#'>Denunciar Espacio</Button>
+          <Button variant="outline-primary" className='BotonDerecha' href='#'>Denunciar Usuario</Button>
+        </div>
+      }
         
       {isLoggedIn ? (
         // Muestra un título si la sesión está iniciada
         
         <div id='LateralDerechoAccionesBotonSesionHomeEspacio'>
+
+          {location.pathname.startsWith("/EspacioPropio") && 
+            <div className='LateralDerechoAccionesBotonSesionHomePrincipalAccesos'>
+              <h1>Opciones del espacio</h1>
+              <Button variant="outline-primary" className='BotonDerecha' href='#'>Modificar Espacio</Button>
+              <Button variant="outline-primary" className='BotonDerecha' href='#'>Subir de nivel</Button>
+              <Button variant="outline-primary" className='BotonDerecha' href='#'>Descargar Espacio</Button>
+              <Button variant="outline-primary" className='BotonDerecha' href='#'>Eliminar Espacio</Button>
+            </div>
+          }
 
           {location.pathname.startsWith("/UsuarioPropio") && 
             <div id='LateralDerechoAccionesBotonSesionHomePrincipalAccesosP'>

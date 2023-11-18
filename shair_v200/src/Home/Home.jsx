@@ -73,7 +73,7 @@ export default function Home() {
             <h1>Contenido Destacado de SHAIR</h1>
 
             {espacioData.map(item => (
-              <a href="#" key={item.IdEspacio} id='ContenidoCentroHomeA'>
+              <a href={`/EspacioOtro/${item.IdEspacio}`} key={item.IdEspacio} id='ContenidoCentroHomeA'>
                 <div className='EspacioCentroHome'>
                   <h1>{item.NombreEspacio}</h1>
                   <p>{item.DescripcionEspacio}</p>

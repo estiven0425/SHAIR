@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
-    height: 100vh;
     text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
