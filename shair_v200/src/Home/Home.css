@@ -51,6 +51,10 @@
     text-align: justify;
 }
 
+#PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN hr {  
+    z-index: 1;
+}
+
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN p h5 {
     text-align: center;
 }

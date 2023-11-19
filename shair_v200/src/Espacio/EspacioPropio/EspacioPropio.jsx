@@ -5,11 +5,12 @@ import './EspacioPropio.css';
 import BarraDeNavegacionHome from '../../Home/Components/Header/BarraDeNavegacionHome';
 import LateralIzquierdoHome from '../../Home/Components/LateralIzquierdo/LateralIzquierdoHome';
 import LateralDerechoHome from '../../Home/Components/LateralDerecho/LateralDerechoHome';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../BD_v200/AuthContext';
 
 const EspacioPropio = () => {
   const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const navigate = useNavigate();
   const { IdEspacio } = useParams();
   const [espacioData, setEspacioData] = useState({});
   const { IdUsuario } = useParams(); // Obtener IdUsuario de la URL
@@ -71,7 +72,7 @@ const EspacioPropio = () => {
         </section>
 
         <section id='DerechoEspacioPropio'> 
-          <LateralDerechoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="EspacioPropio" />
+          <LateralDerechoHome isLoggedIn={isLoggedIn} IdUsuario={IdUsuario} location="EspacioPropio" navigate={navigate} />
         </section>
       </div>
     </div>

@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { useAuth } from '../../../../../BD_v200/AuthContext';
 import './LateralDerechoAccionesBotonHome.css';
 import axios from 'axios';
 
 const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
-  const { IdUsuario } = useParams();
+  const { IdUsuario, IdEspacio } = useParams();
   const [userSpaces, setUserSpaces] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserSpaces = async () => {
@@ -20,13 +21,12 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
         console.error('Error al obtener espacios del usuario:', error);
       }
     };
-    
 
     // Llama a la función para obtener los espacios del usuario al montar el componente
     if (isLoggedIn) {
       fetchUserSpaces();
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, IdUsuario]);
 
   return (
     <div id='LateralDerechoAccionesBotonSesionHomePrincipal'>
@@ -54,7 +54,7 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
           {location.pathname.startsWith("/EspacioPropio") && 
             <div className='LateralDerechoAccionesBotonSesionHomePrincipalAccesos'>
               <h1>Opciones del espacio</h1>
-              <Button variant="outline-primary" className='BotonDerecha' href='#'>Modificar Espacio</Button>
+              <Button variant="outline-primary" className='BotonDerecha' onClick={() => navigate(`/ModificarEspacio/${IdEspacio}`)}> Modificar espacio </Button>
               <Button variant="outline-primary" className='BotonDerecha' href='#'>Subir de nivel</Button>
               <Button variant="outline-primary" className='BotonDerecha' href='#'>Descargar Espacio</Button>
               <Button variant="outline-primary" className='BotonDerecha' href='#'>Eliminar Espacio</Button>
@@ -64,7 +64,7 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
           {location.pathname.startsWith("/UsuarioPropio") && 
             <div id='LateralDerechoAccionesBotonSesionHomePrincipalAccesosP'>
               <h1>Opciones de perfil</h1>
-              <Button variant="outline-primary" className='BotonDerecha' href='#'>Modificar Cuenta</Button>
+              <Button variant="outline-primary" className='BotonDerecha' onClick={() => navigate(`/ModificarCuenta/${IdUsuario}`)}>Modificar Cuenta</Button>
               <Button variant="outline-primary" className='BotonDerecha' href='#'>Subir de nivel</Button>
               <Button variant="outline-primary" className='BotonDerecha' href='#'>Eliminar Cuenta</Button>
             </div>

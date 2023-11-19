@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+
+#ModificarCuentaPrincipal {
+    align-items: center;
+    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta {
+    align-items: stretch;
+    background-color: #454545;
+    border: 2px solid #8e4c98;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 90%;
+    justify-content: space-around;
+    padding: 2%;
+    width: 50%;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta .TextoLabel {
+    color: #ffffff;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta .TextoCheck {
+    color: #ffffff;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta .TextoCheck a {
+    color: #8e4c98;
+    text-decoration: none;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta .Input:focus {
+    border: 2px solid #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta #ModificarCuenta {
+    background-color: #8e4c98;
+    border-color: #606060;
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#ModificarCuentaPrincipal #FormularioModificarCuenta #ModificarCuenta:focus {
+    background-color: #8e4c98;
+    box-shadow: 0px 0px 10px  #8e4c98;
+    outline: none;
+}
