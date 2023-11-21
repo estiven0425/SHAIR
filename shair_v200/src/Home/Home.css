@@ -1,145 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #PrincipalHome {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
-    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans"; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+  text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
 #PrincipalHome #bodyHome {
-    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+  background: linear-gradient(
+    to right,
+    #303030,
+    #606060
+  ); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
 
-    padding: 6% 12% 1% 12%;
+  padding: 6% 12% 1% 12%;
 }
 
 #PrincipalHome #bodyHome #CentroHome {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome {
-    align-items: center;
-    background-color: #606060;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0% 0% 1% 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #606060;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0% 0% 1% 0%;
+  text-align: center;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome a {
-    color: #ffffff;
-    width: 100%;
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN {
-    height: 100%;
-    margin: 1%;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
+  height: 100%;
+  margin: 1%;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN p {
-    text-align: justify;
+  text-align: justify;
 }
 
-#PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN hr {  
-    z-index: 1;
+#PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN hr {
+  z-index: 1;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN p h5 {
-    text-align: center;
+  text-align: center;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome .BotonDerecha {
-    background-color: #8e4c98;
-    border-color: #555555;
-    color: #ffffff;
-    font-size: 15px;
-    margin-bottom: 1%;
-    text-transform: uppercase;
+  background-color: #8e4c98;
+  border-color: #555555;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 1%;
+  text-transform: uppercase;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome .BotonDerecha:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalHome #bodyHome #CentroHome #NoticiaCentroHome #NoticiaCentroHomenN:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome {
-    align-items: center;
-    background-color: #606060;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #606060;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0%;
+  text-align: center;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome h1 {
-    color: #ffffff;
-    width: 100%;
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA {
-    height: auto;
-    margin: 1%;
-    text-align: center;
-    text-decoration: none;
-    width: 30%;
+  height: auto;
+  margin: 1%;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome {
-    align-items: stretch;
-    background-color: #8e4c98;
-    border-radius: 5px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: -1%;
-    text-align: center;
+  align-items: stretch;
+  background-color: #8e4c98;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: -1%;
+  text-align: center;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome h1 {
-    background-color: #693870;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 20px;
-    margin: 0%;
+  background-color: #693870;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 20px;
+  margin: 0%;
 }
 
 #PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome p {
-    font-size: 15px;
-    margin: 1%;
+  font-size: 15px;
+  margin: 1%;
 }
 
-#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome a{
-    color: #ffffff;
-    font-size: 15px;
-    margin: 1%;
-    text-decoration: none;
+#PrincipalHome #bodyHome #CentroHome #ContenidoCentroHome #ContenidoCentroHomeA .EspacioCentroHome a {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 1%;
+  text-decoration: none;
 }

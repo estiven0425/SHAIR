@@ -1,46 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-.mb-1 button { /* Seleccionamos los elementos button dentro de los elementos con la clase mb-1 y les aplicamos los siguientes estilos: */
-    background-color: #fdb23b; /* Le damos un color de fondo naranja */
-    border-color: #fdb23b; /* Le damos un color de borde naranja */
-    border-radius: 50px; /* Le damos un radio de borde de 50px para hacerlo redondeado */
-    color: #fff; /* Le damos un color blanco al texto */
-    cursor: pointer; /* Cambiamos el cursor a un puntero cuando pasa sobre el botón */
-    font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
-    height: 100%; /* Le damos una altura del 100% del contenedor */
-    padding: 10%; /* Le damos un relleno del 10% del contenedor */
-    text-align: center; /* Alineamos el texto en el centro */
-    transition: background-color 0.2s, transform 0.2s; /* Le damos una transición suave al cambiar el color de fondo y la transformación */
-    width: 120%; /* Le damos un ancho del 120% del contenedor */
+.mb-1 button {
+  /* Seleccionamos los elementos button dentro de los elementos con la clase mb-1 y les aplicamos los siguientes estilos: */
+  background-color: #fdb23b; /* Le damos un color de fondo naranja */
+  border-color: #fdb23b; /* Le damos un color de borde naranja */
+  border-radius: 50px; /* Le damos un radio de borde de 50px para hacerlo redondeado */
+  color: #fff; /* Le damos un color blanco al texto */
+  cursor: pointer; /* Cambiamos el cursor a un puntero cuando pasa sobre el botón */
+  font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
+  height: 100%; /* Le damos una altura del 100% del contenedor */
+  padding: 10%; /* Le damos un relleno del 10% del contenedor */
+  text-align: center; /* Alineamos el texto en el centro */
+  transition: background-color 0.2s, transform 0.2s; /* Le damos una transición suave al cambiar el color de fondo y la transformación */
+  width: 120%; /* Le damos un ancho del 120% del contenedor */
 }
 
-.mb-1 button:hover { /* Seleccionamos los elementos button dentro de los elementos con la clase mb-1 cuando el cursor pasa sobre ellos y les aplicamos los siguientes estilos: */
-    background-color: #da9931; /* Le damos un color de fondo más oscuro que el naranja */
-    border-color: #da9931; /* Le damos un color de borde más oscuro que el naranja */
-    transform: scale(110%); /* Le aplicamos una transformación de escala de 1.1 para aumentar su tamaño */
+.mb-1 button:hover {
+  /* Seleccionamos los elementos button dentro de los elementos con la clase mb-1 cuando el cursor pasa sobre ellos y les aplicamos los siguientes estilos: */
+  background-color: #da9931; /* Le damos un color de fondo más oscuro que el naranja */
+  border-color: #da9931; /* Le damos un color de borde más oscuro que el naranja */
+  transform: scale(
+    110%
+  ); /* Le aplicamos una transformación de escala de 1.1 para aumentar su tamaño */
 }
 
-.mb-1 button a { /* Seleccionamos los elementos a dentro de los elementos button dentro de los elementos con la clase mb-1 y les aplicamos los siguientes estilos: */
-    color: #fff; /* Le damos un color blanco al texto */
-    font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
-    font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
-    text-decoration: none; /* Quitamos el subrayado al texto */
+.mb-1 button a {
+  /* Seleccionamos los elementos a dentro de los elementos button dentro de los elementos con la clase mb-1 y les aplicamos los siguientes estilos: */
+  color: #fff; /* Le damos un color blanco al texto */
+  font-family: "Bangers"; /* Le damos la fuente Bangers al texto */
+  font-size: 30px; /* Le damos un tamaño de fuente de 30px al texto */
+  text-decoration: none; /* Quitamos el subrayado al texto */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
-    .mb-1 {
-        zoom: 90%; /* Aplicamos un zoom del 90% para reducir el tamaño de los elementos con la clase mb-1 */
-   }
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+  .mb-1 {
+    zoom: 90%; /* Aplicamos un zoom del 90% para reducir el tamaño de los elementos con la clase mb-1 */
+  }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
-    .mb-1 {
-        zoom: 80%; /* Aplicamos un zoom del 80% para reducir el tamaño de los elementos con la clase mb-1 */
-   }
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+  .mb-1 {
+    zoom: 80%; /* Aplicamos un zoom del 80% para reducir el tamaño de los elementos con la clase mb-1 */
+  }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    .mb-1 {
-        display: none; /* Ocultamos los elementos con la clase mb-1 */
-   }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  .mb-1 {
+    display: none; /* Ocultamos los elementos con la clase mb-1 */
+  }
 }

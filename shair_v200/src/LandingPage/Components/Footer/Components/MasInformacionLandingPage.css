@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente MasInformación */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos fuentes de Google Fonts para usar en estilos del componente MasInformación */
 
-#MasInformacionLandingPage { /* Estilizamos el contenedor principal con el ID "MasInformacionLandingPage" */
+#MasInformacionLandingPage {
+  /* Estilizamos el contenedor principal con el ID "MasInformacionLandingPage" */
   align-items: center; /* Centramos los elementos verticalmente */
   display: flex; /* Configuramos el contenedor como un contenedor flexible (flex) */
   flex-direction: column; /* Configuramos la dirección de los elementos como una columna */
@@ -9,12 +10,14 @@
   width: 100%; /* Establecemos el ancho del contenedor al 100% del tamaño del contenedor padre */
 }
 
-#MasInformacionLandingPage h1 { /* Estilizamos el encabezado h1 dentro de MasInformaciónLandingPage */
+#MasInformacionLandingPage h1 {
+  /* Estilizamos el encabezado h1 dentro de MasInformaciónLandingPage */
   font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
   text-align: center; /*Alineamos el texto en el centro*/
 }
 
-#MasInformacionEnlacesLandingPage { /* Estilizamos el contenedor de enlaces dentro de MasInformación */
+#MasInformacionEnlacesLandingPage {
+  /* Estilizamos el contenedor de enlaces dentro de MasInformación */
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -22,15 +25,17 @@
   justify-content: center;
 }
 
-#MasInformacionEnlacesLandingPage a { /* Estilizamos los enlaces dentro de MasInformaciónEnlaces */
+#MasInformacionEnlacesLandingPage a {
+  /* Estilizamos los enlaces dentro de MasInformaciónEnlaces */
   color: #ffffff;
   margin: 5%;
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
 
   #MasInformacion h1 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   #MasInformacionEnlacesLandingPage a {
@@ -38,10 +43,11 @@
   }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
 
   #MasInformacion h1 {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   #MasInformacionEnlacesLandingPage a {
@@ -49,10 +55,11 @@
   }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
 
   #MasInformacion h1 {
-      font-size: 13px;
+    font-size: 13px;
   }
 
   #MasInformacionEnlacesLandingPage a {
@@ -60,10 +67,11 @@
   }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
 
   #MasInformacion h1 {
-      font-size: 7px;
+    font-size: 7px;
   }
 
   #MasInformacionEnlacesLandingPage a {

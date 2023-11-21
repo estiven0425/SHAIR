@@ -24,4 +24,3 @@ if (isset($_SESSION['IdUsuario'])) {
     // Responde con un JSON indicando que no hay sesión activa
     echo json_encode(array("success" => false, "message" => "No hay sesión activa para cerrar"));
 }
-?>

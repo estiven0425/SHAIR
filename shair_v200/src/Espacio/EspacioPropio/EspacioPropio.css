@@ -1,132 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #PrincipalEspacioPropio {
-    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
-    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
+  font-family: "Open Sans"; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+  text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio {
-    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-    padding: 6% 12% 1% 12%;
-    text-align: center;
+  background: linear-gradient(
+    to right,
+    #303030,
+    #606060
+  ); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  padding: 6% 12% 1% 12%;
+  text-align: center;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio .BotonDerecha {
-    background-color: #8e4c98;
-    border-color: #555555;
-    color: #ffffff;
-    font-size: 15px;
-    margin: 1%;
-    text-transform: uppercase;
+  background-color: #8e4c98;
+  border-color: #555555;
+  color: #ffffff;
+  font-size: 15px;
+  margin: 1%;
+  text-transform: uppercase;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio .BotonDerecha:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio {
-    align-items: center;
-    background-color: #454545;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #454545;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0%;
+  text-align: center;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio h1 {
-    color: #ffffff;
-    width: 100%;
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #InformacionEspacioPropio {
-    align-items: center;
-    background-color: #606060;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0% 0% 1% 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #606060;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0% 0% 1% 0%;
+  text-align: center;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #InformacionEspacioPropio h1 {
-    color: #ffffff;
-    width: 100%;
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #InformacionEspacioPropio .BotonDerecha {
-    background-color: #8e4c98;
-    border-color: #555555;
-    color: #ffffff;
-    font-size: 15px;
-    margin-bottom: 1%;
-    text-transform: uppercase;
+  background-color: #8e4c98;
+  border-color: #555555;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 1%;
+  text-transform: uppercase;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #InformacionEspacioPropio .BotonDerecha:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA {
-    height: auto;
-    margin: 1%;
-    text-align: center;
-    text-decoration: none;
-    width: 30%;
+  height: auto;
+  margin: 1%;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA .EspacioCentroEspacioPropio {
-    align-items: stretch;
-    background-color: #8e4c98;
-    border-radius: 5px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: -1%;
-    text-align: center;
+  align-items: stretch;
+  background-color: #8e4c98;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: -1%;
+  text-align: center;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA .EspacioCentroEspacioPropio h1 {
-    background-color: #693870;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 20px;
-    margin: 0%;
+  background-color: #693870;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 20px;
+  margin: 0%;
 }
 
 #PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA .EspacioCentroEspacioPropio p {
-    font-size: 15px;
-    margin: 1%;
+  font-size: 15px;
+  margin: 1%;
 }
 
-#PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA .EspacioCentroEspacioPropio a{
-    color: #ffffff;
-    font-size: 15px;
-    margin: 1%;
-    text-decoration: none;
+#PrincipalEspacioPropio #bodyEspacioPropio #CentroEspacioPropio #ContenidoCentroEspacioPropio #ContenidoCentroEspacioPropioA .EspacioCentroEspacioPropio a {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 1%;
+  text-decoration: none;
 }

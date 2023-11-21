@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #LateralIzquierdoSubtituloHome {
-    text-align: center;
+  text-align: center;
 }
 
 #LateralIzquierdoSubtituloHomePrincipal a {
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 #LateralIzquierdoSubtituloHomePrincipal a:focus {
-    background-color: #8e4c9891;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c9891;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }

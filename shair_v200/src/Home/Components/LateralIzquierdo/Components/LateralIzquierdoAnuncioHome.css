@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 .LateralIzquierdoAnuncioHomePrincipal {
-    align-items: center;
-    background-color: #303030;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 250px;
-    justify-content: center;
-    padding: 2%;
-    text-align: center;
-    width: 90%;
+  align-items: center;
+  background-color: #303030;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 250px;
+  justify-content: center;
+  padding: 2%;
+  text-align: center;
+  width: 90%;
 }
 
-.LateralIzquierdoAnuncioHomePrincipal .Anuncios{
-    font-size: 15px;
+.LateralIzquierdoAnuncioHomePrincipal .Anuncios {
+  font-size: 15px;
 }

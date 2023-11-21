@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #LateralDerechoAccionesHomePrincipal {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  text-align: center;
 }

@@ -29,4 +29,3 @@ echo json_encode($results);
 
 // Cerrar la conexión
 $conn->close();
-?>

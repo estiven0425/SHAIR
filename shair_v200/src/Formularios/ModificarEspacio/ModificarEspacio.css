@@ -1,61 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #ModificarEspacioPrincipal {
-    align-items: center;
-    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 100vh;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-    
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #303030,
+    #606060
+  ); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio {
-    align-items: stretch;
-    background-color: #454545;
-    border: 2px solid #8e4c98;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 90%;
-    justify-content: space-around;
-    padding: 2%;
-    width: 50%;
+  align-items: stretch;
+  background-color: #454545;
+  border: 2px solid #8e4c98;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 90%;
+  justify-content: space-around;
+  padding: 2%;
+  width: 50%;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio .TextoLabel {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio .TextoCheck {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio .TextoCheck a {
-    color: #8e4c98;
-    text-decoration: none;
+  color: #8e4c98;
+  text-decoration: none;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio .Input:focus {
-    border: 2px solid #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  border: 2px solid #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio #ModificarEspacio {
-    background-color: #8e4c98;
-    border-color: #606060;
-    color: #ffffff;
-    font-size: 15px;
-    text-transform: uppercase;
+  background-color: #8e4c98;
+  border-color: #606060;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 #ModificarEspacioPrincipal #FormularioModificarEspacio #ModificarEspacio:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }

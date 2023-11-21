@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente Ubicación */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos fuentes de Google Fonts para usar en estilos del componente Ubicación */
 
-#UbicacionLandingPage { /* Estilizamos el contenedor principal con el ID "Ubicación" */
+#UbicacionLandingPage {
+  /* Estilizamos el contenedor principal con el ID "Ubicación" */
   align-items: center; /* Centramos verticalmente los elementos del contenedor */
   display: flex; /* Configuramos el contenedor como un contenedor flexible (flexbox) */
   flex-direction: column; /* Los elementos se apilan en una columna */
@@ -9,26 +10,30 @@
   width: 100%; /* El ancho del contenedor es del 100% del contenedor padre */
 }
 
-#UbicacionLandingPage h1 { /* Estilizamos el encabezado h1 dentro del contenedor "Ubicación" */
+#UbicacionLandingPage h1 {
+  /* Estilizamos el encabezado h1 dentro del contenedor "Ubicación" */
   font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
   text-align: center; /* Alineamos el texto en el centro */
 }
 
-#UbicacionLandingPage a { /* Estilizamos los enlaces dentro del contenedor "Ubicación" */
+#UbicacionLandingPage a {
+  /* Estilizamos los enlaces dentro del contenedor "Ubicación" */
   color: #ffffff; /* Configuramos el color del texto en blanco */
   font-size: 12px; /* Definimos el tamaño de fuente como 12 píxeles */
   text-align: center; /* Alineamos el texto en el centro */
   text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
 
   #UbicacionLandingPage h1 {
     font-size: 18px; /* Disminuimos el tamaño de fuente a 18px */
   }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
 
   #UbicacionLandingPage h1 {
     font-size: 15px; /* Disminuimos el tamaño de fuente a 15px */
@@ -39,7 +44,8 @@
   }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
 
   #UbicacionLandingPage h1 {
     font-size: 13px; /* Disminuimos el tamaño de fuente a 13px */
@@ -50,7 +56,8 @@
   }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
 
   #UbicacionLandingPage h1 {
     font-size: 7px; /* Disminuimos el tamaño de fuente a 7px */

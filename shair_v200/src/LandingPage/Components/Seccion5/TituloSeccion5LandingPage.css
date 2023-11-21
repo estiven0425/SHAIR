@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
 #TituloSeccion5LandingPage {
-    text-align: center; /* Alineamos el texto en el centro */
+  text-align: center; /* Alineamos el texto en el centro */
 }
 
-#TituloSeccion5LandingPage h1 { /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion5LandingPage y les aplicamos los siguientes estilos: */
-    color: #fdb23b; /* Le damos un color amarillo anaranjado al texto */
-    font-family: 'Bangers'; /* Le damos la fuente Bangers al texto */
-    font-size: 90px; /* Le damos un tamaño de fuente de 90px al texto */
-    text-shadow: none; /* Quitamos la sombra al texto */
+#TituloSeccion5LandingPage h1 {
+  /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion5LandingPage y les aplicamos los siguientes estilos: */
+  color: #fdb23b; /* Le damos un color amarillo anaranjado al texto */
+  font-family: "Bangers"; /* Le damos la fuente Bangers al texto */
+  font-size: 90px; /* Le damos un tamaño de fuente de 90px al texto */
+  text-shadow: none; /* Quitamos la sombra al texto */
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    #TituloSeccion5LandingPage h1 {
-        font-size: 45px; /* Cambiamos el tamaño de fuente a 45px para pantallas más pequeñas */
-    }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  #TituloSeccion5LandingPage h1 {
+    font-size: 45px; /* Cambiamos el tamaño de fuente a 45px para pantallas más pequeñas */
+  }
 }

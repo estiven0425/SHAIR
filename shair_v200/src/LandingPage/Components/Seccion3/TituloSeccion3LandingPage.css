@@ -1,36 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
 #TituloSeccion3LandingPage {
-    text-align: center; /* Alineamos el texto en el centro horizontalmente */
+  text-align: center; /* Alineamos el texto en el centro horizontalmente */
 }
 
-#TituloSeccion3LandingPage h1 { /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion3LandingPage y les aplicamos los siguientes estilos: */
-    color: #fdb23b; /* Damos un color amarillo anaranjado al texto */
-    font-family: 'Bangers'; /* Aplicamos la fuente Bangers al texto */
-    font-size: 75px; /* Establecemos un tamaño de fuente de 75px al texto */
-    text-shadow: none; /* Quitamos la sombra al texto */
+#TituloSeccion3LandingPage h1 {
+  /* Seleccionamos los elementos h1 dentro del elemento con id TituloSeccion3LandingPage y les aplicamos los siguientes estilos: */
+  color: #fdb23b; /* Damos un color amarillo anaranjado al texto */
+  font-family: "Bangers"; /* Aplicamos la fuente Bangers al texto */
+  font-size: 75px; /* Establecemos un tamaño de fuente de 75px al texto */
+  text-shadow: none; /* Quitamos la sombra al texto */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
-    #TituloSeccion3LandingPage h1 {
-        font-size: 50px; /* Modificamos el tamaño de fuente a 50px */
-    }
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+  #TituloSeccion3LandingPage h1 {
+    font-size: 50px; /* Modificamos el tamaño de fuente a 50px */
+  }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
-    #TituloSeccion3LandingPage h1 {
-        font-size: 50px; /* Modificamos el tamaño de fuente a 50px */
-    }
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+  #TituloSeccion3LandingPage h1 {
+    font-size: 50px; /* Modificamos el tamaño de fuente a 50px */
+  }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    #TituloSeccion3LandingPage h1 {
-        font-size: 30px; /* Modificamos el tamaño de fuente a 30px */
-    }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  #TituloSeccion3LandingPage h1 {
+    font-size: 30px; /* Modificamos el tamaño de fuente a 30px */
+  }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
-    #TituloSeccion3LandingPage h1 {
-        font-size: 15px; /* Modificamos el tamaño de fuente a 15px */
-    }
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+  #TituloSeccion3LandingPage h1 {
+    font-size: 15px; /* Modificamos el tamaño de fuente a 15px */
+  }
 }

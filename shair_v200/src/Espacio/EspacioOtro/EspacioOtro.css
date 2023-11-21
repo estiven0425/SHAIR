@@ -1,116 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #PrincipalEspacioOtro {
-    font-family: 'Open Sans'; /* Le asignamos la fuente Open Sans como la fuente por defecto */
-    text-transform: uppercase; /* Transformamos el texto a mayúsculas */
+  font-family: "Open Sans"; /* Le asignamos la fuente Open Sans como la fuente por defecto */
+  text-transform: uppercase; /* Transformamos el texto a mayúsculas */
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro {
-    background: linear-gradient(to right, #303030, #606060); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-    padding: 6% 12% 1% 12%;
+  background: linear-gradient(
+    to right,
+    #303030,
+    #606060
+  ); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  padding: 6% 12% 1% 12%;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro {
-    align-items: center;
-    background-color: #454545;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #454545;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0%;
+  text-align: center;
 }
 
-#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro h1 {
-    color: #ffffff;
-    width: 100%;
+#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro
+  h1 {
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #InformacionEspacioOtro {
-    align-items: center;
-    background-color: #606060;
-    border: 2px solid #8e4c98;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0% 0% 1% 0%;
-    text-align: center;
+  align-items: center;
+  background-color: #606060;
+  border: 2px solid #8e4c98;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0% 0% 1% 0%;
+  text-align: center;
 }
 
-#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #InformacionEspacioOtro h1 {
-    color: #ffffff;
-    width: 100%;
+#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #InformacionEspacioOtro
+  h1 {
+  color: #ffffff;
+  width: 100%;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #InformacionEspacioOtro .BotonDerecha {
-    background-color: #8e4c98;
-    border-color: #555555;
-    color: #ffffff;
-    font-size: 15px;
-    margin-bottom: 1%;
-    text-transform: uppercase;
+  background-color: #8e4c98;
+  border-color: #555555;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 1%;
+  text-transform: uppercase;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #InformacionEspacioOtro .BotonDerecha:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA {
-    height: auto;
-    margin: 1%;
-    text-align: center;
-    text-decoration: none;
-    width: 30%;
+  height: auto;
+  margin: 1%;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA .EspacioCentroEspacioOtro {
-    align-items: stretch;
-    background-color: #8e4c98;
-    border-radius: 5px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: -1%;
-    text-align: center;
+  align-items: stretch;
+  background-color: #8e4c98;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: -1%;
+  text-align: center;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA .EspacioCentroEspacioOtro h1 {
-    background-color: #693870;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 20px;
-    margin: 0%;
+  background-color: #693870;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 20px;
+  margin: 0%;
 }
 
 #PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA .EspacioCentroEspacioOtro p {
-    font-size: 15px;
-    margin: 1%;
+  font-size: 15px;
+  margin: 1%;
 }
 
-#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA .EspacioCentroEspacioOtro a{
-    color: #ffffff;
-    font-size: 15px;
-    margin: 1%;
-    text-decoration: none;
+#PrincipalEspacioOtro #bodyEspacioOtro #CentroEspacioOtro #ContenidoCentroEspacioOtro #ContenidoCentroEspacioOtroA .EspacioCentroEspacioOtro a {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 1%;
+  text-decoration: none;
 }

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos fuentes de Google Fonts para usar en estilos del componente CondicionesdeServicio */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos fuentes de Google Fonts para usar en estilos del componente CondicionesdeServicio */
 
-#CondicionesdeServicioLandingPage { /* Estilizamos el contenedor principal con el ID "CondicionesdeServicio" */
+#CondicionesdeServicioLandingPage {
+  /* Estilizamos el contenedor principal con el ID "CondicionesdeServicio" */
   align-items: center; /* Centramos los elementos verticalmente */
   display: flex; /* Configuramos el contenedor como un contenedor flexible (flex) */
   flex-direction: column; /* Configuramos la dirección de los elementos como una columna */
@@ -9,58 +10,60 @@
   width: 100%; /* Establecemos el ancho del contenedor al 100% del tamaño del contenedor padre */
 }
 
-#CondicionesdeServicioLandingPage h1 { /* Estilizamos el encabezado h1 dentro de CondicionesdeServicio */
+#CondicionesdeServicioLandingPage h1 {
+  /* Estilizamos el encabezado h1 dentro de CondicionesdeServicio */
   font-size: 20px; /* Definimos el tamaño de fuente como 20 píxeles */
   text-align: center; /* Alineamos el texto en el centro */
 }
 
-#CondicionesdeServicioLandingPage a { /* Estilizamos los enlaces dentro de CondicionesdeServicio */
+#CondicionesdeServicioLandingPage a {
+  /* Estilizamos los enlaces dentro de CondicionesdeServicio */
   color: #ffffff; /* Configuramos el color del texto en blanco */
   font-size: 12px; /* Definimos el tamaño de fuente como 12 píxeles */
   text-align: center; /* Alineamos el texto en el centro */
   text-decoration: none; /* Eliminamos la subrayado de los enlaces (text-decoration) */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
 
   #CondicionesdeServicioLandingPage h1 {
-      font-size: 18px; /* Cambiamos el tamaño de fuente a 18px */
+    font-size: 18px; /* Cambiamos el tamaño de fuente a 18px */
   }
-
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
 
   #CondicionesdeServicioLandingPage h1 {
-      font-size: 15px; /* Cambiamos el tamaño de fuente a 15px */
+    font-size: 15px; /* Cambiamos el tamaño de fuente a 15px */
   }
 
   #CondicionesdeServicioLandingPage a {
     font-size: 10px; /* Cambiamos el tamaño de fuente de los enlaces a 10px */
   }
-
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
 
   #CondicionesdeServicioLandingPage h1 {
-      font-size: 13px; /* Cambiamos el tamaño de fuente a 13px */
+    font-size: 13px; /* Cambiamos el tamaño de fuente a 13px */
   }
 
   #CondicionesdeServicioLandingPage a {
     font-size: 7px; /* Cambiamos el tamaño de fuente de los enlaces a 7px */
   }
-
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
 
   #CondicionesdeServicioLandingPage h1 {
-      font-size: 7px; /* Cambiamos el tamaño de fuente a 7px */
+    font-size: 7px; /* Cambiamos el tamaño de fuente a 7px */
   }
 
   #CondicionesdeServicioLandingPage a {
     font-size: 4px; /* Cambiamos el tamaño de fuente de los enlaces a 4px */
   }
-
 }

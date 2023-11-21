@@ -22,6 +22,3 @@ if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['IdUsuario'])) {
 } else {
     echo json_encode(array("message" => "Usuario no autenticado", "error" => true));
 }
-
-
-?>

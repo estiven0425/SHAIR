@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -11,13 +11,16 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await axios.post('http://localhost/SHAIR/shair_v200/src/BD_v200/ApiObtenerIdUsuarioPropio.php', {
-          method: 'GET, POST, OPTIONS',
-          credentials: 'include', // Incluye las cookies en la solicitud
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const response = await axios.post(
+          "http://localhost/SHAIR/shair_v200/src/BD_v200/ApiObtenerIdUsuarioPropio.php",
+          {
+            method: "GET, POST, OPTIONS",
+            credentials: "include", // Incluye las cookies en la solicitud
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         const data = response.data;
 
@@ -26,13 +29,16 @@ export const AuthProvider = ({ children }) => {
           setIsLoggedIn(true);
         } else {
           // Si la API de checksession no devuelve IdUsuario, intenta obtenerlo de la API de inicio de sesión
-          const loginResponse = await axios.post('http://localhost/SHAIR/shair_v200/src/BD_v200/ApiCheckSesion.php', {
-            method: 'GET, POST, OPTIONS',
-            credentials: 'include',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          });
+          const loginResponse = await axios.post(
+            "http://localhost/SHAIR/shair_v200/src/BD_v200/ApiCheckSesion.php",
+            {
+              method: "GET, POST, OPTIONS",
+              credentials: "include",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
 
           const loginData = loginResponse.data;
 
@@ -42,7 +48,7 @@ export const AuthProvider = ({ children }) => {
           }
         }
       } catch (error) {
-        console.error('Error al verificar sesión:', error);
+        console.error("Error al verificar sesión:", error);
       }
     };
 

@@ -1,9 +1,10 @@
 /*Estilos globales*/
 
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
-* { /*Estlo general*/
-  font-family:'Open Sans'; /*Fuente para usar*/
+* {
+  /*Estlo general*/
+  font-family: "Open Sans"; /*Fuente para usar*/
   font-size: 20px; /*Tamaño de la fuente*/
   margin: 0%; /*Sin margen*/
 }

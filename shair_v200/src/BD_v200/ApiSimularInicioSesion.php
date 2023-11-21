@@ -14,4 +14,3 @@ $_SESSION['IdUsuarioSimulated'] = 29;
 
 // Respuesta exitosa
 echo json_encode(array("success" => true));
-?>

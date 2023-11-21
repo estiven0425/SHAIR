@@ -1,34 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#BannerSeccion2LandingPage { /* Seleccionamos el elemento con id BannerSeccion2LandingPage y le aplicamos los siguientes estilos: */
-    height: 100%; /* Le damos una altura del 100% del contenedor */
-    opacity: 100%; /* Le damos una opacidad del 100% para que no se vea transparente */
-    text-align: center; /* Alineamos el texto en el centro */
-    width: 100%; /* Le damos un ancho del 100% del contenedor */
-    z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
-    zoom: 115%; /* Le aplicamos un zoom del 115% para aumentar su tamaño */
+#BannerSeccion2LandingPage {
+  /* Seleccionamos el elemento con id BannerSeccion2LandingPage y le aplicamos los siguientes estilos: */
+  height: 100%; /* Le damos una altura del 100% del contenedor */
+  opacity: 100%; /* Le damos una opacidad del 100% para que no se vea transparente */
+  text-align: center; /* Alineamos el texto en el centro */
+  width: 100%; /* Le damos un ancho del 100% del contenedor */
+  z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
+  zoom: 115%; /* Le aplicamos un zoom del 115% para aumentar su tamaño */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
-    #BannerSeccion2LandingPage {
-        zoom: 90%; /* Aplicamos un zoom del 90% para reducir el tamaño del elemento en pantallas de hasta 1440px de ancho */
-    }
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+  #BannerSeccion2LandingPage {
+    zoom: 90%; /* Aplicamos un zoom del 90% para reducir el tamaño del elemento en pantallas de hasta 1440px de ancho */
+  }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
-    #BannerSeccion2LandingPage {
-        zoom: 70%; /* Aplicamos un zoom del 70% para reducir el tamaño del elemento en pantallas de hasta 1366px de ancho */
-    }
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+  #BannerSeccion2LandingPage {
+    zoom: 70%; /* Aplicamos un zoom del 70% para reducir el tamaño del elemento en pantallas de hasta 1366px de ancho */
+  }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    #BannerSeccion2LandingPage {
-        zoom: 40%; /* Aplicamos un zoom del 40% para reducir el tamaño del elemento en pantallas de hasta 720px de ancho */
-    }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  #BannerSeccion2LandingPage {
+    zoom: 40%; /* Aplicamos un zoom del 40% para reducir el tamaño del elemento en pantallas de hasta 720px de ancho */
+  }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
-    #BannerSeccion2LandingPage {
-        zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento en pantallas de hasta 375px de ancho */
-    }
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+  #BannerSeccion2LandingPage {
+    zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento en pantallas de hasta 375px de ancho */
+  }
 }

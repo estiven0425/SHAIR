@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo json_encode(array("message" => "Inicio de sesión exitoso", "IdUsuario" => $userRow['IdUsuario']));
             } else {
                 echo json_encode(array("message" => "Uno de los campos es incorrecto", "error" => true));
-            }            
+            }
         } else {
             echo json_encode(array("message" => "Usuario no encontrado", "error" => true));
         }
@@ -56,4 +56,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $conn->close();
-?>

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #BarraDeNavegacionSesionHomePrincipal {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  text-align: center;
 }

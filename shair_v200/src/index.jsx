@@ -1,71 +1,71 @@
 /*Archivo de entrada (NO ELIMINAR O MODIFICAR)*/
 
-import React from 'react'; /*Importar librería de REACT*/
-import ReactDOM from 'react-dom/client'; /*Importar REACT DOM*/
-import {createBrowserRouter, RouterProvider,} from "react-router-dom"; /*Importamos el navegador de pestañas de REACT*/
-import './index.css'; /*importar archivo de estilos globales*/
-import LandingPage from './LandingPage/LandingPage'; /*Importamos ejecutable de REACT*/
-import Home from './Home/Home'; /*Importamos ejecutable de REACT*/
-import CrearCuenta from './Formularios/CrearCuenta/CrearCuenta';
-import IniciarSesion from './Formularios/IniciarSesion/IniciarSesion';
-import UsuarioOtro from './Usuario/Otro/UsuarioOtro';
-import EspacioOtro from './Espacio/EspacioOtro/EspacioOtro';
-import UsuarioPropio from './Usuario/Propio/UsuarioPropio';
-import EspacioPropio from './Espacio/EspacioPropio/EspacioPropio';
-import CrearEspacio from './Formularios/CrearEspacio/CrearEspacio';
-import ModificarEspacio from './Formularios/ModificarEspacio/ModificarEspacio';
-import ModificarCuenta from './Formularios/ModificarCuenta/ModificarCuenta';
-import reportWebVitals from './reportWebVitals'; /*Importamos el reporte de errores*/
-import { AuthProvider } from './BD_v200/AuthContext';
+import React from "react"; /*Importar librería de REACT*/
+import ReactDOM from "react-dom/client"; /*Importar REACT DOM*/
+import { createBrowserRouter, RouterProvider } from "react-router-dom"; /*Importamos el navegador de pestañas de REACT*/
+import "./index.css"; /*importar archivo de estilos globales*/
+import LandingPage from "./LandingPage/LandingPage"; /*Importamos ejecutable de REACT*/
+import Home from "./Home/Home"; /*Importamos ejecutable de REACT*/
+import CrearCuenta from "./Formularios/CrearCuenta/CrearCuenta";
+import IniciarSesion from "./Formularios/IniciarSesion/IniciarSesion";
+import UsuarioOtro from "./Usuario/Otro/UsuarioOtro";
+import EspacioOtro from "./Espacio/EspacioOtro/EspacioOtro";
+import UsuarioPropio from "./Usuario/Propio/UsuarioPropio";
+import EspacioPropio from "./Espacio/EspacioPropio/EspacioPropio";
+import CrearEspacio from "./Formularios/CrearEspacio/CrearEspacio";
+import ModificarEspacio from "./Formularios/ModificarEspacio/ModificarEspacio";
+import ModificarCuenta from "./Formularios/ModificarCuenta/ModificarCuenta";
+import reportWebVitals from "./reportWebVitals"; /*Importamos el reporte de errores*/
+import { AuthProvider } from "./BD_v200/AuthContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage/>,
+    element: <LandingPage />,
   },
   {
     path: "/Home",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/CrearCuenta",
-    element: <CrearCuenta/>,
+    element: <CrearCuenta />,
   },
   {
     path: "/IniciarSesion",
-    element: <IniciarSesion/>,
+    element: <IniciarSesion />,
   },
   {
     path: "/UsuarioOtro/:IdUsuario",
-    element: <UsuarioOtro/>,
+    element: <UsuarioOtro />,
   },
   {
     path: "/EspacioOtro/:IdEspacio",
-    element: <EspacioOtro/>,
+    element: <EspacioOtro />,
   },
   {
     path: "/UsuarioPropio/:IdUsuario",
-    element: <UsuarioPropio/>,
+    element: <UsuarioPropio />,
   },
   {
     path: "/ModificarCuenta/:IdUsuario",
-    element: <ModificarCuenta/>,
+    element: <ModificarCuenta />,
   },
   {
     path: "/EspacioPropio/:IdEspacio",
-    element: <EspacioPropio/>,
+    element: <EspacioPropio />,
   },
   {
     path: "/CrearEspacio",
-    element: <CrearEspacio/>,
+    element: <CrearEspacio />,
   },
   {
     path: "/ModificarEspacio/:IdEspacio",
-    element: <ModificarEspacio/>,
-  }
+    element: <ModificarEspacio />,
+  },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />

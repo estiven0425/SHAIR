@@ -1,39 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#BannerSeccion4LandingPage { /* Seleccionamos el elemento con id BannerSeccion4LandingPage y le aplicamos los siguientes estilos: */
-    height: 100%; /* Le damos una altura del 100% del contenedor */
-    margin: 5%; /* Le damos un margen del 5% alrededor del elemento */
-    opacity: 100%; /* Le damos una opacidad del 100% al elemento para que no sea transparente */
-    text-align: center; /* Alineamos el texto en el centro horizontalmente */
-    width: 100%; /* Le damos un ancho del 100% del contenedor */
-    z-index: 1; /* Le damos un índice de profundidad de 1 para que esté por encima de otros elementos */
-    zoom: 25%; /* Aplicamos un zoom del 25% para aumentar su tamaño */
+#BannerSeccion4LandingPage {
+  /* Seleccionamos el elemento con id BannerSeccion4LandingPage y le aplicamos los siguientes estilos: */
+  height: 100%; /* Le damos una altura del 100% del contenedor */
+  margin: 5%; /* Le damos un margen del 5% alrededor del elemento */
+  opacity: 100%; /* Le damos una opacidad del 100% al elemento para que no sea transparente */
+  text-align: center; /* Alineamos el texto en el centro horizontalmente */
+  width: 100%; /* Le damos un ancho del 100% del contenedor */
+  z-index: 1; /* Le damos un índice de profundidad de 1 para que esté por encima de otros elementos */
+  zoom: 25%; /* Aplicamos un zoom del 25% para aumentar su tamaño */
 }
 
-#BannerSeccion4LandingPage img { /* Seleccionamos los elementos img dentro del elemento con id BannerSeccion4LandingPage y les aplicamos los siguientes estilos: */
-    border-radius: 50px; /* Damos un borde redondeado de 50px a la imagen */
+#BannerSeccion4LandingPage img {
+  /* Seleccionamos los elementos img dentro del elemento con id BannerSeccion4LandingPage y les aplicamos los siguientes estilos: */
+  border-radius: 50px; /* Damos un borde redondeado de 50px a la imagen */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
-    #BannerSeccion4LandingPage {
-        zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento */
-    }
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+  #BannerSeccion4LandingPage {
+    zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento */
+  }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
-    #BannerSeccion4LandingPage {
-        zoom: 15%; /* Aplicamos un zoom del 15% para reducir el tamaño del elemento */
-    }
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+  #BannerSeccion4LandingPage {
+    zoom: 15%; /* Aplicamos un zoom del 15% para reducir el tamaño del elemento */
+  }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    #BannerSeccion4LandingPage {
-        zoom: 10%; /* Aplicamos un zoom del 10% para reducir el tamaño del elemento */
-    }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  #BannerSeccion4LandingPage {
+    zoom: 10%; /* Aplicamos un zoom del 10% para reducir el tamaño del elemento */
+  }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
-    #BannerSeccion4LandingPage {
-        zoom: 5%; /* Aplicamos un zoom del 5% para reducir el tamaño del elemento */
-    }
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+  #BannerSeccion4LandingPage {
+    zoom: 5%; /* Aplicamos un zoom del 5% para reducir el tamaño del elemento */
+  }
 }

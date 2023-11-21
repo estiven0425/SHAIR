@@ -55,4 +55,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
 }
 
 $conn->close();
-?>

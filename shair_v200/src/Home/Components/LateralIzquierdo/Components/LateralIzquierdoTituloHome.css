@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #LateralIzquierdoTituloHomePrincipal {
-    text-align: center;
+  text-align: center;
 }
 
 #LateralIzquierdoTituloHomePrincipal h1 {
-    color: #ffffff;
-    font-size: 20px;
+  color: #ffffff;
+  font-size: 20px;
 }

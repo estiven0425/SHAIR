@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #BarraDeNavegacionSesionCuentaHomePrincipal {
-    text-align: center;
+  text-align: center;
 }
 
 #BarraDeNavegacionSesionCuentaHomePrincipal .PerfilBarraDeNavegacion {
-    background-color: transparent;
-    border: 2px solid #303030;
-    border-radius: 100px;
-    margin-left: 5%;
-    padding: 2%;
+  background-color: transparent;
+  border: 2px solid #303030;
+  border-radius: 100px;
+  margin-left: 5%;
+  padding: 2%;
 }
 
 #BarraDeNavegacionSesionCuentaHomePrincipal .PerfilBarraDeNavegacion:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 25px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 25px #8e4c98;
+  outline: none;
 }

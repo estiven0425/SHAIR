@@ -1,109 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /*Importamos fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /*Importamos fuentes de google*/
 
 #LateralDerechoAccionesBotonSesionHomePrincipal {
-    text-align: center;
-    margin: 2%;
+  text-align: center;
+  margin: 2%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos h1 {
-    color: #ffffff;
-    font-size: 15px;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal .LateralDerechoAccionesBotonSesionHomePrincipalAccesos .BotonDerecha {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomePrincipalAccesosP {
-    margin-bottom: 5%;
-    margin-top: 110%;
+  margin-bottom: 5%;
+  margin-top: 110%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomePrincipalAccesosP h1 {
-    color: #ffffff;
-    font-size: 15px;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal .BotonDerecha {
-    background-color: #8e4c98;
-    border-color: #606060;
-    color: #ffffff;
-    font-size: 15px;
-    text-transform: uppercase;
-    width: 92%;
+  background-color: #8e4c98;
+  border-color: #606060;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  width: 92%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal .BotonDerecha:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    margin: 0%;
-    max-height: 70vh;
-    overflow-y: auto;
-    padding-top: 100%;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 0%;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-top: 100%;
+  text-align: center;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio h1 {
-    color: #ffffff;
-    font-size: 20px;
-    margin-top: 0%;
-    width: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 0%;
+  width: 100%;
 }
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA {
-    height: auto;
-    margin: 1%;
-    text-align: center;
-    text-decoration: none;
-    width: 95%;
+  height: auto;
+  margin: 1%;
+  text-align: center;
+  text-decoration: none;
+  width: 95%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA:focus {
-    background-color: #8e4c98;
-    box-shadow: 0px 0px 10px  #8e4c98;
-    outline: none;
+  background-color: #8e4c98;
+  box-shadow: 0px 0px 10px #8e4c98;
+  outline: none;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA {
-    align-items: stretch;
-    background-color: #8e4c98;
-    border-radius: 5px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: -1%;
-    text-align: center;
+  align-items: stretch;
+  background-color: #8e4c98;
+  border-radius: 5px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: -1%;
+  text-align: center;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA h1 {
-    background-color: #693870;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 15px;
-    margin: 0%;
+  background-color: #693870;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 15px;
+  margin: 0%;
 }
 
 #LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA p {
-    font-size: 15px;
-    margin: 1%;
+  font-size: 15px;
+  margin: 1%;
 }
 
-#LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA a{
-    color: #ffffff;
-    font-size: 15px;
-    margin: 1%;
-    text-decoration: none;
+#LateralDerechoAccionesBotonSesionHomePrincipal #LateralDerechoAccionesBotonSesionHomeEspacio #LateralDerechoAccionesBotonSesionHomeEspacioA a {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 1%;
+  text-decoration: none;
 }

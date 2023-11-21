@@ -1,34 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap'); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap"); /* Importamos las fuentes de Google Fonts que usaremos en el componente */
 
-#BannerSeccion3LandingPage { /* Seleccionamos el elemento con id BannerSeccion3LandingPage y le aplicamos los siguientes estilos: */
-    height: 100%; /* Establecemos la altura del elemento al 100% del tamaño de su contenedor */
-    opacity: 100%; /* Configuramos la opacidad al 100% para que no se vea transparente */
-    text-align: center; /* Alineamos el texto en el centro horizontalmente */
-    width: 20%; /* Establecemos el ancho del elemento al 20% del tamaño de su contenedor */
-    z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
-    zoom: 115%; /* Aplicamos un zoom del 115% para aumentar su tamaño */
+#BannerSeccion3LandingPage {
+  /* Seleccionamos el elemento con id BannerSeccion3LandingPage y le aplicamos los siguientes estilos: */
+  height: 100%; /* Establecemos la altura del elemento al 100% del tamaño de su contenedor */
+  opacity: 100%; /* Configuramos la opacidad al 100% para que no se vea transparente */
+  text-align: center; /* Alineamos el texto en el centro horizontalmente */
+  width: 20%; /* Establecemos el ancho del elemento al 20% del tamaño de su contenedor */
+  z-index: 1; /* Le damos un índice de profundidad de 1 para que se quede detrás de otros elementos */
+  zoom: 115%; /* Aplicamos un zoom del 115% para aumentar su tamaño */
 }
 
-@media (max-width: 1440px) { /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
-    #BannerSeccion3LandingPage {
-        zoom: 75%; /* Aplicamos un zoom del 75% para reducir el tamaño del elemento en pantallas de hasta 1440px de ancho */
-    }
+@media (max-width: 1440px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1440 píxeles */
+  #BannerSeccion3LandingPage {
+    zoom: 75%; /* Aplicamos un zoom del 75% para reducir el tamaño del elemento en pantallas de hasta 1440px de ancho */
+  }
 }
 
-@media (max-width: 1366px) { /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
-    #BannerSeccion3LandingPage {
-        zoom: 60%; /* Aplicamos un zoom del 60% para reducir el tamaño del elemento en pantallas de hasta 1366px de ancho */
-    }
+@media (max-width: 1366px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 1366 píxeles */
+  #BannerSeccion3LandingPage {
+    zoom: 60%; /* Aplicamos un zoom del 60% para reducir el tamaño del elemento en pantallas de hasta 1366px de ancho */
+  }
 }
 
-@media (max-width: 720px) { /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
-    #BannerSeccion3LandingPage {
-        zoom: 40%; /* Aplicamos un zoom del 40% para reducir el tamaño del elemento en pantallas de hasta 720px de ancho */
-    }
+@media (max-width: 720px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 720 píxeles */
+  #BannerSeccion3LandingPage {
+    zoom: 40%; /* Aplicamos un zoom del 40% para reducir el tamaño del elemento en pantallas de hasta 720px de ancho */
+  }
 }
 
-@media (max-width: 375px) { /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
-    #BannerSeccion3LandingPage {
-        zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento en pantallas de hasta 375px de ancho */
-    }
+@media (max-width: 375px) {
+  /* Establecemos estilos para pantallas con un ancho máximo de 375 píxeles */
+  #BannerSeccion3LandingPage {
+    zoom: 20%; /* Aplicamos un zoom del 20% para reducir el tamaño del elemento en pantallas de hasta 375px de ancho */
+  }
 }
