@@ -57,7 +57,7 @@ function CrearEspacio() {
       console.log(response.data);
 
       // Redireccionar o realizar otras acciones después de crear el espacio
-      navigate("/UsuarioPropio/26");
+      navigate("/UsuarioPropio/1");
     } catch (error) {
       // Manejar errores, por ejemplo, mostrar un mensaje al usuario
       console.error("Error al crear el espacio:", error);

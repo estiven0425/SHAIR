@@ -13,7 +13,7 @@
     #303030,
     #606060
   ); /* Le damos un fondo con un gradiente lineal de izquierda a derecha, de gris oscuro a gris claro */
-
+  height: 100vh;
   padding: 6% 12% 1% 12%;
 }
 

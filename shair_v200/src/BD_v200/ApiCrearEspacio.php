@@ -66,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $NombreEspacio = $data['NombreEspacio'];
   $DescripcionEspacio = $data['DescripcionEspacio'];
   $AceptaCondiciones = $data['AceptaCondiciones'];
-  $IdUsuario = '26'; // Establecer el IdUsuario como '26'
+  $IdUsuario = '1'; // Establecer el IdUsuario como '26'
 
   // Puedes validar y sanitizar los datos aquí según tus necesidades
 
   // Crear la consulta SQL
-  $sql = "INSERT INTO espacio (NombreEspacio, DescripcionEspacio, IdUsuario) 
+  $sql = "INSERT INTO espacio (NombreEspacio, DescripcionEspacio, IdUsuario)
           VALUES ('$NombreEspacio', '$DescripcionEspacio', '$IdUsuario')";
 
   // Ejecutar la consulta
