@@ -2,7 +2,10 @@
 
 import React from "react"; /*Importar librería de REACT*/
 import ReactDOM from "react-dom/client"; /*Importar REACT DOM*/
-import { createBrowserRouter, RouterProvider } from "react-router-dom"; /*Importamos el navegador de pestañas de REACT*/
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom"; /*Importamos el navegador de pestañas de REACT*/
 import "./index.css"; /*importar archivo de estilos globales*/
 import LandingPage from "./LandingPage/LandingPage"; /*Importamos ejecutable de REACT*/
 import Home from "./Home/Home"; /*Importamos ejecutable de REACT*/
@@ -14,7 +17,9 @@ import UsuarioPropio from "./Usuario/Propio/UsuarioPropio";
 import EspacioPropio from "./Espacio/EspacioPropio/EspacioPropio";
 import CrearEspacio from "./Formularios/CrearEspacio/CrearEspacio";
 import ModificarEspacio from "./Formularios/ModificarEspacio/ModificarEspacio";
+import EliminarCuenta from "./Formularios/BorrarCuenta/EliminarCuenta";
 import ModificarCuenta from "./Formularios/ModificarCuenta/ModificarCuenta";
+import DenunciarCuenta from "./Formularios/DenunciarCuenta/DenunciarCuenta";
 import reportWebVitals from "./reportWebVitals"; /*Importamos el reporte de errores*/
 import { AuthProvider } from "./BD_v200/AuthContext";
 
@@ -40,6 +45,10 @@ const router = createBrowserRouter([
     element: <UsuarioOtro />,
   },
   {
+    path: "/DenunciarCuenta/:IdUsuario",
+    element: <DenunciarCuenta />,
+  },
+  {
     path: "/EspacioOtro/:IdEspacio",
     element: <EspacioOtro />,
   },
@@ -62,6 +71,10 @@ const router = createBrowserRouter([
   {
     path: "/ModificarEspacio/:IdEspacio",
     element: <ModificarEspacio />,
+  },
+  {
+    path: "/EliminarCuenta/:IdUsuario",
+    element: <EliminarCuenta />,
   },
 ]);
 

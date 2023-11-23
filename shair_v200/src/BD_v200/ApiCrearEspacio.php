@@ -27,7 +27,7 @@
 //   // Puedes validar y sanitizar los datos aquí según tus necesidades
 
 //   // Crear la consulta SQL
-//   $sql = "INSERT INTO espacio (NombreEspacio, DescripcionEspacio, IdUsuario) 
+//   $sql = "INSERT INTO espacio (NombreEspacio, DescripcionEspacio, IdUsuario)
 //           VALUES ('$NombreEspacio', '$DescripcionEspacio', '26')";
 
 //   // Ejecutar la consulta

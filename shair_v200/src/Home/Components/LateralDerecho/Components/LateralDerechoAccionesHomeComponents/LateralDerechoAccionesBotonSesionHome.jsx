@@ -7,6 +7,7 @@ import axios from "axios";
 const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
   const { IdUsuario, IdEspacio } = useParams();
   const [userSpaces, setUserSpaces] = useState([]);
+  const [nombrePerfil, setNombrePerfil] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -18,6 +19,13 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
         );
         console.log(response.data); // Verifica la estructura de la respuesta en la consola
         setUserSpaces(response.data);
+        if (
+          response.data &&
+          response.data[0] &&
+          response.data[0].NombreUsuario
+        ) {
+          setNombrePerfil(response.data[0].NombreUsuario);
+        }
       } catch (error) {
         console.error("Error al obtener espacios del usuario:", error);
       }
@@ -34,7 +42,15 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
       {location.pathname.startsWith("/UsuarioOtro") && (
         <div className="LateralDerechoAccionesBotonSesionHomePrincipalAccesos">
           <h1>Opciones de perfil</h1>
-          <Button variant="outline-primary" className="BotonDerecha" href="#">
+          <Button
+            variant="outline-primary"
+            className="BotonDerecha"
+            onClick={() =>
+              navigate(
+                `/DenunciarCuenta/${IdUsuario}?nombrePerfil=${nombrePerfil}`
+              )
+            }
+          >
             Denunciar Cuenta
           </Button>
         </div>
@@ -114,7 +130,7 @@ const LateralDerechoAccionesBotonSesionHome = ({ isLoggedIn }) => {
               <Button
                 variant="outline-primary"
                 className="BotonDerecha"
-                href="#"
+                onClick={() => navigate(`/EliminarCuenta/${IdUsuario}`)}
               >
                 Eliminar Cuenta
               </Button>
